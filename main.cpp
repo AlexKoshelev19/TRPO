@@ -12,7 +12,7 @@ int main() {
     Py_Initialize();
 
     // Добавляем путь к скрипту в sys.path
-    PyRun_SimpleString("import sys; sys.path.append('.')");
+    PyRun_SimpleString("import sys; sys.path.append('.')"); //ищем наш файл в текущей директории
 
     // Импортируем модуль
     PyObject* pModule = PyImport_ImportModule("test_file");
