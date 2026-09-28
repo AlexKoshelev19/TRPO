@@ -1,0 +1,105 @@
+{
+	"configurations" : 
+	[
+		{
+			"abstractTargets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Python3::Interpreter::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Python3__Interpreter-Debug-2360a2df59c858a3efd3.json",
+					"name" : "Python3::Interpreter",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Python3::InterpreterMultiConfig::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Python3__InterpreterMultiConfig-Debug-1e84f87df415c815b9e3.json",
+					"name" : "Python3::InterpreterMultiConfig",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Python3::Module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Python3__Module-Debug-025ae03df5d781653252.json",
+					"name" : "Python3::Module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Python3::Python::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Python3__Python-Debug-f15016eae84e14b98eb6.json",
+					"name" : "Python3::Python",
+					"projectIndex" : 0
+				}
+			],
+			"directories" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					],
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f6f22219c74102c3da70.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "main",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "TRPO::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TRPO-Debug-06c8fc96b6a2bd7e55a0.json",
+					"name" : "TRPO",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/study/TRPO/cmake-build-debug",
+		"source" : "D:/study/TRPO"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 9
+	}
+}

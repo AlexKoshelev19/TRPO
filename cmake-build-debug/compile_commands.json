@@ -1,0 +1,8 @@
+[
+{
+  "directory": "D:/study/TRPO/cmake-build-debug",
+  "command": "C:\\PROGRA~1\\JETBRA~1\\CLION2~1.3\\bin\\mingw\\bin\\G__~1.EXE -DPy_NO_LINK_LIB -isystem C:/Users/Алексей/AppData/Local/Python/pythoncore-3.14-64/include -g -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles\\TRPO.dir\\main.cpp.obj -c D:\\study\\TRPO\\main.cpp",
+  "file": "D:/study/TRPO/main.cpp",
+  "output": "D:/study/TRPO/cmake-build-debug/CMakeFiles/TRPO.dir/main.cpp.obj"
+}
+]
