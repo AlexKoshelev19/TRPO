@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/ivanr/MAI/TRPO/LABA/build/cmake_install.cmake",
+		"C:/Users/ivanr/MAI/TRPO/LABA/build/third_party/pybind11/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

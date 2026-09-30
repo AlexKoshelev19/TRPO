@@ -15,7 +15,7 @@ int main() {
     PyRun_SimpleString("import sys; sys.path.append('.')");
 
     // Импортируем модуль
-    PyObject* pModule = PyImport_ImportModule("test_file");
+    PyObject* pModule = PyImport_ImportModule("verb_analiser");
     if (!pModule) {
         PyErr_Print();
         std::cerr << "Не удалось загрузить модуль" << std::endl;
