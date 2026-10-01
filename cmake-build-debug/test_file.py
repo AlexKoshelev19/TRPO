@@ -5,6 +5,7 @@ from natasha import Segmenter, NewsEmbedding, NewsMorphTagger, Doc
 #NewsMorphTagger - определяет части речи и грамматические признаки
 text = "Иван приехал в Москву, отдохнул и встретил старого друга." #исходный текст
 from natasha import Segmenter, NewsEmbedding, NewsMorphTagger, Doc
+from stressonnx import stress
 
 def analyze(input_file: str ):
 
@@ -23,7 +24,9 @@ def analyze(input_file: str ):
     # Определяем части речи
     doc.tag_morph(morph_tagger)
     verbs = [token.text for token in doc.tokens if token.pos == 'VERB']
-    print(verbs)
+    for verb in verbs:
+       verb = stress(verb, "ru")
+       print(verb)
     return verbs
 
-
+analyze('input')
