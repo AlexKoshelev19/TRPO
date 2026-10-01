@@ -2,11 +2,22 @@
 #include <iostream>
 #include <string>
 #include <windows.h>
+#include <vector>
 using namespace std;
+
+typedef struct {
+        string word;
+        vector <string> rhymed;
+    } VERB;
+
+vector<VERB> verbs;
+
+
 int main() {
 
     SetConsoleOutputCP(65001);
     SetConsoleCP(65001);
+
 
     // Инициализируем интерпретатор Python
     Py_Initialize();
@@ -43,13 +54,19 @@ int main() {
     PyObject* pResult = PyObject_CallObject(pFunc, pArgs);
 
     if (pResult && PyList_Check(pResult)) {
+
         Py_ssize_t size = PyList_Size(pResult);
         std::cout << "Найдено глаголов: " << size << std::endl;
-
+        VERB temp;
         for (Py_ssize_t i = 0; i < size; ++i) {
             PyObject* item = PyList_GetItem(pResult, i);
             const char* verb = PyUnicode_AsUTF8(item);
-            std::cout << "  - " << verb << std::endl;
+            temp.word = verb;
+            verbs.push_back(temp);
+
+        }
+        for (size_t i = 0; i < verbs.size(); i++) {
+            cout << " -" << verbs[i].word << endl;
         }
     } else {
         PyErr_Print();
@@ -63,4 +80,22 @@ int main() {
     Py_Finalize();
 
     return 0;
+}
+
+
+void search_rhyme() {
+    for (size_t i = 0; i < verbs.size()-1; i++) {
+        for (size_t j = i; j<verbs.size(); j++) {
+            /*
+             * берем iй элемент и jй элемент
+             * извлекаем подстроки от конца до ударной буквы
+             * если совпали
+             *      рифма есть
+             *      добавляем в вектора iй  jй
+             *
+             * иначе
+             *      идем дальше
+             */
+        }
+    }
 }

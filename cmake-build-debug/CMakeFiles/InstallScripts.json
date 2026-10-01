@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"D:/study/TRPO/cmake-build-debug/cmake_install.cmake",
+		"D:/study/TRPO/cmake-build-debug/third_party/pybind11/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
