@@ -1,9 +1,0 @@
-python314.zip
-.
-../lib
-../lib/site-packages
-
-import site
-
-# Uncomment to run site.main() automatically
-#import site

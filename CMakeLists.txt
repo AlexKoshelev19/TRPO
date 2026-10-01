@@ -16,5 +16,5 @@ add_subdirectory(third_party/pybind11)
 add_executable(app main.cpp)
 
 # Опции линковщика настраиваются ТОЛЬКО после add_executable
-target_link_options(app PRIVATE -static-libgcc -static-libstdc++)
+target_link_options(app PRIVATE -static -static-libgcc -static-libstdc++)
 target_link_libraries(app PRIVATE pybind11::embed)

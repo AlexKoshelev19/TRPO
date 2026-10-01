@@ -1,7 +1,3 @@
 # ninja log v7
-39	7122	8125593751956712	CMakeFiles/app.dir/main.cpp.obj	38f7bdff5bf09bbc
-7147	7574	8125593823051085	C:/Users/ivanr/MAI/TRPO/LABA/bin/app.exe	7b2d375ddaa835dc
-98	7966	8125619351792897	CMakeFiles/app.dir/main.cpp.obj	38f7bdff5bf09bbc
-7968	8364	8125619430485328	C:/Users/ivanr/MAI/TRPO/LABA/bin/app.exe	7b2d375ddaa835dc
-37	1750	8125620345854807	CMakeFiles/app.dir/main.cpp.obj	38f7bdff5bf09bbc
-1751	2047	8125620362965723	C:/Users/ivanr/MAI/TRPO/LABA/bin/app.exe	7b2d375ddaa835dc
+21	1840	8125630999609110	CMakeFiles/app.dir/main.cpp.obj	fb2281928435701c
+1868	2279	8125631018032737	C:/Users/ivanr/MAI/TRPO/LABA/bin/app.exe	20c630d8ada74643

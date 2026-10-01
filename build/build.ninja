@@ -48,7 +48,7 @@ build CMakeFiles/app.dir/main.cpp.obj: CXX_COMPILER__app_unscanned_ C$:/Users/iv
   DEFINES = -DPy_NO_LINK_LIB
   DEP_FILE = CMakeFiles\app.dir\main.cpp.obj.d
   FLAGS = -std=gnu++20
-  INCLUDES = -isystem C:/Users/ivanr/MAI/TRPO/LABA/third_party/pybind11/include -isystem C:/Users/ivanr/AppData/Local/Programs/Python/Python314/include
+  INCLUDES = -isystem C:/Users/ivanr/MAI/TRPO/LABA/third_party/pybind11/include -isystem C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Include
   OBJECT_DIR = CMakeFiles\app.dir
   OBJECT_FILE_DIR = CMakeFiles\app.dir
   TARGET_COMPILE_PDB = CMakeFiles\app.dir\
@@ -64,7 +64,7 @@ build CMakeFiles/app.dir/main.cpp.obj: CXX_COMPILER__app_unscanned_ C$:/Users/iv
 # Link the executable C:\Users\ivanr\MAI\TRPO\LABA\bin\app.exe
 
 build C$:/Users/ivanr/MAI/TRPO/LABA/bin/app.exe: CXX_EXECUTABLE_LINKER__app_ CMakeFiles/app.dir/main.cpp.obj | C$:/Users/ivanr/AppData/Local/Programs/Python/Python314/libs/python314.lib
-  LINK_FLAGS = -static-libgcc -static-libstdc++
+  LINK_FLAGS = -static -static-libgcc -static-libstdc++
   LINK_LIBRARIES = C:/Users/ivanr/AppData/Local/Programs/Python/Python314/libs/python314.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\app.dir
   POST_BUILD = cd .
