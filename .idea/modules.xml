@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/TRPO.iml" filepath="$PROJECT_DIR$/.idea/TRPO.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/pybind11.iml" filepath="$PROJECT_DIR$/.idea/pybind11.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/pybind11_tests.iml" filepath="$PROJECT_DIR$/.idea/pybind11_tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/verb_analiser.py.iml" filepath="$PROJECT_DIR$/.idea/verb_analiser.py.iml" />
     </modules>
   </component>
 </project>
