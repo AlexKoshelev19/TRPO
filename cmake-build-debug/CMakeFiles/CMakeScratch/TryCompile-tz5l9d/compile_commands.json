@@ -1,0 +1,8 @@
+[
+{
+  "directory": "D:/study/TRPO/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-tz5l9d",
+  "command": "C:\\PROGRA~1\\JETBRA~1\\CLION2~1.3\\bin\\mingw\\bin\\gcc.exe -fdiagnostics-color=always   -v -o CMakeFiles\\cmTC_da00d.dir\\CMakeCCompilerABI.c.obj -c \"C:\\Program Files\\JetBrains\\CLion 2026.1.3\\bin\\cmake\\win\\x64\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c\"",
+  "file": "C:/Program Files/JetBrains/CLion 2026.1.3/bin/cmake/win/x64/share/cmake-4.2/Modules/CMakeCCompilerABI.c",
+  "output": "D:/study/TRPO/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-tz5l9d/CMakeFiles/cmTC_da00d.dir/CMakeCCompilerABI.c.obj"
+}
+]
