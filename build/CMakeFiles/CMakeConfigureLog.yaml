@@ -34,9 +34,11 @@ events:
       - "C:/Windows/System32/wbem/"
       - "C:/Windows/System32/WindowsPowerShell/v1.0/"
       - "C:/Windows/System32/OpenSSH/"
-      - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
       - "C:/Users/ivanr/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/ivanr/AppData/Local/Programs/Microsoft VS Code/bin/"
@@ -44,6 +46,7 @@ events:
       - "C:/Users/ivanr/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/LocalCache/local-packages/Python312/Scripts/"
       - "C:/Exterenal tools/msys2/mingw64/bin/"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/Windows/System32/ninja-build.com"
       - "C:/Windows/System32/ninja-build.exe"
@@ -90,15 +93,6 @@ events:
       - "C:/Windows/System32/OpenSSH/samu.com"
       - "C:/Windows/System32/OpenSSH/samu.exe"
       - "C:/Windows/System32/OpenSSH/samu"
-      - "C:/Program Files/Git/cmd/ninja-build.com"
-      - "C:/Program Files/Git/cmd/ninja-build.exe"
-      - "C:/Program Files/Git/cmd/ninja-build"
-      - "C:/Program Files/Git/cmd/ninja.com"
-      - "C:/Program Files/Git/cmd/ninja.exe"
-      - "C:/Program Files/Git/cmd/ninja"
-      - "C:/Program Files/Git/cmd/samu.com"
-      - "C:/Program Files/Git/cmd/samu.exe"
-      - "C:/Program Files/Git/cmd/samu"
       - "C:/Program Files/CMake/bin/ninja-build.com"
       - "C:/Program Files/CMake/bin/ninja-build.exe"
       - "C:/Program Files/CMake/bin/ninja-build"
@@ -117,6 +111,33 @@ events:
       - "C:/Program Files/Docker/Docker/resources/bin/samu.com"
       - "C:/Program Files/Docker/Docker/resources/bin/samu.exe"
       - "C:/Program Files/Docker/Docker/resources/bin/samu"
+      - "C:/Program Files/Git/cmd/ninja-build.com"
+      - "C:/Program Files/Git/cmd/ninja-build.exe"
+      - "C:/Program Files/Git/cmd/ninja-build"
+      - "C:/Program Files/Git/cmd/ninja.com"
+      - "C:/Program Files/Git/cmd/ninja.exe"
+      - "C:/Program Files/Git/cmd/ninja"
+      - "C:/Program Files/Git/cmd/samu.com"
+      - "C:/Program Files/Git/cmd/samu.exe"
+      - "C:/Program Files/Git/cmd/samu"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/ninja-build.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/ninja-build.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/ninja-build"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/ninja.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/ninja.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/ninja"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/samu.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/samu.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/samu"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/ninja-build.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/ninja-build.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/ninja-build"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/ninja.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/ninja.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/ninja"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/samu.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/samu.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/samu"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/ninja-build.com"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/ninja-build.exe"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/ninja-build"
@@ -156,9 +177,11 @@ events:
         - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\"
         - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
         - "C:\\Users\\ivanr\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
@@ -166,6 +189,7 @@ events:
         - "C:\\Users\\ivanr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\Scripts"
         - "C:\\Exterenal tools\\msys2\\mingw64\\bin"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Ollama"
+        - "c:\\Users\\ivanr\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -197,9 +221,11 @@ events:
       - "C:/Windows/System32/wbem/"
       - "C:/Windows/System32/WindowsPowerShell/v1.0/"
       - "C:/Windows/System32/OpenSSH/"
-      - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
       - "C:/Users/ivanr/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/ivanr/AppData/Local/Programs/Microsoft VS Code/bin/"
@@ -207,6 +233,7 @@ events:
       - "C:/Users/ivanr/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/LocalCache/local-packages/Python312/Scripts/"
       - "C:/Exterenal tools/msys2/mingw64/bin/"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/Windows/System32/cc.com"
       - "C:/Windows/System32/cc.exe"
@@ -313,27 +340,6 @@ events:
       - "C:/Windows/System32/OpenSSH/clang.com"
       - "C:/Windows/System32/OpenSSH/clang.exe"
       - "C:/Windows/System32/OpenSSH/clang"
-      - "C:/Program Files/Git/cmd/cc.com"
-      - "C:/Program Files/Git/cmd/cc.exe"
-      - "C:/Program Files/Git/cmd/cc"
-      - "C:/Program Files/Git/cmd/gcc.com"
-      - "C:/Program Files/Git/cmd/gcc.exe"
-      - "C:/Program Files/Git/cmd/gcc"
-      - "C:/Program Files/Git/cmd/cl.com"
-      - "C:/Program Files/Git/cmd/cl.exe"
-      - "C:/Program Files/Git/cmd/cl"
-      - "C:/Program Files/Git/cmd/bcc.com"
-      - "C:/Program Files/Git/cmd/bcc.exe"
-      - "C:/Program Files/Git/cmd/bcc"
-      - "C:/Program Files/Git/cmd/xlc.com"
-      - "C:/Program Files/Git/cmd/xlc.exe"
-      - "C:/Program Files/Git/cmd/xlc"
-      - "C:/Program Files/Git/cmd/icx.com"
-      - "C:/Program Files/Git/cmd/icx.exe"
-      - "C:/Program Files/Git/cmd/icx"
-      - "C:/Program Files/Git/cmd/clang.com"
-      - "C:/Program Files/Git/cmd/clang.exe"
-      - "C:/Program Files/Git/cmd/clang"
       - "C:/Program Files/CMake/bin/cc.com"
       - "C:/Program Files/CMake/bin/cc.exe"
       - "C:/Program Files/CMake/bin/cc"
@@ -376,6 +382,69 @@ events:
       - "C:/Program Files/Docker/Docker/resources/bin/clang.com"
       - "C:/Program Files/Docker/Docker/resources/bin/clang.exe"
       - "C:/Program Files/Docker/Docker/resources/bin/clang"
+      - "C:/Program Files/Git/cmd/cc.com"
+      - "C:/Program Files/Git/cmd/cc.exe"
+      - "C:/Program Files/Git/cmd/cc"
+      - "C:/Program Files/Git/cmd/gcc.com"
+      - "C:/Program Files/Git/cmd/gcc.exe"
+      - "C:/Program Files/Git/cmd/gcc"
+      - "C:/Program Files/Git/cmd/cl.com"
+      - "C:/Program Files/Git/cmd/cl.exe"
+      - "C:/Program Files/Git/cmd/cl"
+      - "C:/Program Files/Git/cmd/bcc.com"
+      - "C:/Program Files/Git/cmd/bcc.exe"
+      - "C:/Program Files/Git/cmd/bcc"
+      - "C:/Program Files/Git/cmd/xlc.com"
+      - "C:/Program Files/Git/cmd/xlc.exe"
+      - "C:/Program Files/Git/cmd/xlc"
+      - "C:/Program Files/Git/cmd/icx.com"
+      - "C:/Program Files/Git/cmd/icx.exe"
+      - "C:/Program Files/Git/cmd/icx"
+      - "C:/Program Files/Git/cmd/clang.com"
+      - "C:/Program Files/Git/cmd/clang.exe"
+      - "C:/Program Files/Git/cmd/clang"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/cc.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/cc.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/cc"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/cl.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/cl.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/cl"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/bcc.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/bcc.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/bcc"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/xlc.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/xlc.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/xlc"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/icx.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/icx.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/icx"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/clang.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/clang.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/clang"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/cc.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/cc.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/cc"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/cl.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/cl.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/cl"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/bcc.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/bcc.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/bcc"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/xlc.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/xlc.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/xlc"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/icx.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/icx.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/icx"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/clang.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/clang.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/clang"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/cc.com"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/cc.exe"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/cc"
@@ -448,9 +517,11 @@ events:
         - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\"
         - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
         - "C:\\Users\\ivanr\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
@@ -458,6 +529,7 @@ events:
         - "C:\\Users\\ivanr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\Scripts"
         - "C:\\Exterenal tools\\msys2\\mingw64\\bin"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Ollama"
+        - "c:\\Users\\ivanr\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -490,9 +562,11 @@ events:
         - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\"
         - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
         - "C:\\Users\\ivanr\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
@@ -500,6 +574,7 @@ events:
         - "C:\\Users\\ivanr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\Scripts"
         - "C:\\Exterenal tools\\msys2\\mingw64\\bin"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Ollama"
+        - "c:\\Users\\ivanr\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "message-v1"
     backtrace:
@@ -548,15 +623,18 @@ events:
       - "C:/Windows/System32/wbem/"
       - "C:/Windows/System32/WindowsPowerShell/v1.0/"
       - "C:/Windows/System32/OpenSSH/"
-      - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
       - "C:/Users/ivanr/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/ivanr/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/ivanr/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/LocalCache/local-packages/Python312/Scripts/"
       - "C:/Exterenal tools/msys2/mingw64/bin/"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/Exterenal tools/msys2/ucrt64/bin/ar.com"
     found: "C:/Exterenal tools/msys2/ucrt64/bin/ar.exe"
@@ -567,9 +645,11 @@ events:
         - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\"
         - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
         - "C:\\Users\\ivanr\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
@@ -577,6 +657,7 @@ events:
         - "C:\\Users\\ivanr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\Scripts"
         - "C:\\Exterenal tools\\msys2\\mingw64\\bin"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Ollama"
+        - "c:\\Users\\ivanr\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -603,15 +684,18 @@ events:
       - "C:/Windows/System32/wbem/"
       - "C:/Windows/System32/WindowsPowerShell/v1.0/"
       - "C:/Windows/System32/OpenSSH/"
-      - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
       - "C:/Users/ivanr/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/ivanr/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/ivanr/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/LocalCache/local-packages/Python312/Scripts/"
       - "C:/Exterenal tools/msys2/mingw64/bin/"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/Exterenal tools/msys2/ucrt64/bin/ranlib.com"
     found: "C:/Exterenal tools/msys2/ucrt64/bin/ranlib.exe"
@@ -622,9 +706,11 @@ events:
         - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\"
         - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
         - "C:\\Users\\ivanr\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
@@ -632,6 +718,7 @@ events:
         - "C:\\Users\\ivanr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\Scripts"
         - "C:\\Exterenal tools\\msys2\\mingw64\\bin"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Ollama"
+        - "c:\\Users\\ivanr\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -658,15 +745,18 @@ events:
       - "C:/Windows/System32/wbem/"
       - "C:/Windows/System32/WindowsPowerShell/v1.0/"
       - "C:/Windows/System32/OpenSSH/"
-      - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
       - "C:/Users/ivanr/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/ivanr/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/ivanr/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/LocalCache/local-packages/Python312/Scripts/"
       - "C:/Exterenal tools/msys2/mingw64/bin/"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/Exterenal tools/msys2/ucrt64/bin/strip.com"
     found: "C:/Exterenal tools/msys2/ucrt64/bin/strip.exe"
@@ -677,9 +767,11 @@ events:
         - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\"
         - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
         - "C:\\Users\\ivanr\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
@@ -687,6 +779,7 @@ events:
         - "C:\\Users\\ivanr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\Scripts"
         - "C:\\Exterenal tools\\msys2\\mingw64\\bin"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Ollama"
+        - "c:\\Users\\ivanr\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -713,15 +806,18 @@ events:
       - "C:/Windows/System32/wbem/"
       - "C:/Windows/System32/WindowsPowerShell/v1.0/"
       - "C:/Windows/System32/OpenSSH/"
-      - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
       - "C:/Users/ivanr/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/ivanr/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/ivanr/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/LocalCache/local-packages/Python312/Scripts/"
       - "C:/Exterenal tools/msys2/mingw64/bin/"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/Exterenal tools/msys2/ucrt64/bin/ld.com"
     found: "C:/Exterenal tools/msys2/ucrt64/bin/ld.exe"
@@ -732,9 +828,11 @@ events:
         - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\"
         - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
         - "C:\\Users\\ivanr\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
@@ -742,6 +840,7 @@ events:
         - "C:\\Users\\ivanr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\Scripts"
         - "C:\\Exterenal tools\\msys2\\mingw64\\bin"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Ollama"
+        - "c:\\Users\\ivanr\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -768,15 +867,18 @@ events:
       - "C:/Windows/System32/wbem/"
       - "C:/Windows/System32/WindowsPowerShell/v1.0/"
       - "C:/Windows/System32/OpenSSH/"
-      - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
       - "C:/Users/ivanr/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/ivanr/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/ivanr/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/LocalCache/local-packages/Python312/Scripts/"
       - "C:/Exterenal tools/msys2/mingw64/bin/"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/Exterenal tools/msys2/ucrt64/bin/nm.com"
     found: "C:/Exterenal tools/msys2/ucrt64/bin/nm.exe"
@@ -787,9 +889,11 @@ events:
         - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\"
         - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
         - "C:\\Users\\ivanr\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
@@ -797,6 +901,7 @@ events:
         - "C:\\Users\\ivanr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\Scripts"
         - "C:\\Exterenal tools\\msys2\\mingw64\\bin"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Ollama"
+        - "c:\\Users\\ivanr\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -823,15 +928,18 @@ events:
       - "C:/Windows/System32/wbem/"
       - "C:/Windows/System32/WindowsPowerShell/v1.0/"
       - "C:/Windows/System32/OpenSSH/"
-      - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
       - "C:/Users/ivanr/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/ivanr/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/ivanr/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/LocalCache/local-packages/Python312/Scripts/"
       - "C:/Exterenal tools/msys2/mingw64/bin/"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/Exterenal tools/msys2/ucrt64/bin/objdump.com"
     found: "C:/Exterenal tools/msys2/ucrt64/bin/objdump.exe"
@@ -842,9 +950,11 @@ events:
         - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\"
         - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
         - "C:\\Users\\ivanr\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
@@ -852,6 +962,7 @@ events:
         - "C:\\Users\\ivanr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\Scripts"
         - "C:\\Exterenal tools\\msys2\\mingw64\\bin"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Ollama"
+        - "c:\\Users\\ivanr\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -878,15 +989,18 @@ events:
       - "C:/Windows/System32/wbem/"
       - "C:/Windows/System32/WindowsPowerShell/v1.0/"
       - "C:/Windows/System32/OpenSSH/"
-      - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
       - "C:/Users/ivanr/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/ivanr/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/ivanr/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/LocalCache/local-packages/Python312/Scripts/"
       - "C:/Exterenal tools/msys2/mingw64/bin/"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/Exterenal tools/msys2/ucrt64/bin/objcopy.com"
     found: "C:/Exterenal tools/msys2/ucrt64/bin/objcopy.exe"
@@ -897,9 +1011,11 @@ events:
         - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\"
         - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
         - "C:\\Users\\ivanr\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
@@ -907,6 +1023,7 @@ events:
         - "C:\\Users\\ivanr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\Scripts"
         - "C:\\Exterenal tools\\msys2\\mingw64\\bin"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Ollama"
+        - "c:\\Users\\ivanr\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -933,15 +1050,18 @@ events:
       - "C:/Windows/System32/wbem/"
       - "C:/Windows/System32/WindowsPowerShell/v1.0/"
       - "C:/Windows/System32/OpenSSH/"
-      - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
       - "C:/Users/ivanr/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/ivanr/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/ivanr/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/LocalCache/local-packages/Python312/Scripts/"
       - "C:/Exterenal tools/msys2/mingw64/bin/"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/Exterenal tools/msys2/ucrt64/bin/readelf.com"
     found: "C:/Exterenal tools/msys2/ucrt64/bin/readelf.exe"
@@ -952,9 +1072,11 @@ events:
         - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\"
         - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
         - "C:\\Users\\ivanr\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
@@ -962,6 +1084,7 @@ events:
         - "C:\\Users\\ivanr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\Scripts"
         - "C:\\Exterenal tools\\msys2\\mingw64\\bin"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Ollama"
+        - "c:\\Users\\ivanr\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -988,15 +1111,18 @@ events:
       - "C:/Windows/System32/wbem/"
       - "C:/Windows/System32/WindowsPowerShell/v1.0/"
       - "C:/Windows/System32/OpenSSH/"
-      - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
       - "C:/Users/ivanr/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/ivanr/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/ivanr/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/LocalCache/local-packages/Python312/Scripts/"
       - "C:/Exterenal tools/msys2/mingw64/bin/"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/Exterenal tools/msys2/ucrt64/bin/dlltool.com"
     found: "C:/Exterenal tools/msys2/ucrt64/bin/dlltool.exe"
@@ -1007,9 +1133,11 @@ events:
         - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\"
         - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
         - "C:\\Users\\ivanr\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
@@ -1017,6 +1145,7 @@ events:
         - "C:\\Users\\ivanr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\Scripts"
         - "C:\\Exterenal tools\\msys2\\mingw64\\bin"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Ollama"
+        - "c:\\Users\\ivanr\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -1043,15 +1172,18 @@ events:
       - "C:/Windows/System32/wbem/"
       - "C:/Windows/System32/WindowsPowerShell/v1.0/"
       - "C:/Windows/System32/OpenSSH/"
-      - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
       - "C:/Users/ivanr/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/ivanr/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/ivanr/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/LocalCache/local-packages/Python312/Scripts/"
       - "C:/Exterenal tools/msys2/mingw64/bin/"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/Exterenal tools/msys2/ucrt64/bin/addr2line.com"
     found: "C:/Exterenal tools/msys2/ucrt64/bin/addr2line.exe"
@@ -1062,9 +1194,11 @@ events:
         - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\"
         - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
         - "C:\\Users\\ivanr\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
@@ -1072,6 +1206,7 @@ events:
         - "C:\\Users\\ivanr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\Scripts"
         - "C:\\Exterenal tools\\msys2\\mingw64\\bin"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Ollama"
+        - "c:\\Users\\ivanr\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -1098,15 +1233,18 @@ events:
       - "C:/Windows/System32/wbem/"
       - "C:/Windows/System32/WindowsPowerShell/v1.0/"
       - "C:/Windows/System32/OpenSSH/"
-      - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
       - "C:/Users/ivanr/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/ivanr/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/ivanr/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/LocalCache/local-packages/Python312/Scripts/"
       - "C:/Exterenal tools/msys2/mingw64/bin/"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/Exterenal tools/msys2/ucrt64/bin/tapi.com"
       - "C:/Exterenal tools/msys2/ucrt64/bin/tapi.exe"
@@ -1126,15 +1264,21 @@ events:
       - "C:/Windows/System32/OpenSSH/tapi.com"
       - "C:/Windows/System32/OpenSSH/tapi.exe"
       - "C:/Windows/System32/OpenSSH/tapi"
-      - "C:/Program Files/Git/cmd/tapi.com"
-      - "C:/Program Files/Git/cmd/tapi.exe"
-      - "C:/Program Files/Git/cmd/tapi"
       - "C:/Program Files/CMake/bin/tapi.com"
       - "C:/Program Files/CMake/bin/tapi.exe"
       - "C:/Program Files/CMake/bin/tapi"
       - "C:/Program Files/Docker/Docker/resources/bin/tapi.com"
       - "C:/Program Files/Docker/Docker/resources/bin/tapi.exe"
       - "C:/Program Files/Docker/Docker/resources/bin/tapi"
+      - "C:/Program Files/Git/cmd/tapi.com"
+      - "C:/Program Files/Git/cmd/tapi.exe"
+      - "C:/Program Files/Git/cmd/tapi"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/tapi.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/tapi.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/tapi"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/tapi.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/tapi.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/tapi"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/tapi.com"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/tapi.exe"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/tapi"
@@ -1153,6 +1297,9 @@ events:
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/tapi.com"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/tapi.exe"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/tapi"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/tapi.com"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/tapi.exe"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/tapi"
     found: false
     search_context:
       ENV{PATH}:
@@ -1161,9 +1308,11 @@ events:
         - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\"
         - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
         - "C:\\Users\\ivanr\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
@@ -1171,6 +1320,7 @@ events:
         - "C:\\Users\\ivanr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\Scripts"
         - "C:\\Exterenal tools\\msys2\\mingw64\\bin"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Ollama"
+        - "c:\\Users\\ivanr\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -1200,15 +1350,18 @@ events:
       - "C:/Windows/System32/wbem/"
       - "C:/Windows/System32/WindowsPowerShell/v1.0/"
       - "C:/Windows/System32/OpenSSH/"
-      - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
       - "C:/Users/ivanr/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/ivanr/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/ivanr/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/LocalCache/local-packages/Python312/Scripts/"
       - "C:/Exterenal tools/msys2/mingw64/bin/"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ar-15.2.com"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ar-15.2.exe"
@@ -1228,15 +1381,21 @@ events:
       - "C:/Windows/System32/OpenSSH/gcc-ar-15.2.com"
       - "C:/Windows/System32/OpenSSH/gcc-ar-15.2.exe"
       - "C:/Windows/System32/OpenSSH/gcc-ar-15.2"
-      - "C:/Program Files/Git/cmd/gcc-ar-15.2.com"
-      - "C:/Program Files/Git/cmd/gcc-ar-15.2.exe"
-      - "C:/Program Files/Git/cmd/gcc-ar-15.2"
       - "C:/Program Files/CMake/bin/gcc-ar-15.2.com"
       - "C:/Program Files/CMake/bin/gcc-ar-15.2.exe"
       - "C:/Program Files/CMake/bin/gcc-ar-15.2"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ar-15.2.com"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ar-15.2.exe"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ar-15.2"
+      - "C:/Program Files/Git/cmd/gcc-ar-15.2.com"
+      - "C:/Program Files/Git/cmd/gcc-ar-15.2.exe"
+      - "C:/Program Files/Git/cmd/gcc-ar-15.2"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ar-15.2.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ar-15.2.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ar-15.2"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ar-15.2.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ar-15.2.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ar-15.2"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ar-15.2.com"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ar-15.2.exe"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ar-15.2"
@@ -1255,6 +1414,9 @@ events:
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ar-15.2.com"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ar-15.2.exe"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ar-15.2"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar-15.2.com"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar-15.2.exe"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar-15.2"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ar-15.com"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ar-15.exe"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ar-15"
@@ -1273,15 +1435,21 @@ events:
       - "C:/Windows/System32/OpenSSH/gcc-ar-15.com"
       - "C:/Windows/System32/OpenSSH/gcc-ar-15.exe"
       - "C:/Windows/System32/OpenSSH/gcc-ar-15"
-      - "C:/Program Files/Git/cmd/gcc-ar-15.com"
-      - "C:/Program Files/Git/cmd/gcc-ar-15.exe"
-      - "C:/Program Files/Git/cmd/gcc-ar-15"
       - "C:/Program Files/CMake/bin/gcc-ar-15.com"
       - "C:/Program Files/CMake/bin/gcc-ar-15.exe"
       - "C:/Program Files/CMake/bin/gcc-ar-15"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ar-15.com"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ar-15.exe"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ar-15"
+      - "C:/Program Files/Git/cmd/gcc-ar-15.com"
+      - "C:/Program Files/Git/cmd/gcc-ar-15.exe"
+      - "C:/Program Files/Git/cmd/gcc-ar-15"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ar-15.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ar-15.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ar-15"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ar-15.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ar-15.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ar-15"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ar-15.com"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ar-15.exe"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ar-15"
@@ -1300,6 +1468,9 @@ events:
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ar-15.com"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ar-15.exe"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ar-15"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar-15.com"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar-15.exe"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar-15"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ar15.com"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ar15.exe"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ar15"
@@ -1318,15 +1489,21 @@ events:
       - "C:/Windows/System32/OpenSSH/gcc-ar15.com"
       - "C:/Windows/System32/OpenSSH/gcc-ar15.exe"
       - "C:/Windows/System32/OpenSSH/gcc-ar15"
-      - "C:/Program Files/Git/cmd/gcc-ar15.com"
-      - "C:/Program Files/Git/cmd/gcc-ar15.exe"
-      - "C:/Program Files/Git/cmd/gcc-ar15"
       - "C:/Program Files/CMake/bin/gcc-ar15.com"
       - "C:/Program Files/CMake/bin/gcc-ar15.exe"
       - "C:/Program Files/CMake/bin/gcc-ar15"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ar15.com"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ar15.exe"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ar15"
+      - "C:/Program Files/Git/cmd/gcc-ar15.com"
+      - "C:/Program Files/Git/cmd/gcc-ar15.exe"
+      - "C:/Program Files/Git/cmd/gcc-ar15"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ar15.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ar15.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ar15"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ar15.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ar15.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ar15"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ar15.com"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ar15.exe"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ar15"
@@ -1345,6 +1522,9 @@ events:
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ar15.com"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ar15.exe"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ar15"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar15.com"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar15.exe"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar15"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ar.com"
     found: "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ar.exe"
     search_context:
@@ -1354,9 +1534,11 @@ events:
         - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\"
         - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
         - "C:\\Users\\ivanr\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
@@ -1364,6 +1546,7 @@ events:
         - "C:\\Users\\ivanr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\Scripts"
         - "C:\\Exterenal tools\\msys2\\mingw64\\bin"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Ollama"
+        - "c:\\Users\\ivanr\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -1393,15 +1576,18 @@ events:
       - "C:/Windows/System32/wbem/"
       - "C:/Windows/System32/WindowsPowerShell/v1.0/"
       - "C:/Windows/System32/OpenSSH/"
-      - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
       - "C:/Users/ivanr/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/ivanr/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/ivanr/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/LocalCache/local-packages/Python312/Scripts/"
       - "C:/Exterenal tools/msys2/mingw64/bin/"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ranlib-15.2.com"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ranlib-15.2.exe"
@@ -1421,15 +1607,21 @@ events:
       - "C:/Windows/System32/OpenSSH/gcc-ranlib-15.2.com"
       - "C:/Windows/System32/OpenSSH/gcc-ranlib-15.2.exe"
       - "C:/Windows/System32/OpenSSH/gcc-ranlib-15.2"
-      - "C:/Program Files/Git/cmd/gcc-ranlib-15.2.com"
-      - "C:/Program Files/Git/cmd/gcc-ranlib-15.2.exe"
-      - "C:/Program Files/Git/cmd/gcc-ranlib-15.2"
       - "C:/Program Files/CMake/bin/gcc-ranlib-15.2.com"
       - "C:/Program Files/CMake/bin/gcc-ranlib-15.2.exe"
       - "C:/Program Files/CMake/bin/gcc-ranlib-15.2"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ranlib-15.2.com"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ranlib-15.2.exe"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ranlib-15.2"
+      - "C:/Program Files/Git/cmd/gcc-ranlib-15.2.com"
+      - "C:/Program Files/Git/cmd/gcc-ranlib-15.2.exe"
+      - "C:/Program Files/Git/cmd/gcc-ranlib-15.2"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ranlib-15.2.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ranlib-15.2.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ranlib-15.2"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ranlib-15.2.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ranlib-15.2.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ranlib-15.2"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ranlib-15.2.com"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ranlib-15.2.exe"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ranlib-15.2"
@@ -1448,6 +1640,9 @@ events:
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ranlib-15.2.com"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ranlib-15.2.exe"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ranlib-15.2"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib-15.2.com"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib-15.2.exe"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib-15.2"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ranlib-15.com"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ranlib-15.exe"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ranlib-15"
@@ -1466,15 +1661,21 @@ events:
       - "C:/Windows/System32/OpenSSH/gcc-ranlib-15.com"
       - "C:/Windows/System32/OpenSSH/gcc-ranlib-15.exe"
       - "C:/Windows/System32/OpenSSH/gcc-ranlib-15"
-      - "C:/Program Files/Git/cmd/gcc-ranlib-15.com"
-      - "C:/Program Files/Git/cmd/gcc-ranlib-15.exe"
-      - "C:/Program Files/Git/cmd/gcc-ranlib-15"
       - "C:/Program Files/CMake/bin/gcc-ranlib-15.com"
       - "C:/Program Files/CMake/bin/gcc-ranlib-15.exe"
       - "C:/Program Files/CMake/bin/gcc-ranlib-15"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ranlib-15.com"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ranlib-15.exe"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ranlib-15"
+      - "C:/Program Files/Git/cmd/gcc-ranlib-15.com"
+      - "C:/Program Files/Git/cmd/gcc-ranlib-15.exe"
+      - "C:/Program Files/Git/cmd/gcc-ranlib-15"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ranlib-15.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ranlib-15.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ranlib-15"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ranlib-15.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ranlib-15.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ranlib-15"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ranlib-15.com"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ranlib-15.exe"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ranlib-15"
@@ -1493,6 +1694,9 @@ events:
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ranlib-15.com"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ranlib-15.exe"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ranlib-15"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib-15.com"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib-15.exe"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib-15"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ranlib15.com"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ranlib15.exe"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ranlib15"
@@ -1511,15 +1715,21 @@ events:
       - "C:/Windows/System32/OpenSSH/gcc-ranlib15.com"
       - "C:/Windows/System32/OpenSSH/gcc-ranlib15.exe"
       - "C:/Windows/System32/OpenSSH/gcc-ranlib15"
-      - "C:/Program Files/Git/cmd/gcc-ranlib15.com"
-      - "C:/Program Files/Git/cmd/gcc-ranlib15.exe"
-      - "C:/Program Files/Git/cmd/gcc-ranlib15"
       - "C:/Program Files/CMake/bin/gcc-ranlib15.com"
       - "C:/Program Files/CMake/bin/gcc-ranlib15.exe"
       - "C:/Program Files/CMake/bin/gcc-ranlib15"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ranlib15.com"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ranlib15.exe"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ranlib15"
+      - "C:/Program Files/Git/cmd/gcc-ranlib15.com"
+      - "C:/Program Files/Git/cmd/gcc-ranlib15.exe"
+      - "C:/Program Files/Git/cmd/gcc-ranlib15"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ranlib15.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ranlib15.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ranlib15"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ranlib15.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ranlib15.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ranlib15"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ranlib15.com"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ranlib15.exe"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ranlib15"
@@ -1538,6 +1748,9 @@ events:
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ranlib15.com"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ranlib15.exe"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ranlib15"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib15.com"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib15.exe"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib15"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ranlib.com"
     found: "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ranlib.exe"
     search_context:
@@ -1547,9 +1760,11 @@ events:
         - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\"
         - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
         - "C:\\Users\\ivanr\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
@@ -1557,6 +1772,7 @@ events:
         - "C:\\Users\\ivanr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\Scripts"
         - "C:\\Exterenal tools\\msys2\\mingw64\\bin"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Ollama"
+        - "c:\\Users\\ivanr\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -1593,9 +1809,11 @@ events:
         - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\"
         - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
         - "C:\\Users\\ivanr\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
@@ -1603,6 +1821,7 @@ events:
         - "C:\\Users\\ivanr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\Scripts"
         - "C:\\Exterenal tools\\msys2\\mingw64\\bin"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Ollama"
+        - "c:\\Users\\ivanr\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -1635,9 +1854,11 @@ events:
         - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\"
         - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
         - "C:\\Users\\ivanr\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
@@ -1645,6 +1866,7 @@ events:
         - "C:\\Users\\ivanr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\Scripts"
         - "C:\\Exterenal tools\\msys2\\mingw64\\bin"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Ollama"
+        - "c:\\Users\\ivanr\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "message-v1"
     backtrace:
@@ -1696,15 +1918,18 @@ events:
       - "C:/Windows/System32/wbem/"
       - "C:/Windows/System32/WindowsPowerShell/v1.0/"
       - "C:/Windows/System32/OpenSSH/"
-      - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
       - "C:/Users/ivanr/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/ivanr/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/ivanr/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/LocalCache/local-packages/Python312/Scripts/"
       - "C:/Exterenal tools/msys2/mingw64/bin/"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ar-15.2.com"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ar-15.2.exe"
@@ -1724,15 +1949,21 @@ events:
       - "C:/Windows/System32/OpenSSH/gcc-ar-15.2.com"
       - "C:/Windows/System32/OpenSSH/gcc-ar-15.2.exe"
       - "C:/Windows/System32/OpenSSH/gcc-ar-15.2"
-      - "C:/Program Files/Git/cmd/gcc-ar-15.2.com"
-      - "C:/Program Files/Git/cmd/gcc-ar-15.2.exe"
-      - "C:/Program Files/Git/cmd/gcc-ar-15.2"
       - "C:/Program Files/CMake/bin/gcc-ar-15.2.com"
       - "C:/Program Files/CMake/bin/gcc-ar-15.2.exe"
       - "C:/Program Files/CMake/bin/gcc-ar-15.2"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ar-15.2.com"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ar-15.2.exe"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ar-15.2"
+      - "C:/Program Files/Git/cmd/gcc-ar-15.2.com"
+      - "C:/Program Files/Git/cmd/gcc-ar-15.2.exe"
+      - "C:/Program Files/Git/cmd/gcc-ar-15.2"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ar-15.2.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ar-15.2.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ar-15.2"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ar-15.2.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ar-15.2.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ar-15.2"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ar-15.2.com"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ar-15.2.exe"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ar-15.2"
@@ -1751,6 +1982,9 @@ events:
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ar-15.2.com"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ar-15.2.exe"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ar-15.2"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar-15.2.com"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar-15.2.exe"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar-15.2"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ar-15.com"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ar-15.exe"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ar-15"
@@ -1769,15 +2003,21 @@ events:
       - "C:/Windows/System32/OpenSSH/gcc-ar-15.com"
       - "C:/Windows/System32/OpenSSH/gcc-ar-15.exe"
       - "C:/Windows/System32/OpenSSH/gcc-ar-15"
-      - "C:/Program Files/Git/cmd/gcc-ar-15.com"
-      - "C:/Program Files/Git/cmd/gcc-ar-15.exe"
-      - "C:/Program Files/Git/cmd/gcc-ar-15"
       - "C:/Program Files/CMake/bin/gcc-ar-15.com"
       - "C:/Program Files/CMake/bin/gcc-ar-15.exe"
       - "C:/Program Files/CMake/bin/gcc-ar-15"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ar-15.com"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ar-15.exe"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ar-15"
+      - "C:/Program Files/Git/cmd/gcc-ar-15.com"
+      - "C:/Program Files/Git/cmd/gcc-ar-15.exe"
+      - "C:/Program Files/Git/cmd/gcc-ar-15"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ar-15.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ar-15.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ar-15"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ar-15.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ar-15.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ar-15"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ar-15.com"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ar-15.exe"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ar-15"
@@ -1796,6 +2036,9 @@ events:
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ar-15.com"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ar-15.exe"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ar-15"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar-15.com"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar-15.exe"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar-15"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ar15.com"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ar15.exe"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ar15"
@@ -1814,15 +2057,21 @@ events:
       - "C:/Windows/System32/OpenSSH/gcc-ar15.com"
       - "C:/Windows/System32/OpenSSH/gcc-ar15.exe"
       - "C:/Windows/System32/OpenSSH/gcc-ar15"
-      - "C:/Program Files/Git/cmd/gcc-ar15.com"
-      - "C:/Program Files/Git/cmd/gcc-ar15.exe"
-      - "C:/Program Files/Git/cmd/gcc-ar15"
       - "C:/Program Files/CMake/bin/gcc-ar15.com"
       - "C:/Program Files/CMake/bin/gcc-ar15.exe"
       - "C:/Program Files/CMake/bin/gcc-ar15"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ar15.com"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ar15.exe"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ar15"
+      - "C:/Program Files/Git/cmd/gcc-ar15.com"
+      - "C:/Program Files/Git/cmd/gcc-ar15.exe"
+      - "C:/Program Files/Git/cmd/gcc-ar15"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ar15.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ar15.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ar15"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ar15.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ar15.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ar15"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ar15.com"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ar15.exe"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ar15"
@@ -1841,6 +2090,9 @@ events:
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ar15.com"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ar15.exe"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ar15"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar15.com"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar15.exe"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ar15"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ar.com"
     found: "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ar.exe"
     search_context:
@@ -1850,9 +2102,11 @@ events:
         - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\"
         - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
         - "C:\\Users\\ivanr\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
@@ -1860,6 +2114,7 @@ events:
         - "C:\\Users\\ivanr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\Scripts"
         - "C:\\Exterenal tools\\msys2\\mingw64\\bin"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Ollama"
+        - "c:\\Users\\ivanr\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -1889,15 +2144,18 @@ events:
       - "C:/Windows/System32/wbem/"
       - "C:/Windows/System32/WindowsPowerShell/v1.0/"
       - "C:/Windows/System32/OpenSSH/"
-      - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
       - "C:/Users/ivanr/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/ivanr/AppData/Local/Programs/Microsoft VS Code/bin/"
       - "C:/Users/ivanr/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/LocalCache/local-packages/Python312/Scripts/"
       - "C:/Exterenal tools/msys2/mingw64/bin/"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
     searched_directories:
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ranlib-15.2.com"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ranlib-15.2.exe"
@@ -1917,15 +2175,21 @@ events:
       - "C:/Windows/System32/OpenSSH/gcc-ranlib-15.2.com"
       - "C:/Windows/System32/OpenSSH/gcc-ranlib-15.2.exe"
       - "C:/Windows/System32/OpenSSH/gcc-ranlib-15.2"
-      - "C:/Program Files/Git/cmd/gcc-ranlib-15.2.com"
-      - "C:/Program Files/Git/cmd/gcc-ranlib-15.2.exe"
-      - "C:/Program Files/Git/cmd/gcc-ranlib-15.2"
       - "C:/Program Files/CMake/bin/gcc-ranlib-15.2.com"
       - "C:/Program Files/CMake/bin/gcc-ranlib-15.2.exe"
       - "C:/Program Files/CMake/bin/gcc-ranlib-15.2"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ranlib-15.2.com"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ranlib-15.2.exe"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ranlib-15.2"
+      - "C:/Program Files/Git/cmd/gcc-ranlib-15.2.com"
+      - "C:/Program Files/Git/cmd/gcc-ranlib-15.2.exe"
+      - "C:/Program Files/Git/cmd/gcc-ranlib-15.2"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ranlib-15.2.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ranlib-15.2.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ranlib-15.2"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ranlib-15.2.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ranlib-15.2.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ranlib-15.2"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ranlib-15.2.com"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ranlib-15.2.exe"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ranlib-15.2"
@@ -1944,6 +2208,9 @@ events:
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ranlib-15.2.com"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ranlib-15.2.exe"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ranlib-15.2"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib-15.2.com"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib-15.2.exe"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib-15.2"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ranlib-15.com"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ranlib-15.exe"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ranlib-15"
@@ -1962,15 +2229,21 @@ events:
       - "C:/Windows/System32/OpenSSH/gcc-ranlib-15.com"
       - "C:/Windows/System32/OpenSSH/gcc-ranlib-15.exe"
       - "C:/Windows/System32/OpenSSH/gcc-ranlib-15"
-      - "C:/Program Files/Git/cmd/gcc-ranlib-15.com"
-      - "C:/Program Files/Git/cmd/gcc-ranlib-15.exe"
-      - "C:/Program Files/Git/cmd/gcc-ranlib-15"
       - "C:/Program Files/CMake/bin/gcc-ranlib-15.com"
       - "C:/Program Files/CMake/bin/gcc-ranlib-15.exe"
       - "C:/Program Files/CMake/bin/gcc-ranlib-15"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ranlib-15.com"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ranlib-15.exe"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ranlib-15"
+      - "C:/Program Files/Git/cmd/gcc-ranlib-15.com"
+      - "C:/Program Files/Git/cmd/gcc-ranlib-15.exe"
+      - "C:/Program Files/Git/cmd/gcc-ranlib-15"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ranlib-15.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ranlib-15.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ranlib-15"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ranlib-15.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ranlib-15.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ranlib-15"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ranlib-15.com"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ranlib-15.exe"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ranlib-15"
@@ -1989,6 +2262,9 @@ events:
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ranlib-15.com"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ranlib-15.exe"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ranlib-15"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib-15.com"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib-15.exe"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib-15"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ranlib15.com"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ranlib15.exe"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ranlib15"
@@ -2007,15 +2283,21 @@ events:
       - "C:/Windows/System32/OpenSSH/gcc-ranlib15.com"
       - "C:/Windows/System32/OpenSSH/gcc-ranlib15.exe"
       - "C:/Windows/System32/OpenSSH/gcc-ranlib15"
-      - "C:/Program Files/Git/cmd/gcc-ranlib15.com"
-      - "C:/Program Files/Git/cmd/gcc-ranlib15.exe"
-      - "C:/Program Files/Git/cmd/gcc-ranlib15"
       - "C:/Program Files/CMake/bin/gcc-ranlib15.com"
       - "C:/Program Files/CMake/bin/gcc-ranlib15.exe"
       - "C:/Program Files/CMake/bin/gcc-ranlib15"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ranlib15.com"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ranlib15.exe"
       - "C:/Program Files/Docker/Docker/resources/bin/gcc-ranlib15"
+      - "C:/Program Files/Git/cmd/gcc-ranlib15.com"
+      - "C:/Program Files/Git/cmd/gcc-ranlib15.exe"
+      - "C:/Program Files/Git/cmd/gcc-ranlib15"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ranlib15.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ranlib15.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/gcc-ranlib15"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ranlib15.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ranlib15.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/gcc-ranlib15"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ranlib15.com"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ranlib15.exe"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/gcc-ranlib15"
@@ -2034,6 +2316,9 @@ events:
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ranlib15.com"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ranlib15.exe"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/gcc-ranlib15"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib15.com"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib15.exe"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/gcc-ranlib15"
       - "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ranlib.com"
     found: "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ranlib.exe"
     search_context:
@@ -2043,9 +2328,11 @@ events:
         - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\"
         - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
         - "C:\\Users\\ivanr\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
@@ -2053,6 +2340,7 @@ events:
         - "C:\\Users\\ivanr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\Scripts"
         - "C:\\Exterenal tools\\msys2\\mingw64\\bin"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Ollama"
+        - "c:\\Users\\ivanr\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
   -
     kind: "find-v1"
     backtrace:
@@ -2081,9 +2369,11 @@ events:
       - "C:/Windows/System32/wbem/"
       - "C:/Windows/System32/WindowsPowerShell/v1.0/"
       - "C:/Windows/System32/OpenSSH/"
-      - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
       - "C:/Users/ivanr/AppData/Local/Microsoft/WindowsApps/"
       - "C:/Users/ivanr/AppData/Local/Programs/Microsoft VS Code/bin/"
@@ -2091,6 +2381,7 @@ events:
       - "C:/Users/ivanr/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0/LocalCache/local-packages/Python312/Scripts/"
       - "C:/Exterenal tools/msys2/mingw64/bin/"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
       - "C:/Program Files/bin/"
       - "C:/Program Files/sbin/"
       - "C:/Program Files/"
@@ -2119,15 +2410,21 @@ events:
       - "C:/Windows/System32/OpenSSH/windres.com"
       - "C:/Windows/System32/OpenSSH/windres.exe"
       - "C:/Windows/System32/OpenSSH/windres"
-      - "C:/Program Files/Git/cmd/windres.com"
-      - "C:/Program Files/Git/cmd/windres.exe"
-      - "C:/Program Files/Git/cmd/windres"
       - "C:/Program Files/CMake/bin/windres.com"
       - "C:/Program Files/CMake/bin/windres.exe"
       - "C:/Program Files/CMake/bin/windres"
       - "C:/Program Files/Docker/Docker/resources/bin/windres.com"
       - "C:/Program Files/Docker/Docker/resources/bin/windres.exe"
       - "C:/Program Files/Docker/Docker/resources/bin/windres"
+      - "C:/Program Files/Git/cmd/windres.com"
+      - "C:/Program Files/Git/cmd/windres.exe"
+      - "C:/Program Files/Git/cmd/windres"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/windres.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/windres.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/windres"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/windres.com"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/windres.exe"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/windres"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/windres.com"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/windres.exe"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/windres"
@@ -2146,9 +2443,11 @@ events:
         - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\"
         - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
         - "C:\\Users\\ivanr\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
@@ -2156,6 +2455,7 @@ events:
         - "C:\\Users\\ivanr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\Scripts"
         - "C:\\Exterenal tools\\msys2\\mingw64\\bin"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Ollama"
+        - "c:\\Users\\ivanr\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/main"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -2171,8 +2471,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/ivanr/MAI/TRPO/LABA/build/CMakeFiles/CMakeScratch/TryCompile-eytmd0"
-      binary: "C:/Users/ivanr/MAI/TRPO/LABA/build/CMakeFiles/CMakeScratch/TryCompile-eytmd0"
+      source: "C:/Users/ivanr/MAI/TRPO/LABA/build/CMakeFiles/CMakeScratch/TryCompile-s44yzd"
+      binary: "C:/Users/ivanr/MAI/TRPO/LABA/build/CMakeFiles/CMakeScratch/TryCompile-s44yzd"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -2181,10 +2481,10 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/ivanr/MAI/TRPO/LABA/build/CMakeFiles/CMakeScratch/TryCompile-eytmd0'
+        Change Dir: 'C:/Users/ivanr/MAI/TRPO/LABA/build/CMakeFiles/CMakeScratch/TryCompile-s44yzd'
         
-        Run Build Command(s): C:/EXTERE~1/msys2/ucrt64/bin/ninja.exe -v cmTC_f1075
-        [1/2] C:\\EXTERE~1\\msys2\\ucrt64\\bin\\cc.exe   -v -o CMakeFiles/cmTC_f1075.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCCompilerABI.c"
+        Run Build Command(s): C:/EXTERE~1/msys2/ucrt64/bin/ninja.exe -v cmTC_a7d2f
+        [1/2] C:\\EXTERE~1\\msys2\\ucrt64\\bin\\cc.exe   -v -o CMakeFiles/cmTC_a7d2f.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCCompilerABI.c"
         Using built-in specs.
         COLLECT_GCC=C:\\EXTERE~1\\msys2\\ucrt64\\bin\\cc.exe
         Target: x86_64-w64-mingw32
@@ -2192,8 +2492,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 15.2.0 (Rev8, Built by MSYS2 project) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f1075.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_f1075.dir/'
-         C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/cc1.exe -quiet -v -iprefix C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/ -D_REENTRANT C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_f1075.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -o C:\\Users\\ivanr\\AppData\\Local\\Temp\\cc9LnSPQ.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a7d2f.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_a7d2f.dir/'
+         C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/cc1.exe -quiet -v -iprefix C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/ -D_REENTRANT C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_a7d2f.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -o C:\\Users\\ivanr\\AppData\\Local\\Temp\\ccIRJgba.s
         GNU C23 (Rev8, Built by MSYS2 project) version 15.2.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 15.2.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
         
@@ -2212,13 +2512,13 @@ events:
          C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/include-fixed
         End of search list.
         Compiler executable checksum: f68563dd6aebdc6b84233a210e98d3c3
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f1075.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_f1075.dir/'
-         C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_f1075.dir/CMakeCCompilerABI.c.obj C:\\Users\\ivanr\\AppData\\Local\\Temp\\cc9LnSPQ.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a7d2f.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_a7d2f.dir/'
+         C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_a7d2f.dir/CMakeCCompilerABI.c.obj C:\\Users\\ivanr\\AppData\\Local\\Temp\\ccIRJgba.s
         GNU assembler version 2.45.1 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.45.1
         COMPILER_PATH=C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/;C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/;C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/;C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/;C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/;C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/;C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f1075.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_f1075.dir/CMakeCCompilerABI.c.'
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\EXTERE~1\\msys2\\ucrt64\\bin\\cc.exe  -v -Wl,-v CMakeFiles/cmTC_f1075.dir/CMakeCCompilerABI.c.obj -o cmTC_f1075.exe -Wl,--out-implib,libcmTC_f1075.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a7d2f.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_a7d2f.dir/CMakeCCompilerABI.c.'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\EXTERE~1\\msys2\\ucrt64\\bin\\cc.exe  -v -Wl,-v CMakeFiles/cmTC_a7d2f.dir/CMakeCCompilerABI.c.obj -o cmTC_a7d2f.exe -Wl,--out-implib,libcmTC_a7d2f.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
         Using built-in specs.
         COLLECT_GCC=C:\\EXTERE~1\\msys2\\ucrt64\\bin\\cc.exe
         COLLECT_LTO_WRAPPER=C:/Exterenal\\ tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe
@@ -2229,12 +2529,12 @@ events:
         gcc version 15.2.0 (Rev8, Built by MSYS2 project) 
         COMPILER_PATH=C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/;C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/;C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/;C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/;C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/;C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/;C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f1075.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_f1075.'
-         C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/collect2.exe -plugin C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ivanr\\AppData\\Local\\Temp\\ccNO3xV6.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_f1075.exe C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/crt2.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -v CMakeFiles/cmTC_f1075.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_f1075.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/default-manifest.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a7d2f.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_a7d2f.'
+         C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/collect2.exe -plugin C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ivanr\\AppData\\Local\\Temp\\ccCuD4ek.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_a7d2f.exe C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/crt2.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -v CMakeFiles/cmTC_a7d2f.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_a7d2f.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/default-manifest.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
         collect2 version 15.2.0
-        C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ivanr\\AppData\\Local\\Temp\\ccNO3xV6.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_f1075.exe C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/crt2.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -v CMakeFiles/cmTC_f1075.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_f1075.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/default-manifest.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
+        C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ivanr\\AppData\\Local\\Temp\\ccCuD4ek.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_a7d2f.exe C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/crt2.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -v CMakeFiles/cmTC_a7d2f.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_a7d2f.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/default-manifest.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
         GNU ld (GNU Binutils) 2.45.1
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f1075.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_f1075.'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a7d2f.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_a7d2f.'
         
       exitCode: 0
   -
@@ -2267,10 +2567,10 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/ivanr/MAI/TRPO/LABA/build/CMakeFiles/CMakeScratch/TryCompile-eytmd0']
+        ignore line: [Change Dir: 'C:/Users/ivanr/MAI/TRPO/LABA/build/CMakeFiles/CMakeScratch/TryCompile-s44yzd']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/EXTERE~1/msys2/ucrt64/bin/ninja.exe -v cmTC_f1075]
-        ignore line: [[1/2] C:\\EXTERE~1\\msys2\\ucrt64\\bin\\cc.exe   -v -o CMakeFiles/cmTC_f1075.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCCompilerABI.c"]
+        ignore line: [Run Build Command(s): C:/EXTERE~1/msys2/ucrt64/bin/ninja.exe -v cmTC_a7d2f]
+        ignore line: [[1/2] C:\\EXTERE~1\\msys2\\ucrt64\\bin\\cc.exe   -v -o CMakeFiles/cmTC_a7d2f.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCCompilerABI.c"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\EXTERE~1\\msys2\\ucrt64\\bin\\cc.exe]
         ignore line: [Target: x86_64-w64-mingw32]
@@ -2278,8 +2578,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 15.2.0 (Rev8  Built by MSYS2 project) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f1075.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_f1075.dir/']
-        ignore line: [ C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/cc1.exe -quiet -v -iprefix C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/ -D_REENTRANT C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_f1075.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -o C:\\Users\\ivanr\\AppData\\Local\\Temp\\cc9LnSPQ.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a7d2f.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_a7d2f.dir/']
+        ignore line: [ C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/cc1.exe -quiet -v -iprefix C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/ -D_REENTRANT C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_a7d2f.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -o C:\\Users\\ivanr\\AppData\\Local\\Temp\\ccIRJgba.s]
         ignore line: [GNU C23 (Rev8  Built by MSYS2 project) version 15.2.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 15.2.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
         ignore line: []
@@ -2298,8 +2598,8 @@ events:
         ignore line: [ C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/include-fixed]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: f68563dd6aebdc6b84233a210e98d3c3]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f1075.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_f1075.dir/']
-        ignore line: [ C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_f1075.dir/CMakeCCompilerABI.c.obj C:\\Users\\ivanr\\AppData\\Local\\Temp\\cc9LnSPQ.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a7d2f.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_a7d2f.dir/']
+        ignore line: [ C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_a7d2f.dir/CMakeCCompilerABI.c.obj C:\\Users\\ivanr\\AppData\\Local\\Temp\\ccIRJgba.s]
         ignore line: [GNU assembler version 2.45.1 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.45.1]
         ignore line: [COMPILER_PATH=C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/]
         ignore line: [C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/]
@@ -2310,8 +2610,8 @@ events:
         ignore line: [C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/]
         ignore line: [C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f1075.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_f1075.dir/CMakeCCompilerABI.c.']
-        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\EXTERE~1\\msys2\\ucrt64\\bin\\cc.exe  -v -Wl -v CMakeFiles/cmTC_f1075.dir/CMakeCCompilerABI.c.obj -o cmTC_f1075.exe -Wl --out-implib libcmTC_f1075.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a7d2f.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_a7d2f.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\EXTERE~1\\msys2\\ucrt64\\bin\\cc.exe  -v -Wl -v CMakeFiles/cmTC_a7d2f.dir/CMakeCCompilerABI.c.obj -o cmTC_a7d2f.exe -Wl --out-implib libcmTC_a7d2f.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\EXTERE~1\\msys2\\ucrt64\\bin\\cc.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/Exterenal\\ tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe]
@@ -2329,12 +2629,12 @@ events:
         ignore line: [C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/]
         ignore line: [C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f1075.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_f1075.']
-        ignore line: [ C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/collect2.exe -plugin C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ivanr\\AppData\\Local\\Temp\\ccNO3xV6.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_f1075.exe C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/crt2.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -v CMakeFiles/cmTC_f1075.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_f1075.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/default-manifest.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a7d2f.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_a7d2f.']
+        ignore line: [ C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/collect2.exe -plugin C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ivanr\\AppData\\Local\\Temp\\ccCuD4ek.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_a7d2f.exe C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/crt2.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -v CMakeFiles/cmTC_a7d2f.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_a7d2f.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/default-manifest.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o]
         ignore line: [collect2 version 15.2.0]
-        ignore line: [C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ivanr\\AppData\\Local\\Temp\\ccNO3xV6.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_f1075.exe C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/crt2.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -v CMakeFiles/cmTC_f1075.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_f1075.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/default-manifest.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o]
+        ignore line: [C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ivanr\\AppData\\Local\\Temp\\ccCuD4ek.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_a7d2f.exe C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/crt2.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -v CMakeFiles/cmTC_a7d2f.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_a7d2f.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc -lgcc_eh -lmingwex -lmsvcrt -lkernel32 C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/default-manifest.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o]
         ignore line: [GNU ld (GNU Binutils) 2.45.1]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f1075.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_f1075.']
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a7d2f.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_a7d2f.']
         ignore line: []
         ignore line: []
         linker tool for 'C': C:/Exterenal tools/msys2/ucrt64/x86_64-w64-mingw32/bin/ld.exe
@@ -2363,8 +2663,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/ivanr/MAI/TRPO/LABA/build/CMakeFiles/CMakeScratch/TryCompile-l3s48b"
-      binary: "C:/Users/ivanr/MAI/TRPO/LABA/build/CMakeFiles/CMakeScratch/TryCompile-l3s48b"
+      source: "C:/Users/ivanr/MAI/TRPO/LABA/build/CMakeFiles/CMakeScratch/TryCompile-zeegf6"
+      binary: "C:/Users/ivanr/MAI/TRPO/LABA/build/CMakeFiles/CMakeScratch/TryCompile-zeegf6"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -2374,10 +2674,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/ivanr/MAI/TRPO/LABA/build/CMakeFiles/CMakeScratch/TryCompile-l3s48b'
+        Change Dir: 'C:/Users/ivanr/MAI/TRPO/LABA/build/CMakeFiles/CMakeScratch/TryCompile-zeegf6'
         
-        Run Build Command(s): C:/EXTERE~1/msys2/ucrt64/bin/ninja.exe -v cmTC_a393a
-        [1/2] C:\\EXTERE~1\\msys2\\ucrt64\\bin\\C__~1.EXE   -v -o CMakeFiles/cmTC_a393a.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp"
+        Run Build Command(s): C:/EXTERE~1/msys2/ucrt64/bin/ninja.exe -v cmTC_8b55e
+        [1/2] C:\\EXTERE~1\\msys2\\ucrt64\\bin\\C__~1.EXE   -v -o CMakeFiles/cmTC_8b55e.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp"
         Using built-in specs.
         COLLECT_GCC=C:\\EXTERE~1\\msys2\\ucrt64\\bin\\C__~1.EXE
         Target: x86_64-w64-mingw32
@@ -2385,8 +2685,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 15.2.0 (Rev8, Built by MSYS2 project) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a393a.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_a393a.dir/'
-         C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/cc1plus.exe -quiet -v -iprefix C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/ -D_REENTRANT C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_a393a.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -o C:\\Users\\ivanr\\AppData\\Local\\Temp\\ccS43UXT.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8b55e.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_8b55e.dir/'
+         C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/cc1plus.exe -quiet -v -iprefix C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/ -D_REENTRANT C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_8b55e.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -o C:\\Users\\ivanr\\AppData\\Local\\Temp\\cc0o7ThZ.s
         GNU C++17 (Rev8, Built by MSYS2 project) version 15.2.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 15.2.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
         
@@ -2411,13 +2711,13 @@ events:
          C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/include-fixed
         End of search list.
         Compiler executable checksum: 3a1a95c83f0136a64748ec8c5a2a87f3
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a393a.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_a393a.dir/'
-         C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_a393a.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\ivanr\\AppData\\Local\\Temp\\ccS43UXT.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8b55e.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_8b55e.dir/'
+         C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_8b55e.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\ivanr\\AppData\\Local\\Temp\\cc0o7ThZ.s
         GNU assembler version 2.45.1 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.45.1
         COMPILER_PATH=C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/;C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/;C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/;C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/;C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/;C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/;C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a393a.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_a393a.dir/CMakeCXXCompilerABI.cpp.'
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\EXTERE~1\\msys2\\ucrt64\\bin\\C__~1.EXE  -v -Wl,-v CMakeFiles/cmTC_a393a.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_a393a.exe -Wl,--out-implib,libcmTC_a393a.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8b55e.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_8b55e.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\EXTERE~1\\msys2\\ucrt64\\bin\\C__~1.EXE  -v -Wl,-v CMakeFiles/cmTC_8b55e.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_8b55e.exe -Wl,--out-implib,libcmTC_8b55e.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
         Using built-in specs.
         COLLECT_GCC=C:\\EXTERE~1\\msys2\\ucrt64\\bin\\C__~1.EXE
         COLLECT_LTO_WRAPPER=C:/Exterenal\\ tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe
@@ -2428,12 +2728,12 @@ events:
         gcc version 15.2.0 (Rev8, Built by MSYS2 project) 
         COMPILER_PATH=C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/;C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/;C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/;C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/;C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/;C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/;C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a393a.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_a393a.'
-         C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/collect2.exe -plugin C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ivanr\\AppData\\Local\\Temp\\ccSKJen5.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_a393a.exe C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/crt2.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -v CMakeFiles/cmTC_a393a.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_a393a.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/default-manifest.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8b55e.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_8b55e.'
+         C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/collect2.exe -plugin C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ivanr\\AppData\\Local\\Temp\\cc0ypq07.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_8b55e.exe C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/crt2.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -v CMakeFiles/cmTC_8b55e.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_8b55e.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/default-manifest.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
         collect2 version 15.2.0
-        C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ivanr\\AppData\\Local\\Temp\\ccSKJen5.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_a393a.exe C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/crt2.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -v CMakeFiles/cmTC_a393a.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_a393a.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/default-manifest.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
+        C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ivanr\\AppData\\Local\\Temp\\cc0ypq07.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_8b55e.exe C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/crt2.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -v CMakeFiles/cmTC_8b55e.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_8b55e.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/default-manifest.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o
         GNU ld (GNU Binutils) 2.45.1
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a393a.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_a393a.'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8b55e.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_8b55e.'
         
       exitCode: 0
   -
@@ -2472,10 +2772,10 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: 'C:/Users/ivanr/MAI/TRPO/LABA/build/CMakeFiles/CMakeScratch/TryCompile-l3s48b']
+        ignore line: [Change Dir: 'C:/Users/ivanr/MAI/TRPO/LABA/build/CMakeFiles/CMakeScratch/TryCompile-zeegf6']
         ignore line: []
-        ignore line: [Run Build Command(s): C:/EXTERE~1/msys2/ucrt64/bin/ninja.exe -v cmTC_a393a]
-        ignore line: [[1/2] C:\\EXTERE~1\\msys2\\ucrt64\\bin\\C__~1.EXE   -v -o CMakeFiles/cmTC_a393a.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp"]
+        ignore line: [Run Build Command(s): C:/EXTERE~1/msys2/ucrt64/bin/ninja.exe -v cmTC_8b55e]
+        ignore line: [[1/2] C:\\EXTERE~1\\msys2\\ucrt64\\bin\\C__~1.EXE   -v -o CMakeFiles/cmTC_8b55e.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\EXTERE~1\\msys2\\ucrt64\\bin\\C__~1.EXE]
         ignore line: [Target: x86_64-w64-mingw32]
@@ -2483,8 +2783,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 15.2.0 (Rev8  Built by MSYS2 project) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a393a.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_a393a.dir/']
-        ignore line: [ C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/cc1plus.exe -quiet -v -iprefix C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/ -D_REENTRANT C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_a393a.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -o C:\\Users\\ivanr\\AppData\\Local\\Temp\\ccS43UXT.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8b55e.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_8b55e.dir/']
+        ignore line: [ C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/cc1plus.exe -quiet -v -iprefix C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/ -D_REENTRANT C:/Program Files/CMake/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_8b55e.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -o C:\\Users\\ivanr\\AppData\\Local\\Temp\\cc0o7ThZ.s]
         ignore line: [GNU C++17 (Rev8  Built by MSYS2 project) version 15.2.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 15.2.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
         ignore line: []
@@ -2509,8 +2809,8 @@ events:
         ignore line: [ C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/include-fixed]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 3a1a95c83f0136a64748ec8c5a2a87f3]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a393a.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_a393a.dir/']
-        ignore line: [ C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_a393a.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\ivanr\\AppData\\Local\\Temp\\ccS43UXT.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8b55e.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_8b55e.dir/']
+        ignore line: [ C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_8b55e.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\ivanr\\AppData\\Local\\Temp\\cc0o7ThZ.s]
         ignore line: [GNU assembler version 2.45.1 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.45.1]
         ignore line: [COMPILER_PATH=C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/]
         ignore line: [C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/]
@@ -2521,8 +2821,8 @@ events:
         ignore line: [C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/]
         ignore line: [C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a393a.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_a393a.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\EXTERE~1\\msys2\\ucrt64\\bin\\C__~1.EXE  -v -Wl -v CMakeFiles/cmTC_a393a.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_a393a.exe -Wl --out-implib libcmTC_a393a.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8b55e.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_8b55e.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\EXTERE~1\\msys2\\ucrt64\\bin\\C__~1.EXE  -v -Wl -v CMakeFiles/cmTC_8b55e.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_8b55e.exe -Wl --out-implib libcmTC_8b55e.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\EXTERE~1\\msys2\\ucrt64\\bin\\C__~1.EXE]
         ignore line: [COLLECT_LTO_WRAPPER=C:/Exterenal\\ tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe]
@@ -2540,12 +2840,12 @@ events:
         ignore line: [C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/]
         ignore line: [C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a393a.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_a393a.']
-        ignore line: [ C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/collect2.exe -plugin C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ivanr\\AppData\\Local\\Temp\\ccSKJen5.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_a393a.exe C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/crt2.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -v CMakeFiles/cmTC_a393a.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_a393a.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/default-manifest.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8b55e.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_8b55e.']
+        ignore line: [ C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/collect2.exe -plugin C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ivanr\\AppData\\Local\\Temp\\cc0ypq07.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_8b55e.exe C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/crt2.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -v CMakeFiles/cmTC_8b55e.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_8b55e.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/default-manifest.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o]
         ignore line: [collect2 version 15.2.0]
-        ignore line: [C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ivanr\\AppData\\Local\\Temp\\ccSKJen5.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_a393a.exe C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/crt2.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -v CMakeFiles/cmTC_a393a.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_a393a.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/default-manifest.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o]
+        ignore line: [C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe -plugin C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/liblto_plugin.dll -plugin-opt=C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\ivanr\\AppData\\Local\\Temp\\cc0ypq07.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -m i386pep -Bdynamic -o cmTC_8b55e.exe C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/crt2.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtbegin.o -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0 -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../.. -v CMakeFiles/cmTC_8b55e.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_8b55e.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -lmingw32 -lgcc_s -lgcc -lmingwex -lmsvcrt -lkernel32 C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/default-manifest.o C:/Exterenal tools/msys2/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/crtend.o]
         ignore line: [GNU ld (GNU Binutils) 2.45.1]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a393a.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_a393a.']
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8b55e.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_8b55e.']
         ignore line: []
         ignore line: []
         linker tool for 'CXX': C:/Exterenal tools/msys2/ucrt64/x86_64-w64-mingw32/bin/ld.exe
@@ -9960,9 +10260,11 @@ events:
         - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\"
         - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
         - "C:\\Users\\ivanr\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
@@ -9970,6 +10272,7 @@ events:
         - "C:\\Users\\ivanr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\Scripts"
         - "C:\\Exterenal tools\\msys2\\mingw64\\bin"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Ollama"
+        - "c:\\Users\\ivanr\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/main"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -10017,9 +10320,11 @@ events:
         - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\"
         - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
         - "C:\\Users\\ivanr\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
@@ -10027,6 +10332,7 @@ events:
         - "C:\\Users\\ivanr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\Scripts"
         - "C:\\Exterenal tools\\msys2\\mingw64\\bin"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Ollama"
+        - "c:\\Users\\ivanr\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/main"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -10073,9 +10379,11 @@ events:
         - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\"
         - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
         - "C:\\Users\\ivanr\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
@@ -10083,6 +10391,7 @@ events:
         - "C:\\Users\\ivanr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\Scripts"
         - "C:\\Exterenal tools\\msys2\\mingw64\\bin"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Ollama"
+        - "c:\\Users\\ivanr\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/main"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -10126,9 +10435,11 @@ events:
         - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\"
         - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
         - "C:\\Users\\ivanr\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
@@ -10136,6 +10447,7 @@ events:
         - "C:\\Users\\ivanr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\Scripts"
         - "C:\\Exterenal tools\\msys2\\mingw64\\bin"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Ollama"
+        - "c:\\Users\\ivanr\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/main"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -10184,12 +10496,14 @@ events:
       - "C:/Windows/System32/WindowsPowerShell/v1.0/"
       - "C:/Windows/System32/OpenSSH/bin/"
       - "C:/Windows/System32/OpenSSH/"
-      - "C:/Program Files/Git/cmd/bin/"
-      - "C:/Program Files/Git/cmd/"
       - "C:/Program Files/CMake/bin/bin/"
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/Docker/Docker/resources/bin/bin/"
       - "C:/Program Files/Docker/Docker/resources/bin/"
+      - "C:/Program Files/Git/cmd/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/bin/"
+      - "C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Scripts/"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/bin/"
       - "C:/Program Files/MySQL/MySQL Shell 8.0/bin/"
       - "C:/Users/ivanr/AppData/Local/Microsoft/WindowsApps/bin/"
@@ -10204,6 +10518,8 @@ events:
       - "C:/Exterenal tools/msys2/mingw64/bin/"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/bin/"
       - "C:/Users/ivanr/AppData/Local/Programs/Ollama/"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/bin/"
+      - "C:/Users/ivanr/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts/"
       - "C:/Program Files/lib/bin/"
       - "C:/Program Files/lib/"
       - "C:/Program Files/bin/"
@@ -10239,9 +10555,11 @@ events:
         - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\"
         - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
         - "C:\\Users\\ivanr\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
@@ -10249,6 +10567,7 @@ events:
         - "C:\\Users\\ivanr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\Scripts"
         - "C:\\Exterenal tools\\msys2\\mingw64\\bin"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Ollama"
+        - "c:\\Users\\ivanr\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/main"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
@@ -10288,9 +10607,11 @@ events:
         - "C:\\WINDOWS\\System32\\Wbem"
         - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
         - "C:\\WINDOWS\\System32\\OpenSSH\\"
-        - "C:\\Program Files\\Git\\cmd"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\Docker\\Docker\\resources\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Python\\Python314\\"
         - "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\"
         - "C:\\Users\\ivanr\\AppData\\Local\\Microsoft\\WindowsApps"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
@@ -10298,6 +10619,7 @@ events:
         - "C:\\Users\\ivanr\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\Scripts"
         - "C:\\Exterenal tools\\msys2\\mingw64\\bin"
         - "C:\\Users\\ivanr\\AppData\\Local\\Programs\\Ollama"
+        - "c:\\Users\\ivanr\\.vscode\\extensions\\ms-python.debugpy-2026.6.0-win32-x64\\bundled\\scripts\\noConfigScripts"
       CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/main"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
