@@ -554,10 +554,10 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Python
-FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[C:/Users/ivanr/AppData/Local/Programs/Python/Python314/python.exe][C:/Users/ivanr/AppData/Local/Programs/Python/Python314/libs/python314.lib][C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Include][found components: Interpreter Development.Embed ][v3.14.7()]
+FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[C:/Users/ivanr/MAI/TRPO/LABA/bin/python_runtime/python-3.14.7-embed-amd64/python.exe][C:/Users/ivanr/AppData/Local/Programs/Python/Python314/libs/python314.lib][C:/Users/ivanr/AppData/Local/Programs/Python/Python314/include][found components: Interpreter Development.Embed ][v3.14.7()]
 PYBIND11_INCLUDE_DIR:INTERNAL=C:/Users/ivanr/MAI/TRPO/LABA/third_party/pybind11/include
 //Python executable during the last CMake run
-PYBIND11_PYTHON_EXECUTABLE_LAST:INTERNAL=C:/Users/ivanr/AppData/Local/Programs/Python/Python314/python.exe
+PYBIND11_PYTHON_EXECUTABLE_LAST:INTERNAL=C:/Users/ivanr/MAI/TRPO/LABA/bin/python_runtime/python-3.14.7-embed-amd64/python.exe
 //Python debug status
 PYTHON_IS_DEBUG:INTERNAL=0
 PYTHON_MODULE_DEBUG_POSTFIX:INTERNAL=
@@ -568,18 +568,18 @@ _PYBIND11_CROSSCOMPILING:INTERNAL=OFF
 _Python:INTERNAL=Python
 //Compiler reason failure
 _Python_Compiler_REASON_FAILURE:INTERNAL=
-_Python_DEVELOPMENT_EMBED_SIGNATURE:INTERNAL=61696fd5a64dc3d5e5fe62b1b4aa4715
+_Python_DEVELOPMENT_EMBED_SIGNATURE:INTERNAL=fd84894e48ad6b6e08e36a26a8f3ab29
 //Development reason failure
 _Python_Development_REASON_FAILURE:INTERNAL=
 //Path to a program.
-_Python_EXECUTABLE:INTERNAL=C:/Users/ivanr/AppData/Local/Programs/Python/Python314/python.exe
+_Python_EXECUTABLE:INTERNAL=C:/Users/ivanr/MAI/TRPO/LABA/bin/python_runtime/python-3.14.7-embed-amd64/python.exe
 //Path to a program.
 _Python_EXECUTABLE_DEBUG:INTERNAL=_Python_EXECUTABLE_DEBUG-NOTFOUND
 //Path to a file.
-_Python_INCLUDE_DIR:INTERNAL=C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Include
+_Python_INCLUDE_DIR:INTERNAL=C:/Users/ivanr/AppData/Local/Programs/Python/Python314/include
 //Python Properties
-_Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;14;7;64;<none>;cp314-win_amd64;;C:\Users\ivanr\AppData\Local\Programs\Python\Python314\Lib;C:\Users\ivanr\AppData\Local\Programs\Python\Python314\Lib;C:\Users\ivanr\AppData\Local\Programs\Python\Python314\Lib\site-packages;C:\Users\ivanr\AppData\Local\Programs\Python\Python314\Lib\site-packages
-_Python_INTERPRETER_SIGNATURE:INTERNAL=9a8497fe3876876fb81180c055aed510
+_Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;14;7;64;<none>;cp314-win_amd64;;C:\Users\ivanr\MAI\TRPO\LABA\bin\python_runtime\python-3.14.7-embed-amd64\Lib;C:\Users\ivanr\MAI\TRPO\LABA\bin\python_runtime\python-3.14.7-embed-amd64\Lib;C:\Users\ivanr\MAI\TRPO\LABA\bin\python_runtime\python-3.14.7-embed-amd64\Lib\site-packages;C:\Users\ivanr\MAI\TRPO\LABA\bin\python_runtime\python-3.14.7-embed-amd64\Lib\site-packages
+_Python_INTERPRETER_SIGNATURE:INTERNAL=e56e6b2e4bc3c23e8a341a439e1e7345
 //Path to a library.
 _Python_LIBRARY_DEBUG:INTERNAL=_Python_LIBRARY_DEBUG-NOTFOUND
 //Path to a library.
@@ -593,5 +593,5 @@ pybind11_FOUND:INTERNAL=TRUE
 //Directory where pybind11 headers are located
 pybind11_INCLUDE_DIR:INTERNAL=C:/Users/ivanr/MAI/TRPO/LABA/third_party/pybind11/include
 //Directories where pybind11 and possibly Python headers are located
-pybind11_INCLUDE_DIRS:INTERNAL=C:/Users/ivanr/MAI/TRPO/LABA/third_party/pybind11/include;C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Include
+pybind11_INCLUDE_DIRS:INTERNAL=C:/Users/ivanr/MAI/TRPO/LABA/third_party/pybind11/include;C:/Users/ivanr/AppData/Local/Programs/Python/Python314/include
 

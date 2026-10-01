@@ -31,6 +31,8 @@ def analyze(input_file: str ):
 
     # Определяем части речи
     doc.tag_morph(morph_tagger)
+
+    verbs = set()
     verbs = [token.text for token in doc.tokens if token.pos == 'VERB']
     print(verbs)
     return verbs
