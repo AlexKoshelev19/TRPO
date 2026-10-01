@@ -1,0 +1,7 @@
+python314.zip
+.
+python_runtime/lib
+import site
+
+# Uncomment to run site.main() automatically
+#import site
