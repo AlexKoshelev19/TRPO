@@ -7,65 +7,63 @@ lib_path = os.path.join(current_dir, "python_runtime", "lib")
 if lib_path not in sys.path:
     sys.path.insert(0, lib_path)
 
-# Обход блокировки Hugging Face (перенаправление на рабочее зеркало)
+# Обход блокировок для беспрепятственного скачивания ONNX-моделей
 os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
 
 from natasha import Segmenter, NewsEmbedding, NewsMorphTagger, Doc
+# Импортируем функцию ударения из выбранной библиотеки
+from stressonnx import stress
 
+ACCENT_CHAR = '\u0301'  # Юникод-символ ударения, который ставит stressonnx
 
 
 def analyze(input_file: str):
-    # Инициализация ruaccent (без CUDA, если нет видеокарты Nvidia)
-    accentizer = RUAccent()
-    accentizer.load()
-
-    # Считываем файл
     with open(input_file + '.txt', 'r', encoding='utf-8') as f:
         content = f.read()
 
-    # Создание объектов классов Natasha
+    # Инициализация модулей Natasha
     segmenter = Segmenter()
     emb = NewsEmbedding()
     morph_tagger = NewsMorphTagger(emb)
-
     doc = Doc(content)
 
-    # Анализ текста с помощью Natasha
+    # Разбор текста на токены и части речи
     doc.segment(segmenter)
     doc.tag_morph(morph_tagger)
 
-    # Собираем глаголы
+    # Выбираем глаголы
     verbs = [token.text for token in doc.tokens if token.pos == 'VERB']
 
-    for verb in verbs:
-        # ruaccent возвращает строку со знаком '+' ПЕРЕД ударной гласной
-        processed = accentizer.process_all(verb)
 
-        # Если вернулся список (в некоторых версиях), берем первый элемент
-        if isinstance(processed, list):
-            processed = processed[0] if processed else verb
+    # Используем enumerate, чтобы получить и сам глагол (verb), и его индекс (i) в массиве
+    for i, verb in enumerate(verbs):
+        # Передаем слово и маркер языка "ru"
+        word = stress(verb, "ru")
 
-        # Ищем плюс, который ставит ruaccent
-        accent_index = processed.find('+')
+        # Ищем символ ударения (он стоит сразу ПОСЛЕ ударной гласной)
+        accent_index = word.find(ACCENT_CHAR)
 
         if accent_index != -1:
-            # Буква после плюса должна стать заглавной
-            # Удаляем сам плюс из строки, а букву, которая шла за ним, делаем большой
-            clean_word = processed.replace('+', '')
+            # Убираем знак ударения, чтобы работать с чистыми буквами
+            clean_word = word.replace(ACCENT_CHAR, '')
 
-            # Индекс ударной буквы в строке без плюса совпадает со старым индексом самого плюса
-            idx = accent_index
-            if idx < len(clean_word):
+            # Ударная буква находится на позицию раньше, чем стоял символ ударения
+            idx = accent_index - 1
+
+            if 0 <= idx < len(clean_word):
                 new_word = clean_word[:idx] + clean_word[idx].upper() + clean_word[idx + 1:]
-                print(f"Глагол: {verb} -> {new_word}")
-            else:
-                print(f"Глагол: {verb} -> {clean_word}")
-        else:
-            print(f"Ударение в слове '{verb}' не найдено")
+                # ПЕРЕЗАПИСЫВАЕМ элемент в массиве verbs под текущим индексом
+                verbs[i] = new_word
 
+            else:
+                verbs[i] = clean_word
+        else:
+
+            # Если ударение не нашли, оставляем слово без изменений (или обрабатываем иначе)
+            verbs[i] = verb
+
+    # Теперь здесь вернется массив уже с измененными строками!
     return verbs
 
 
-if __name__ == "__main__":
-    # Убедитесь, что рядом лежит файл test.txt
-    analyze("test")
+
