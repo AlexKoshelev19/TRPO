@@ -1,0 +1,15 @@
+{
+  "variant": "ruaccent_turbo2",
+  "backend": "ruaccent",
+  "omograph_model": "turbo2",
+  "upstream": "Den4ikAI/ruaccent",
+  "upstream_hf": "ruaccent/accentuator",
+  "license": "Apache-2.0",
+  "attribution": "RUAccent by Den4ikAI (https://github.com/Den4ikAI/ruaccent), licensed Apache-2.0 per upstream classifiers and setup.py. Models from HuggingFace hub: ruaccent/accentuator.",
+  "deps": [
+    "onnxruntime",
+    "numpy",
+    "tokenizers"
+  ],
+  "no_torch": true
+}
