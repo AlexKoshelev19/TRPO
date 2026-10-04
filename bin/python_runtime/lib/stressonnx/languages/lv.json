@@ -1,0 +1,14 @@
+{
+  "name": "Latvian",
+  "script": "latin",
+  "rule": "first",
+  "hf": {
+    "simple": "lav"
+  },
+  "sources": [
+    "Nau 1998, Latvian: fixed initial stress"
+  ],
+  "tag": "lv",
+  "alpha": "aābcčdeēfgģhiījkķlļmnņoōprsštuūvzž",
+  "vowels": "aāeēiīoōuū"
+}

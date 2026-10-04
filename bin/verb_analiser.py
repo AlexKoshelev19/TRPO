@@ -1,14 +1,34 @@
 import sys
 import os
 
-# Добавляем путь к python_runtime/lib
 current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# 1. Настройка путей для библиотек Python
 lib_path = os.path.join(current_dir, "python_runtime", "lib")
 if lib_path not in sys.path:
     sys.path.insert(0, lib_path)
 
-# Обход блокировок для беспрепятственного скачивания ONNX-моделей
+# 2. Создаем локальную папку для моделей (если её нет)
+models_cache_dir = os.path.join(current_dir, "models_cache")
+os.makedirs(models_cache_dir, exist_ok=True)
+
+# 3. Перенаправляем кэш загрузок в локальную папку
+os.environ["HF_HOME"] = models_cache_dir
+os.environ["XDG_CACHE_HOME"] = models_cache_dir
 os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
+
+# 4. ПРОВЕРКА НА БЛОКИРОВКУ СКАЧИВАНИЯ
+# Проверяем, есть ли внутри папки models_cache какие-либо файлы/папки.
+# Функция scandir работает очень быстро и не загружает весь список в память.
+has_cached_models = any(os.scandir(models_cache_dir))
+
+if has_cached_models:
+    # Если файлы есть, жестко блокируем любые сетевые запросы Hugging Face
+    os.environ["HF_HUB_OFFLINE"] = "1"
+    os.environ["TRANSFORMERS_OFFLINE"] = "1"
+else:
+    # Оставляем доступ в сеть для первоначального скачивания (на этапе разработки)
+    pass
 
 from natasha import Segmenter, NewsEmbedding, NewsMorphTagger, Doc
 # Импортируем функцию ударения из выбранной библиотеки

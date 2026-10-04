@@ -1,0 +1,15 @@
+{
+  "name": "Azerbaijani (Cyrillic)",
+  "script": "cyrillic",
+  "rule": "last",
+  "hf": {
+    "simple": "aze_cyr"
+  },
+  "sources": [
+    "Ghaffarvand Mokari & Werner 2017, JIPA: final stress"
+  ],
+  "tag": "az-Cyrl",
+  "alpha": "абвгғдеәжзиыјкҝлмноөпрстуүфхһчҹш'",
+  "vowels": "аеәиыоөуү",
+  "rule_accuracy": 0.816
+}

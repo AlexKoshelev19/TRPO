@@ -1,0 +1,14 @@
+{
+  "name": "Slovene",
+  "script": "latin",
+  "rule": "none",
+  "hf": {
+    "simple": "slv"
+  },
+  "sources": [
+    "Herrity 2000, Slovene: A Comprehensive Grammar: free stress"
+  ],
+  "tag": "sl",
+  "alpha": "abcčdefghijklmnoprsštuvzž",
+  "vowels": "aeiou"
+}

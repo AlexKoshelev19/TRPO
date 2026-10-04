@@ -1,0 +1,15 @@
+{
+  "name": "Uzbek (Cyrillic)",
+  "script": "cyrillic",
+  "rule": "last",
+  "hf": {
+    "simple": "uzb_cyr"
+  },
+  "sources": [
+    "Boeschoten 1998: final stress"
+  ],
+  "tag": "uz-Cyrl",
+  "alpha": "абдеэфгҳижклмнопқрстувхйзўғшчнгъ",
+  "vowels": "аеиоуў",
+  "rule_accuracy": 1.0
+}

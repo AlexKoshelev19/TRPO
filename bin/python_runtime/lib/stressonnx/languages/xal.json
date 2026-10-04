@@ -1,0 +1,15 @@
+{
+  "name": "Kalmyk",
+  "script": "cyrillic",
+  "rule": "last",
+  "hf": {
+    "simple": "xal"
+  },
+  "sources": [
+    "Bläsing, Kalmuck: final stress (understudied)"
+  ],
+  "tag": "xal",
+  "alpha": "абвгдежзийклмнопрстуфхцчшщъыьэюяҗңүһәө",
+  "vowels": "аеиоуыэюяүәө",
+  "rule_accuracy": 1.0
+}

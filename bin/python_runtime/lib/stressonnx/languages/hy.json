@@ -1,0 +1,15 @@
+{
+  "name": "Armenian (Eastern)",
+  "script": "armenian",
+  "rule": "hye",
+  "hf": {
+    "simple": "hye"
+  },
+  "sources": [
+    "Chakmakjian 2024, Speech Prosody: stress within the last non-schwa syllable"
+  ],
+  "tag": "hy",
+  "alpha": "աբգդեզէըթժիլխծկհձղճմյնշոչպջռսվտրցւփքօֆև",
+  "vowels": "աեէըիուօ",
+  "rule_accuracy": 0.777
+}

@@ -1,27 +1,69 @@
-from natasha import Segmenter, NewsEmbedding, NewsMorphTagger, Doc
-#импорт классов: segmenter - разбивает на токены
-#Doc - хранит всю информацию об анализе
-#news_embedding -
-#NewsMorphTagger - определяет части речи и грамматические признаки
-text = "Иван приехал в Москву, отдохнул и встретил старого друга." #исходный текст
-from natasha import Segmenter, NewsEmbedding, NewsMorphTagger, Doc
+import sys
+import os
 
-def analyze(input_file: str ):
+# Добавляем путь к python_runtime/lib
+current_dir = os.path.dirname(os.path.abspath(__file__))
+lib_path = os.path.join(current_dir, "python_runtime", "lib")
+if lib_path not in sys.path:
+    sys.path.insert(0, lib_path)
 
+# Обход блокировок для беспрепятственного скачивания ONNX-моделей
+os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
+
+from natasha import Segmenter, NewsEmbedding, NewsMorphTagger, Doc
+# Импортируем функцию ударения из выбранной библиотеки
+from stressonnx import stress
+
+ACCENT_CHAR = '\u0301'  # Юникод-символ ударения, который ставит stressonnx
+
+
+def analyze(input_file: str):
     with open(input_file + '.txt', 'r', encoding='utf-8') as f:
         content = f.read()
-    #создание объектов классов
+
+    # Инициализация модулей Natasha
     segmenter = Segmenter()
     emb = NewsEmbedding()
     morph_tagger = NewsMorphTagger(emb)
+    doc = Doc(content)
 
-    doc = Doc(content) #контейнер для текста и результатов анализа
-
-    # Разбиваем текст на токены
+    # Разбор текста на токены и части речи
     doc.segment(segmenter)
-
-    # Определяем части речи
     doc.tag_morph(morph_tagger)
+
+    # Выбираем глаголы
     verbs = [token.text for token in doc.tokens if token.pos == 'VERB']
-    print(verbs)
+
+
+    # Используем enumerate, чтобы получить и сам глагол (verb), и его индекс (i) в массиве
+    for i, verb in enumerate(verbs):
+        # Передаем слово и маркер языка "ru"
+        word = stress(verb, "ru")
+
+        # Ищем символ ударения (он стоит сразу ПОСЛЕ ударной гласной)
+        accent_index = word.find(ACCENT_CHAR)
+
+        if accent_index != -1:
+            # Убираем знак ударения, чтобы работать с чистыми буквами
+            clean_word = word.replace(ACCENT_CHAR, '')
+
+            # Ударная буква находится на позицию раньше, чем стоял символ ударения
+            idx = accent_index - 1
+
+            if 0 <= idx < len(clean_word):
+                new_word = clean_word[:idx] + clean_word[idx].upper() + clean_word[idx + 1:]
+                # ПЕРЕЗАПИСЫВАЕМ элемент в массиве verbs под текущим индексом
+                verbs[i] = new_word
+
+            else:
+                verbs[i] = clean_word
+        else:
+
+            # Если ударение не нашли, оставляем слово без изменений (или обрабатываем иначе)
+            verbs[i] = verb
+
+    # Теперь здесь вернется массив уже с измененными строками!
     return verbs
+
+
+

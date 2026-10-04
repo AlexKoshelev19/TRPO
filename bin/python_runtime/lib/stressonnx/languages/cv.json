@@ -1,0 +1,15 @@
+{
+  "name": "Chuvash",
+  "script": "cyrillic",
+  "rule": "chv",
+  "hf": {
+    "simple": "chv"
+  },
+  "sources": [
+    "Clark 1998 / Krueger 1961 / Dobrovolsky 1999: last full vowel; ӑ/ӗ never stressed"
+  ],
+  "tag": "cv",
+  "alpha": "абвгдежзийклмнопрстуфхцчшщъыьэюяёҫӑӗӳ",
+  "vowels": "аеиоуыэюяёӑӗӳ",
+  "rule_accuracy": 0.94
+}

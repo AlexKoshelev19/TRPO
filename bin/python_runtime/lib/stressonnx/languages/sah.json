@@ -1,0 +1,15 @@
+{
+  "name": "Yakut / Sakha",
+  "script": "cyrillic",
+  "rule": "sah",
+  "hf": {
+    "simple": "sah"
+  },
+  "sources": [
+    "Krueger 1962 + vocabulary evidence: heavy nuclei (long vowels/diphthongs) attract stress"
+  ],
+  "tag": "sah",
+  "alpha": "абвгдежзийклмнопрстуфхцчшщъыьэюяёҕҥүһө",
+  "vowels": "аеиоуыэюяёүө",
+  "rule_accuracy": 0.994
+}

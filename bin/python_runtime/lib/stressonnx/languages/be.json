@@ -1,0 +1,19 @@
+{
+  "name": "Belarusian",
+  "script": "cyrillic",
+  "rule": "none",
+  "hf": {
+    "simple": "bel",
+    "silero": "bel"
+  },
+  "sources": [
+    "East Slavic accentology: free lexical stress"
+  ],
+  "tag": "be",
+  "alpha": "ЁІЎАБВГДЕЖЗЙКЛМНОПРСТУФХЦЧШЫЬЭЮЯабвгдежзйклмнопрстуфхцчшыьэюяёіў’",
+  "vowels": "аоуіэыяеёю",
+  "accuracy": {
+    "silero": 0.873,
+    "simple": 0.433
+  }
+}

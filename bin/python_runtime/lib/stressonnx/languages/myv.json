@@ -1,0 +1,15 @@
+{
+  "name": "Erzya",
+  "script": "cyrillic",
+  "rule": "first",
+  "hf": {
+    "simple": "erz"
+  },
+  "sources": [
+    "Hamari & Ajanki 2022: first-syllable tendency (free variation)"
+  ],
+  "tag": "myv",
+  "alpha": "абвгдежзийклмнопрстуфхцчшщъыьэюяё",
+  "vowels": "аеиоуыэюяё",
+  "rule_accuracy": 0.538
+}
