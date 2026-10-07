@@ -3,6 +3,8 @@
 #include <string>
 #include <windows.h>
 #include <vector>
+#include <unordered_map>
+#include <unordered_set>
 #include <cctype>
 
 using namespace std;
@@ -12,7 +14,7 @@ typedef struct {
     vector<string> rhymed;
 } VERB;
 
-vector<VERB> verbs;
+unordered_map<string, unordered_set<string>> VERBS;
 
 wstring utf8_to_wstring(const string& str) {
     if (str.empty()) return L"";
@@ -57,19 +59,17 @@ bool is_duplicate(const VERB& verb, const string& str) {
 }
 
 void search_rhyme() {
-    for (size_t i = 0; i < verbs.size(); ++i) {
-        string curr_ending = get_ending(verbs[i].word);
+    for (const auto& [verb, _] : VERBS) {
+        string curr_ending = get_ending(verb);
         if (curr_ending.empty()) continue;
 
-        for (size_t j = i + 1; j < verbs.size(); ++j) {
-            string next_ending = get_ending(verbs[j].word);
+        for (const auto& [current_verb, _] : VERBS) {
+            string next_ending = get_ending(current_verb);
             if (next_ending.empty()) continue;
 
-            if (next_ending == curr_ending) {
-                if (!is_duplicate(verbs[i], verbs[j].word)) {
-                    verbs[i].rhymed.push_back(verbs[j].word);
-                    verbs[j].rhymed.push_back(verbs[i].word);
-                }
+            if ((next_ending == curr_ending)&&(verb!=current_verb)) {
+                VERBS[verb].insert(current_verb);
+                VERBS[current_verb].insert(verb);
             }
         }
     }
@@ -122,9 +122,10 @@ int main() {
             PyObject* item = PyList_GetItem(pResult, i); // borrowed reference
             const char* verb = PyUnicode_AsUTF8(item);
             if (verb) {
-                VERB temp;
-                temp.word = verb;
-                verbs.push_back(temp);
+                if (!VERBS.contains(verb)) {
+                    VERBS[verb];
+                }
+                else continue;
             }
         }
 
@@ -132,10 +133,10 @@ int main() {
         search_rhyme();
 
         // Вывод результатов
-        for (size_t i = 0; i < verbs.size(); ++i) {
-            cout << " - " << verbs[i].word << endl;
-            for (size_t j = 0; j < verbs[i].rhymed.size(); ++j) { // было i++ — ошибка
-                cout << '\t' << verbs[i].rhymed[j] << endl;
+        for (const auto& [verb, rhymed_list] : VERBS) {
+            cout << " - " << verb << endl;
+            for (const auto& elm : rhymed_list) {
+                cout << '\t' << elm << endl;
             }
         }
     } else {

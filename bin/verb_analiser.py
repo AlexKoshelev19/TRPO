@@ -64,7 +64,7 @@ def analyze(input_file: str):
         accent_index = word.find(ACCENT_CHAR)
 
         if accent_index != -1:
-            # Убираем знак ударения, чтобы работать с чистыми буквами
+            # Убираем знак ударения, чтобы работать с буквами
             clean_word = word.replace(ACCENT_CHAR, '')
 
             # Ударная буква находится на позицию раньше, чем стоял символ ударения
