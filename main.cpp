@@ -14,7 +14,11 @@ typedef struct {
     vector<string> rhymed;
 } VERB;
 
+// словарь глагол и множество рифмующихся глаголов
 unordered_map<string, unordered_set<string>> VERBS;
+
+// множество выведенных глаголов (для фильтрации дубликатов при выводе)
+unordered_set<string> hasUsed;
 
 wstring utf8_to_wstring(const string& str) {
     if (str.empty()) return L"";
@@ -75,6 +79,7 @@ void search_rhyme() {
     }
 }
 int main() {
+    int unic_pairs = 0;
     SetConsoleOutputCP(65001);
     SetConsoleCP(65001);
 
@@ -122,6 +127,7 @@ int main() {
             PyObject* item = PyList_GetItem(pResult, i); // borrowed reference
             const char* verb = PyUnicode_AsUTF8(item);
             if (verb) {
+                cout << (i + 1) << ") " << verb << '\n';
                 if (!VERBS.contains(verb)) {
                     VERBS[verb];
                 }
@@ -129,19 +135,34 @@ int main() {
             }
         }
 
-
         search_rhyme();
 
+        cout << "\nРифмующиеся комбинации:\n";
         // Вывод результатов
         for (const auto& [verb, rhymed_list] : VERBS) {
-            cout << " - " << verb << endl;
-            for (const auto& elm : rhymed_list) {
-                cout << '\t' << elm << endl;
+            if(!rhymed_list.empty())
+            {
+                string out = " - " + verb + '\n';
+                bool hasPair = false;
+                for (const auto& elm : rhymed_list)
+                {
+                    if(!hasUsed.count(elm))
+                    {
+                        out += '\t' + elm + '\n';
+                        hasPair = true;
+                        unic_pairs ++;
+                    }
+                }
+                if(hasPair)
+                    cout << out << '\n';
+                hasUsed.insert(verb);
             }
         }
     } else {
         PyErr_Print();
     }
+
+    cout << "Итого уникальных пар: " << unic_pairs << '\n';
 
     // Очистка
     Py_XDECREF(pResult);

@@ -580,6 +580,8 @@ _Python_INCLUDE_DIR:INTERNAL=C:/Users/ivanr/AppData/Local/Programs/Python/Python
 //Python Properties
 _Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;14;7;64;<none>;cp314-win_amd64;;C:\Users\ivanr\AppData\Local\Programs\Python\Python314\Lib;C:\Users\ivanr\AppData\Local\Programs\Python\Python314\Lib;C:\Users\ivanr\AppData\Local\Programs\Python\Python314\Lib\site-packages;C:\Users\ivanr\AppData\Local\Programs\Python\Python314\Lib\site-packages
 _Python_INTERPRETER_SIGNATURE:INTERNAL=6e5fae4d52b3b8509fed4cbe0052123a
+//Interpreter reason failure
+_Python_Interpreter_REASON_FAILURE:INTERNAL=
 //Path to a library.
 _Python_LIBRARY_DEBUG:INTERNAL=_Python_LIBRARY_DEBUG-NOTFOUND
 //Path to a library.
