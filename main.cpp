@@ -6,6 +6,7 @@
 #include <unordered_map>
 #include <unordered_set>
 #include <cctype>
+#include <chrono>
 
 using namespace std;
 
@@ -16,9 +17,7 @@ typedef struct {
 
 // словарь глагол и множество рифмующихся глаголов
 unordered_map<string, unordered_set<string>> VERBS;
-
-// множество выведенных глаголов (для фильтрации дубликатов при выводе)
-unordered_set<string> hasUsed;
+unordered_map<string, unordered_set<string>> rhymes;
 
 wstring utf8_to_wstring(const string& str) {
     if (str.empty()) return L"";
@@ -67,14 +66,16 @@ void search_rhyme() {
         string curr_ending = get_ending(verb);
         if (curr_ending.empty()) continue;
 
-        for (const auto& [current_verb, _] : VERBS) {
-            string next_ending = get_ending(current_verb);
-            if (next_ending.empty()) continue;
-
-            if ((next_ending == curr_ending)&&(verb!=current_verb)) {
-                VERBS[verb].insert(current_verb);
-                VERBS[current_verb].insert(verb);
-            }
+        if(rhymes.contains(curr_ending))
+        {
+            unordered_set<string> v = rhymes[curr_ending];
+            v.insert(verb);
+            rhymes[curr_ending] = v;
+        }
+        else
+        {
+            unordered_set<string> v {verb};
+            rhymes[curr_ending] = v;
         }
     }
 }
@@ -85,10 +86,6 @@ int main() {
 
     // Инициализируем интерпретатор Python
     Py_Initialize();
-
-    // Добавляем пути в sys.path
-    PyRun_SimpleString("import sys; sys.path.append('.')");
-    PyRun_SimpleString("sys.path.append('D:/study/TRPO/test_accent/.venv/Lib/site-packages')");
 
     // Импортируем модуль
     PyObject* pModule = PyImport_ImportModule("verb_analiser");
@@ -111,6 +108,8 @@ int main() {
     string input_file;
     cout << "Введите название файла: ";
     getline(cin, input_file);
+
+    auto start = std::chrono::high_resolution_clock::now();
 
     // Создаём аргументы и вызываем функцию
     PyObject* pArgs = PyTuple_New(1);
@@ -138,31 +137,30 @@ int main() {
         search_rhyme();
 
         cout << "\nРифмующиеся комбинации:\n";
-        // Вывод результатов
-        for (const auto& [verb, rhymed_list] : VERBS) {
-            if(!rhymed_list.empty())
+
+        for(const auto& [end, v] : rhymes)
+        {
+            if(v.size() > 1)
             {
-                string out = " - " + verb + '\n';
-                bool hasPair = false;
-                for (const auto& elm : rhymed_list)
+                for(const auto& verb: v)
                 {
-                    if(!hasUsed.count(elm))
-                    {
-                        out += '\t' + elm + '\n';
-                        hasPair = true;
-                        unic_pairs ++;
-                    }
+                    cout << verb << ", ";
                 }
-                if(hasPair)
-                    cout << out << '\n';
-                hasUsed.insert(verb);
+                cout << '\n';
+                unic_pairs += (2 + (v.size() - 1) - 1) * (v.size() - 1) / 2;
             }
         }
     } else {
         PyErr_Print();
     }
 
+    auto end = std::chrono::high_resolution_clock::now();
+
     cout << "Итого уникальных пар: " << unic_pairs << '\n';
+
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+
+    std::cout << "Время выполнения: " << duration.count() << " мс\n";
 
     // Очистка
     Py_XDECREF(pResult);

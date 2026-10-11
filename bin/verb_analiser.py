@@ -1,5 +1,7 @@
 import sys
 import os
+import re # регулярные выражения
+import concurrent.futures
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -36,6 +38,10 @@ from stressonnx import stress
 
 ACCENT_CHAR = '\u0301'  # Юникод-символ ударения, который ставит stressonnx
 
+# Вспомогательная функция для потоков
+def get_stressed_word(verb):
+    return stress(verb, "ru")
+
 
 def analyze(input_file: str):
     with open(input_file + '.txt', 'r', encoding='utf-8') as f:
@@ -45,16 +51,28 @@ def analyze(input_file: str):
     segmenter = Segmenter()
     emb = NewsEmbedding()
     morph_tagger = NewsMorphTagger(emb)
-    doc = Doc(content)
 
-    # Разбор текста на токены и части речи
-    doc.segment(segmenter)
-    doc.tag_morph(morph_tagger)
+    # Разбиваем текст по знакам препинания (. ! ?), за которыми идут пробелы или перенос строки
+    sentences = re.split(r'(?<=[.!?])\s+', content)
 
-    # Выбираем глаголы
-    verbs = [token.text for token in doc.tokens if token.pos == 'VERB']
+    # Убираем пустые строки, если они появились
+    sentences = [s.strip() for s in sentences if s.strip()]
+    verbs = set()
+    for sentence in sentences:
+        doc = Doc(sentence)
 
+        # Разбор текста на токены и части речи
+        doc.segment(segmenter)
+        doc.tag_morph(morph_tagger)
 
+        # Выбираем глаголы
+        for token in doc.tokens:
+            if token.pos == 'VERB':
+                verbs.add(token.text);
+        #verbs += [token.text for token in doc.tokens if token.pos == 'VERB']
+
+    verbs = list(verbs)
+    
     # Используем enumerate, чтобы получить и сам глагол (verb), и его индекс (i) в массиве
     for i, verb in enumerate(verbs):
         # Передаем слово и маркер языка "ru"
