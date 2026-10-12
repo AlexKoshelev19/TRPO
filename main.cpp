@@ -5,8 +5,12 @@
 #include <vector>
 #include <unordered_map>
 #include <unordered_set>
+#include <map>
+#include <set>
 #include <cctype>
 #include <chrono>
+#include <filesystem>
+#include <fstream>
 
 using namespace std;
 
@@ -15,9 +19,8 @@ typedef struct {
     vector<string> rhymed;
 } VERB;
 
-// словарь глагол и множество рифмующихся глаголов
-unordered_map<string, unordered_set<string>> VERBS;
-unordered_map<string, unordered_set<string>> rhymes;
+map<string, set<string>> rhymes;
+map<string, vector<int>> VERBS_and_indexes;
 
 wstring utf8_to_wstring(const string& str) {
     if (str.empty()) return L"";
@@ -62,25 +65,91 @@ bool is_duplicate(const VERB& verb, const string& str) {
 }
 
 void search_rhyme() {
-    for (const auto& [verb, _] : VERBS) {
+    for (const auto& [verb, _] : VERBS_and_indexes) {
         string curr_ending = get_ending(verb);
         if (curr_ending.empty()) continue;
 
         if(rhymes.contains(curr_ending))
         {
-            unordered_set<string> v = rhymes[curr_ending];
+            set<string> v = rhymes[curr_ending];
             v.insert(verb);
             rhymes[curr_ending] = v;
         }
         else
         {
-            unordered_set<string> v {verb};
+            set<string> v {verb};
             rhymes[curr_ending] = v;
         }
     }
 }
-int main() {
+
+// Функция для генерации имени выходного файла
+string generateFileName()
+{
+    auto now = chrono::system_clock::now();
+    auto time_t_now = chrono::system_clock::to_time_t(now);
+    tm* tm_now = localtime(&time_t_now);
+    
+    string data = to_string(tm_now->tm_hour);
+    data += "_" + to_string(tm_now->tm_min);
+    data += "_" + to_string(tm_now->tm_sec) + ".txt";
+    
+    return data;
+}
+
+// функция вывода в файл всех глаголов и номеров предложений, где они встретились
+void save_verbs()
+{
+    string file_name = "all_verbs_" + generateFileName();
+    filesystem::path path(file_name);
+    ofstream fos(path, ios::ate);
+
+    fos << "Найдено уникальных глаголов: " << VERBS_and_indexes.size() << "\n\n";
+
+    int ind = 1;
+    for(const auto& [verb, sentences] : VERBS_and_indexes)
+    {
+        fos << ind << ") " << verb << " : ";
+        for(const auto & sentence : sentences)
+        {
+            fos << sentence << ' ';
+        }
+        fos << '\n';
+        ind++;
+    }
+    fos.flush();
+    fos.close();
+}
+
+// функция вывода в файл всех рифмующихся пар
+void save_rhymes()
+{
     int unic_pairs = 0;
+    string file_name = "unic_rhymes_" + generateFileName();
+    filesystem::path path(file_name);
+    ofstream fos(path, ios::ate);
+
+    int ind = 1;
+    for(const auto& [end, v] : rhymes)
+    {
+        if(v.size() > 1)
+        {
+            for (auto it1 = v.begin(); it1 != v.end(); ++it1) {
+                auto it2 = it1;
+                ++it2;
+                for (; it2 != v.end(); ++it2) {
+                    fos << ind++ << ") " << *it1 << " - " << *it2 << '\n';
+                }
+            }
+            unic_pairs += v.size() * (v.size() - 1) / 2;
+        }
+    }
+
+    fos.flush();
+    fos.close();
+}
+
+int main() {
     SetConsoleOutputCP(65001);
     SetConsoleCP(65001);
 
@@ -109,7 +178,7 @@ int main() {
     cout << "Введите название файла: ";
     getline(cin, input_file);
 
-    auto start = std::chrono::high_resolution_clock::now();
+    auto start = chrono::high_resolution_clock::now();
 
     // Создаём аргументы и вызываем функцию
     PyObject* pArgs = PyTuple_New(1);
@@ -118,49 +187,47 @@ int main() {
 
     PyObject* pResult = PyObject_CallObject(pFunc, pArgs);
 
-    if (pResult && PyList_Check(pResult)) {
-        Py_ssize_t size = PyList_Size(pResult);
-        cout << "Найдено глаголов: " << size << endl;
+    if (pResult && PyDict_Check(pResult)) {
+        Py_ssize_t size = PyDict_Size(pResult);
 
-        for (Py_ssize_t i = 0; i < size; ++i) {
-            PyObject* item = PyList_GetItem(pResult, i); // borrowed reference
-            const char* verb = PyUnicode_AsUTF8(item);
-            if (verb) {
-                cout << (i + 1) << ") " << verb << '\n';
-                if (!VERBS.contains(verb)) {
-                    VERBS[verb];
+        PyObject *key = nullptr;
+        PyObject *value = nullptr;
+        Py_ssize_t pos = 0;
+
+        // PyDict_Next итерируется по всем парам (key, value)
+        while (PyDict_Next(pResult, &pos, &key, &value)) {
+            const char* verb = PyUnicode_AsUTF8(key);
+            
+            if (verb && PyList_Check(value)) {
+                Py_ssize_t list_size = PyList_Size(value);
+                vector<int> sentence_indices;
+                sentence_indices.reserve(list_size);
+
+                for (Py_ssize_t j = 0; j < list_size; ++j) {
+                    PyObject* item = PyList_GetItem(value, j);
+                    if (PyLong_Check(item)) {
+                        sentence_indices.push_back(static_cast<int>(PyLong_AsLong(item)));
+                    }
                 }
-                else continue;
+
+                // Сохраняем в словарь
+                VERBS_and_indexes[verb] = move(sentence_indices);
             }
         }
 
         search_rhyme();
-
-        cout << "\nРифмующиеся комбинации:\n";
-
-        for(const auto& [end, v] : rhymes)
-        {
-            if(v.size() > 1)
-            {
-                for(const auto& verb: v)
-                {
-                    cout << verb << ", ";
-                }
-                cout << '\n';
-                unic_pairs += (2 + (v.size() - 1) - 1) * (v.size() - 1) / 2;
-            }
-        }
+        save_verbs();
+        save_rhymes();
+        
     } else {
         PyErr_Print();
     }
 
-    auto end = std::chrono::high_resolution_clock::now();
+    auto end = chrono::high_resolution_clock::now();
 
-    cout << "Итого уникальных пар: " << unic_pairs << '\n';
+    auto duration = chrono::duration_cast<chrono::milliseconds>(end - start);
 
-    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
-
-    std::cout << "Время выполнения: " << duration.count() << " мс\n";
+    cout << "Время выполнения: " << duration.count() << " мс\n";
 
     // Очистка
     Py_XDECREF(pResult);

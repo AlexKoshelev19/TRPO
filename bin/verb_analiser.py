@@ -1,7 +1,9 @@
 import sys
 import os
-import re # регулярные выражения
-import concurrent.futures
+# импортируем модель natasha для выявления глаголов
+from natasha import Segmenter, NewsEmbedding, NewsMorphTagger, NewsSyntaxParser, Doc
+# Импортируем функцию ударения из выбранной библиотеки
+from stressonnx import stress
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -30,16 +32,11 @@ else:
     # оставляем доступ в сеть для первоначального скачивания (на этапе разработки)
     pass
 
-# импортируем модель natasha для выявления глаголов
-from natasha import Segmenter, NewsEmbedding, NewsMorphTagger, NewsSyntaxParser, Doc
-# Импортируем функцию ударения из выбранной библиотеки
-from stressonnx import stress
-
 ACCENT_CHAR = '\u0301'  # Юникод-символ ударения, который ставит stressonnx
 
 def analyze(input_file: str):
     with open(input_file + '.txt', 'r', encoding='utf-8') as f:
-        content = f.read()
+        text = f.read()
 
     # Инициализация модулей Natasha
     segmenter = Segmenter()
@@ -47,50 +44,44 @@ def analyze(input_file: str):
     morph_tagger = NewsMorphTagger(emb)
     syntax_tagger = NewsSyntaxParser(emb)
 
-    # Разбиваем текст по знакам препинания (. ! ?), за которыми идут пробелы или перенос строки
-    sentences = re.split(r'(?<=[.!?])\s+', content)
+    doc = Doc(text)
 
-    # Убираем пустые строки, если они появились
-    sentences = [s.strip() for s in sentences if s.strip()]
-    verbs = set()
-    for sentence in sentences:
-        doc = Doc(sentence)
+    # Разбор предложения на токены и части речи
+    doc.segment(segmenter)
 
-        # Разбор предложения на токены и части речи
-        doc.segment(segmenter)
+    # моррфологический разбор (присваивает token.pos)
+    doc.tag_morph(morph_tagger)
 
-        # моррфологический разбор (присваивает token.pos)
-        doc.tag_morph(morph_tagger)
+    # синтаксический разбор (присваивает token.rel и token.head_id для выявления зависемостей между словами)
+    doc.parse_syntax(syntax_tagger)
 
-        # синтаксический разбор (присваивает token.rel и token.head_id для выявления зависемостей между словами)
-        doc.parse_syntax(syntax_tagger)
+    # ищем слова, у которых есть свои исполнители или зависимые предметы
+    heads_with_arguments = set()
+    for token in doc.tokens:
+        if token.rel in ("nsubj", "obj", "iobj", "obl"):
+            heads_with_arguments.add(token.head_id)
 
-        # ищем слова, у которых есть свои исполнители или зависимые предметы
-        heads_with_arguments = set()
-        for token in doc.tokens:
-            if token.rel in ("nsubj", "obj", "iobj", "obl"):
-                heads_with_arguments.add(token.head_id)
-
-        # Выбираем глаголы
-        for token in doc.tokens:
-            if token.pos in ('VERB', 'AUX'):
-                # Критерий А: токен сам является предикативным узлом
-                is_predicate_node = token.rel in ("root", "xcomp", "ccomp", "conj", "advcl")
-                
-                # Критерий Б: токен управляет хотя бы одним глагольным зависимым
-                controls_arguments = token.id in heads_with_arguments
-                
-                # Критерий В: отсекаем явно неглагольные роли (подлежащее, определение, приложение)
-                is_nominal_role = token.rel in ("nsubj", "obj", "iobj", "nmod", "amod", "appos")
-                
-                if (is_predicate_node or controls_arguments) and not is_nominal_role:
-                    verbs.add(token.text);
-        #verbs += [token.text for token in doc.tokens if token.pos == 'VERB']
-
-    verbs = list(verbs)
+    verbs = dict()
+    # Выбираем глаголы
+    for token in doc.tokens:
+        if token.pos in ('VERB', 'AUX'):
+            # Критерий А: токен сам является предикативным узлом
+            is_predicate_node = token.rel in ("root", "xcomp", "ccomp", "conj", "advcl")
+            
+            # Критерий Б: токен управляет хотя бы одним глагольным зависимым
+            controls_arguments = token.id in heads_with_arguments
+            
+            # Критерий В: отсекаем явно неглагольные роли (подлежащее, определение, приложение)
+            is_nominal_role = token.rel in ("nsubj", "obj", "iobj", "nmod", "amod", "appos")
+            
+            if (is_predicate_node or controls_arguments) and not is_nominal_role:
+                verb = token.text.lower()
+                indexes =  verbs.get(verb) if verbs.get(verb) != None else []
+                indexes.append(int(token.id.split('_')[0]))
+                verbs[verb] = indexes
+                #print(verb)
     
-    # Используем enumerate, чтобы получить и сам глагол (verb), и его индекс (i) в массиве
-    for i, verb in enumerate(verbs):
+    for verb in list(verbs.keys()):
         # Передаем слово и маркер языка "ru"
         word = stress(verb, "ru")
 
@@ -98,6 +89,8 @@ def analyze(input_file: str):
         accent_index = word.find(ACCENT_CHAR)
 
         if accent_index != -1:
+
+            indexes = verbs.pop(verb)
             # Убираем знак ударения, чтобы работать с буквами
             clean_word = word.replace(ACCENT_CHAR, '')
 
@@ -107,17 +100,11 @@ def analyze(input_file: str):
             if 0 <= idx < len(clean_word):
                 new_word = clean_word[:idx] + clean_word[idx].upper() + clean_word[idx + 1:]
                 # ПЕРЕЗАПИСЫВАЕМ элемент в массиве verbs под текущим индексом
-                verbs[i] = new_word
-
+                verbs[new_word] = indexes
             else:
-                verbs[i] = clean_word
+                verbs[clean_word] = indexes
         else:
+            # Если ударение не нашли, оставляем слово без изменений
+            pass
 
-            # Если ударение не нашли, оставляем слово без изменений (или обрабатываем иначе)
-            verbs[i] = verb
-
-    # Теперь здесь вернется массив уже с измененными строками!
     return verbs
-
-
-
