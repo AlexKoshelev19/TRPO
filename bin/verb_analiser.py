@@ -5,43 +5,37 @@ import concurrent.futures
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
-# 1. Настройка путей для библиотек Python
+# настройка путей для библиотек Python
 lib_path = os.path.join(current_dir, "python_runtime", "lib")
 if lib_path not in sys.path:
     sys.path.insert(0, lib_path)
 
-# 2. Создаем локальную папку для моделей (если её нет)
+# 2. создание локальной папки для моделей (если её нет)
 models_cache_dir = os.path.join(current_dir, "models_cache")
 os.makedirs(models_cache_dir, exist_ok=True)
 
-# 3. Перенаправляем кэш загрузок в локальную папку
+# перенаправление кэша загрузок в локальную папку
 os.environ["HF_HOME"] = models_cache_dir
 os.environ["XDG_CACHE_HOME"] = models_cache_dir
 os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
 
-# 4. ПРОВЕРКА НА БЛОКИРОВКУ СКАЧИВАНИЯ
-# Проверяем, есть ли внутри папки models_cache какие-либо файлы/папки.
-# Функция scandir работает очень быстро и не загружает весь список в память.
+# 4. проверяем, есть ли внутри папки models_cache какие-либо файлы/папки.
 has_cached_models = any(os.scandir(models_cache_dir))
 
 if has_cached_models:
-    # Если файлы есть, жестко блокируем любые сетевые запросы Hugging Face
+    # если файлы - блокируем сетевые запросы Hugging Face
     os.environ["HF_HUB_OFFLINE"] = "1"
     os.environ["TRANSFORMERS_OFFLINE"] = "1"
 else:
-    # Оставляем доступ в сеть для первоначального скачивания (на этапе разработки)
+    # оставляем доступ в сеть для первоначального скачивания (на этапе разработки)
     pass
 
-from natasha import Segmenter, NewsEmbedding, NewsMorphTagger, Doc
+# импортируем модель natasha для выявления глаголов
+from natasha import Segmenter, NewsEmbedding, NewsMorphTagger, NewsSyntaxParser, Doc
 # Импортируем функцию ударения из выбранной библиотеки
 from stressonnx import stress
 
 ACCENT_CHAR = '\u0301'  # Юникод-символ ударения, который ставит stressonnx
-
-# Вспомогательная функция для потоков
-def get_stressed_word(verb):
-    return stress(verb, "ru")
-
 
 def analyze(input_file: str):
     with open(input_file + '.txt', 'r', encoding='utf-8') as f:
@@ -51,6 +45,7 @@ def analyze(input_file: str):
     segmenter = Segmenter()
     emb = NewsEmbedding()
     morph_tagger = NewsMorphTagger(emb)
+    syntax_tagger = NewsSyntaxParser(emb)
 
     # Разбиваем текст по знакам препинания (. ! ?), за которыми идут пробелы или перенос строки
     sentences = re.split(r'(?<=[.!?])\s+', content)
@@ -61,14 +56,35 @@ def analyze(input_file: str):
     for sentence in sentences:
         doc = Doc(sentence)
 
-        # Разбор текста на токены и части речи
+        # Разбор предложения на токены и части речи
         doc.segment(segmenter)
+
+        # моррфологический разбор (присваивает token.pos)
         doc.tag_morph(morph_tagger)
+
+        # синтаксический разбор (присваивает token.rel и token.head_id для выявления зависемостей между словами)
+        doc.parse_syntax(syntax_tagger)
+
+        # ищем слова, у которых есть свои исполнители или зависимые предметы
+        heads_with_arguments = set()
+        for token in doc.tokens:
+            if token.rel in ("nsubj", "obj", "iobj", "obl"):
+                heads_with_arguments.add(token.head_id)
 
         # Выбираем глаголы
         for token in doc.tokens:
-            if token.pos == 'VERB':
-                verbs.add(token.text);
+            if token.pos in ('VERB', 'AUX'):
+                # Критерий А: токен сам является предикативным узлом
+                is_predicate_node = token.rel in ("root", "xcomp", "ccomp", "conj", "advcl")
+                
+                # Критерий Б: токен управляет хотя бы одним глагольным зависимым
+                controls_arguments = token.id in heads_with_arguments
+                
+                # Критерий В: отсекаем явно неглагольные роли (подлежащее, определение, приложение)
+                is_nominal_role = token.rel in ("nsubj", "obj", "iobj", "nmod", "amod", "appos")
+                
+                if (is_predicate_node or controls_arguments) and not is_nominal_role:
+                    verbs.add(token.text);
         #verbs += [token.text for token in doc.tokens if token.pos == 'VERB']
 
     verbs = list(verbs)
