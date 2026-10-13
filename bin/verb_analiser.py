@@ -86,25 +86,7 @@ def analyze(input_file: str):
         word = stress(verb, "ru")
 
         # Ищем символ ударения (он стоит сразу ПОСЛЕ ударной гласной)
-        accent_index = word.find(ACCENT_CHAR)
-
-        if accent_index != -1:
-
-            indexes = verbs.pop(verb)
-            # Убираем знак ударения, чтобы работать с буквами
-            clean_word = word.replace(ACCENT_CHAR, '')
-
-            # Ударная буква находится на позицию раньше, чем стоял символ ударения
-            idx = accent_index - 1
-
-            if 0 <= idx < len(clean_word):
-                new_word = clean_word[:idx] + clean_word[idx].upper() + clean_word[idx + 1:]
-                # ПЕРЕЗАПИСЫВАЕМ элемент в массиве verbs под текущим индексом
-                verbs[new_word] = indexes
-            else:
-                verbs[clean_word] = indexes
-        else:
-            # Если ударение не нашли, оставляем слово без изменений
-            pass
+        verbs.pop(verb)
+        verbs[word] = indexes
 
     return verbs
