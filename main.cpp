@@ -282,7 +282,7 @@ int main_algorytm() {
     cout << "Время выполнения: " << duration.count() << " мс\n";
     cout << "нажмите любую клавишу";
     getch();
-
+    system("cls");
     Py_XDECREF(pResult);
     Py_XDECREF(pArgs);
     Py_XDECREF(pFunc);
