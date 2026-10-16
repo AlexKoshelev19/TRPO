@@ -35,7 +35,7 @@ else:
 ACCENT_CHAR = '\u0301'  # Юникод-символ ударения, который ставит stressonnx
 
 def analyze(input_file: str):
-    with open(input_file + '.txt', 'r', encoding='utf-8') as f:
+    with open(input_file, 'r', encoding='utf-8') as f:
         text = f.read()
 
     # Инициализация модулей Natasha
@@ -54,6 +54,9 @@ def analyze(input_file: str):
 
     # синтаксический разбор (присваивает token.rel и token.head_id для выявления зависемостей между словами)
     doc.parse_syntax(syntax_tagger)
+    with open(input_file, "w", encoding="utf-8") as f:
+        for index, sentence in enumerate(doc.sents, start=1):
+           f.write(f"({index}) {sentence.text}")
 
     # ищем слова, у которых есть свои исполнители или зависимые предметы
     heads_with_arguments = set()
