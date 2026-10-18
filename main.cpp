@@ -89,40 +89,39 @@ void draw_menu(int index, string page_choice[], int size) {
 
 int choice_menu(string page_choice[], string message, int size)
 {
-
     int index = 0;
+    int c;
+
     cout << message << endl << endl;
     draw_menu(index, page_choice, size);
-    int c;
-    do{
 
+    do {
         c = getch();
-        system("cls");
+
         if (c == 224 || c == 0) {
-            cout << message << endl << endl;
             c = getch();
 
-            if (c == 72) { // Стрелка ВВЕРХ
+            if (c == 72) { // Стрелка вверх
                 index = (index - 1 + size) % size;
-                draw_menu(index, page_choice, size);
             }
-            else if (c == 80) {
+            else if (c == 80) { // Стрелка вниз
                 index = (index + 1) % size;
-                draw_menu(index, page_choice, size);
             }
             else {
-                draw_menu(index, page_choice, size); }
+                continue;
+            }
+
+            system("cls");
+            cout << message << endl << endl;
+            draw_menu(index, page_choice, size);
         }
-        else if(c == 13)
-        {
+        else if (c == 13) { // Enter
             return index;
         }
-        else {
-            cout << message <<endl<<endl;
-            draw_menu(index, page_choice, size); }
-    }
-    while (c != 27);
-    return -1;
+
+    } while (c != 13);
+
+    return index;
 }
 
 
@@ -215,7 +214,7 @@ string choose_data_file()
 }
 
 int main_algorytm() {
-    Py_Initialize();
+
 
     PyObject* pModule = PyImport_ImportModule("verb_analiser");
     if (!pModule) {
@@ -287,8 +286,33 @@ int main_algorytm() {
     Py_XDECREF(pArgs);
     Py_XDECREF(pFunc);
     Py_XDECREF(pModule);
-    Py_Finalize();
+
     return 0;
+}
+void instruction_menu() {
+    cout << "Пока ничего нету";
+    getch();
+    system("cls");
+}
+
+void exit_from_program() {
+
+    system("cls");
+    string page_choice[] = {
+        "выйти окончательно",
+        "вернуться в меню"
+    };
+    int index;
+    do{
+        int menu_size = size(page_choice);
+        string message = "Вы точно уверены?";
+        index = choice_menu(page_choice, message, menu_size);
+        switch (index) {
+            case 0:  Py_Finalize(); exit(0);
+            case 1:  return;
+            default: continue;
+        }
+    } while(true);
 }
 
 void greeting_menu() {
@@ -296,28 +320,52 @@ void greeting_menu() {
         "Начать работу",
         "Выйти из программы",
         "Инструкция"
-        };
+    };
 
     int menu_size = size(page_choice);
-    string message = "Здравствуйте!\n Данная программа позволяет находить рифмы среди глаголов в текстовом файле. Результатом работы программы являются файлы с именами: all_verbs_<id> и unic_rhymes_<id>. ";
 
-    int index=0;
-    do{
+    string message =
+        "Здравствуйте!\n"
+        "Данная программа позволяет находить рифмы среди глаголов "
+        "в текстовом файле.\n"
+        "Результаты работы сохраняются в файлы "
+        "all_verbs_<id> и unic_rhymes_<id>.";
+
+    int index = 0;
+
+    do {
+        system("cls");
         index = choice_menu(page_choice, message, menu_size);
+
         switch (index) {
-            case 0: main_algorytm();  break;
-            case 1:  break;
-            case 2:  break;
-            case -1: break;
-            default: break;
+            case 0:
+                main_algorytm();
+                break;
+
+            case 1:
+                exit_from_program();
+                break;
+
+            case 2:
+                instruction_menu();
+                break;
+
+            default:
+                continue;
         }
-    } while(index != -1);
-    return;
+
+    } while (true);
 }
+
+
+
 
 int main() {
     SetConsoleOutputCP(65001);
     SetConsoleCP(65001);
+    Py_Initialize();
     greeting_menu();
+
+
     return 0;
 }

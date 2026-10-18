@@ -1,5 +1,6 @@
 import sys
 import os
+import re
 # импортируем модель natasha для выявления глаголов
 from natasha import Segmenter, NewsEmbedding, NewsMorphTagger, NewsSyntaxParser, Doc
 # Импортируем функцию ударения из выбранной библиотеки
@@ -54,9 +55,6 @@ def analyze(input_file: str):
 
     # синтаксический разбор (присваивает token.rel и token.head_id для выявления зависемостей между словами)
     doc.parse_syntax(syntax_tagger)
-    with open(input_file, "w", encoding="utf-8") as f:
-        for index, sentence in enumerate(doc.sents, start=1):
-           f.write(f"({index}) {sentence.text}")
 
     # ищем слова, у которых есть свои исполнители или зависимые предметы
     heads_with_arguments = set()
@@ -70,20 +68,20 @@ def analyze(input_file: str):
         if token.pos in ('VERB', 'AUX'):
             # Критерий А: токен сам является предикативным узлом
             is_predicate_node = token.rel in ("root", "xcomp", "ccomp", "conj", "advcl")
-            
+
             # Критерий Б: токен управляет хотя бы одним глагольным зависимым
             controls_arguments = token.id in heads_with_arguments
-            
+
             # Критерий В: отсекаем явно неглагольные роли (подлежащее, определение, приложение)
             is_nominal_role = token.rel in ("nsubj", "obj", "iobj", "nmod", "amod", "appos")
-            
+
             if (is_predicate_node or controls_arguments) and not is_nominal_role:
                 verb = token.text.lower()
                 indexes =  verbs.get(verb) if verbs.get(verb) != None else []
                 indexes.append(int(token.id.split('_')[0]))
                 verbs[verb] = indexes
                 #print(verb)
-    
+
     for verb in list(verbs.keys()):
         # Передаем слово и маркер языка "ru"
         word = stress(verb, "ru")
@@ -92,4 +90,14 @@ def analyze(input_file: str):
         verbs.pop(verb)
         verbs[word] = indexes
 
+
+    with open(input_file, "w", encoding="utf-8") as f:
+        for index, sentence in enumerate(doc.sents, start=1):
+            sent_text = sentence.text.strip()
+
+            # Проверка: если текст уже начинается с формата "(число) ", то не добавляем нумерацию повторно
+            if re.match(r'^\(\d+\)\s', sent_text):
+                f.write(f"{sent_text}\n")
+            else:
+                f.write(f"({index}) {sent_text}\n")
     return verbs
