@@ -81,12 +81,11 @@ def analyze(input_file: str):
                 verbs[verb] = indexes
                 #print(verb)
     
+    # ищем ударения в словах
     for verb in list(verbs.keys()):
-        # Передаем слово и маркер языка "ru"
         word = stress(verb, "ru")
 
-        # Ищем символ ударения (он стоит сразу ПОСЛЕ ударной гласной)
-        verbs.pop(verb)
+        indexes = verbs.pop(verb)
         verbs[word] = indexes
 
     return verbs
