@@ -1,10 +1,5 @@
 import sys
 import os
-import re
-# импортируем модель natasha для выявления глаголов
-from natasha import Segmenter, NewsEmbedding, NewsMorphTagger, NewsSyntaxParser, Doc
-# Импортируем функцию ударения из выбранной библиотеки
-from stressonnx import stress
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -13,7 +8,7 @@ lib_path = os.path.join(current_dir, "python_runtime", "lib")
 if lib_path not in sys.path:
     sys.path.insert(0, lib_path)
 
-# 2. создание локальной папки для моделей (если её нет)
+# создание локальной папки для моделей (если её нет)
 models_cache_dir = os.path.join(current_dir, "models_cache")
 os.makedirs(models_cache_dir, exist_ok=True)
 
@@ -22,8 +17,14 @@ os.environ["HF_HOME"] = models_cache_dir
 os.environ["XDG_CACHE_HOME"] = models_cache_dir
 os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
 
-# 4. проверяем, есть ли внутри папки models_cache какие-либо файлы/папки.
+# проверяем, есть ли внутри папки models_cache какие-либо файлы/папки.
 has_cached_models = any(os.scandir(models_cache_dir))
+
+import re
+# импортируем модель natasha для выявления глаголов
+from natasha import Segmenter, NewsEmbedding, NewsMorphTagger, NewsSyntaxParser, Doc
+# Импортируем функцию ударения из выбранной библиотеки
+from stressonnx import stress
 
 if has_cached_models:
     # если файлы - блокируем сетевые запросы Hugging Face
@@ -82,10 +83,12 @@ def analyze(input_file: str):
                 verbs[verb] = indexes
                 #print(verb)
 
-    # поиск ударений в глаголах
     for verb in list(verbs.keys()):
+        # Передаем слово и маркер языка "ru"
         word = stress(verb, "ru")
-        indexes = verbs.pop(verb)
+
+        # Ищем символ ударения (он стоит сразу ПОСЛЕ ударной гласной)
+        verbs.pop(verb)
         verbs[word] = indexes
 
 
