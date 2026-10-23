@@ -4,10 +4,10 @@ project(main)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/bin")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/bin/app")
 
 # Путь с учетом подпапки bin
-set(Python_ROOT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/bin/python_runtime/python-3.14.7-embed-amd64")
+set(Python_ROOT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/bin/app/python_runtime/python-3.14.7-embed-amd64")
 
 find_package(Python REQUIRED COMPONENTS Interpreter Development.Embed)
 
