@@ -14,6 +14,9 @@ using namespace std;
 
 map<string, set<string>> rhymes;
 map<string, vector<int>> VERBS_and_indexes;
+string verbs_file;
+string rhymes_file;
+string file_name;
 
 // Поиск начала гласной буквы, на которой стоит ударение \u0301
 int accent_index(const string& str) {
@@ -56,11 +59,33 @@ string generateFileName()
            to_string(tm_now.tm_min) + "_" + 
            to_string(tm_now.tm_sec) + ".txt";
 }
+namespace fs = std::filesystem;
+
+
+fs::path get_dir(string mode) {
+    fs::path words = mode;
+    error_code ec;
+    fs::create_directories(words, ec);
+
+    // Проверяем именно факт ОШИБКИ, а не то, существовала ли папка раньше
+    if (ec) {
+        cout << "Критическая ошибка создания директории " << words
+             << ": " << ec.message() << " (Код: " << ec.value() << ")\n";
+        return fs::path(); // Возвращаем пустой путь в случае сбоя
+    }
+    file_name = mode + "_" + generateFileName();
+    fs::path filePath = words / file_name;
+    return filePath;
+}
 
 void save_verbs()
 {
-    string file_name = "all_verbs_" + generateFileName();
-    ofstream fos(file_name, ios::out | ios::trunc);
+    fs::path filePath = get_dir("all_verbs");
+    if (filePath.empty()) {
+        cout << "Сохранение отменено: не удалось перенаправить путь.\n";
+        return;
+    }
+    ofstream fos(filePath, ios::out | ios::trunc);
 
     fos << "Найдено уникальных глаголов: " << VERBS_and_indexes.size() << "\n\n";
 
@@ -76,6 +101,50 @@ void save_verbs()
         ind++;
     }
 }
+enum class ACTIONS : int
+{
+    NO_ACTION,
+    MOVE_UP,
+    MOVE_DOWN,
+    CHANGE_CURSOR,
+    EXIT,
+    ENTER,
+    RESIZE,
+    BACK,
+};
+
+// Получение нажатой клавиши
+ACTIONS getPressedKey()
+{
+    unsigned int key = _getch();
+
+    switch (key)
+    {
+        case 0x0D: // Enter
+            return ACTIONS::ENTER;
+
+        case 0x08: // Backspace
+            return ACTIONS::BACK;
+
+        case 0xE0: // Первый байт кода стрелок в Windows
+        {
+            if (!_kbhit())
+                return ACTIONS::NO_ACTION;
+
+            key = _getch();
+
+            if (key == 0x48) // Стрелка вверх
+                return ACTIONS::MOVE_UP;
+            if (key == 0x50) // Стрелка вниз
+                return ACTIONS::MOVE_DOWN;
+
+            return ACTIONS::NO_ACTION;
+        }
+
+        default:
+            return ACTIONS::NO_ACTION;
+    }
+}
 
 void draw_menu(int index, string page_choice[], int size) {
     // Очищаем экран перед каждым выводом, чтобы меню не дублировалось
@@ -87,41 +156,30 @@ void draw_menu(int index, string page_choice[], int size) {
     }
 }
 
-int choice_menu(string page_choice[], string message, int size)
+int choice_menu(string page_choice[], string message, int menu_size)
 {
+    if (menu_size <= 0)
+        return -1;
+
     int index = 0;
-    int c;
 
-    cout << message << endl << endl;
-    draw_menu(index, page_choice, size);
+    while (true)
+    {
+        system("cls");
+        cout << message << "\n\n";
+        draw_menu(index, page_choice, menu_size);
 
-    do {
-        c = getch();
+        ACTIONS action = getPressedKey();
 
-        if (c == 224 || c == 0) {
-            c = getch();
-
-            if (c == 72) { // Стрелка вверх
-                index = (index - 1 + size) % size;
-            }
-            else if (c == 80) { // Стрелка вниз
-                index = (index + 1) % size;
-            }
-            else {
-                continue;
-            }
-
-            system("cls");
-            cout << message << endl << endl;
-            draw_menu(index, page_choice, size);
-        }
-        else if (c == 13) { // Enter
+        if (action == ACTIONS::MOVE_UP)
+            index = (index - 1 + menu_size) % menu_size;
+        else if (action == ACTIONS::MOVE_DOWN)
+            index = (index + 1) % menu_size;
+        else if (action == ACTIONS::ENTER)
             return index;
-        }
-
-    } while (c != 13);
-
-    return index;
+        else if (action == ACTIONS::BACK)
+            return -1;
+    }
 }
 
 
@@ -129,8 +187,12 @@ int choice_menu(string page_choice[], string message, int size)
 
 void save_rhymes()
 {
-    string file_name = "unic_rhymes_" + generateFileName();
-    ofstream fos(file_name, ios::out | ios::trunc);
+    fs::path filePath = get_dir("unic_rhymes");
+    if (filePath.empty()) {
+        cout << "Сохранение отменено: не удалось перенаправить путь.\n";
+        return;
+    }
+    ofstream fos(filePath, ios::out | ios::trunc);
 
     int ind = 1;
     for (const auto& [end, v] : rhymes)
@@ -214,7 +276,7 @@ string choose_data_file()
 }
 
 int main_algorytm() {
-
+    system("cls");
 
     PyObject* pModule = PyImport_ImportModule("verb_analiser");
     if (!pModule) {
@@ -234,6 +296,9 @@ int main_algorytm() {
     }
 
     string input_file = choose_data_file();
+    if (input_file.empty()) {
+        return 0;
+    }
 
     auto start = chrono::high_resolution_clock::now();
 
@@ -270,14 +335,18 @@ int main_algorytm() {
 
         search_rhyme();
         save_verbs();
+        verbs_file = file_name;
         save_rhymes();
+        rhymes_file = file_name;
     } else {
         PyErr_Print();
     }
 
     auto end = chrono::high_resolution_clock::now();
     auto duration = chrono::duration_cast<chrono::milliseconds>(end - start);
-    cout << "Анализ проведен. Данные сохранены в файлы. \n";
+
+    cout << "Анализ проведен. Данные сохранены в файлы "
+            <<verbs_file << " и " << rhymes_file <<  " соответствующих директорий\n";
     cout << "Время выполнения: " << duration.count() << " мс\n";
     cout << "нажмите любую клавишу";
     getch();
@@ -329,13 +398,20 @@ void greeting_menu() {
         "Данная программа позволяет находить рифмы среди глаголов "
         "в текстовом файле.\n"
         "Результаты работы сохраняются в файлы "
-        "all_verbs_<id> и unic_rhymes_<id>.";
+        "all_verbs_<id> и unic_rhymes_<id>."
+        "Enter - выбрать действие\n"
+        "Backspace - выход";
 
     int index = 0;
 
     do {
         system("cls");
         index = choice_menu(page_choice, message, menu_size);
+
+        if (index == -1) {
+            Py_Finalize();
+            return;
+        }
 
         switch (index) {
             case 0:
@@ -356,7 +432,6 @@ void greeting_menu() {
 
     } while (true);
 }
-
 
 
 

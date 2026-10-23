@@ -90,8 +90,8 @@ def analyze(input_file: str):
         verbs.pop(verb)
         verbs[word] = indexes
 
-
-    with open(input_file, "w", encoding="utf-8") as f:
+    output_file = input_file.replace('.txt', '(edited).txt')
+    with open(output_file, "w", encoding="utf-8") as f:
         for index, sentence in enumerate(doc.sents, start=1):
             sent_text = sentence.text.strip()
 
