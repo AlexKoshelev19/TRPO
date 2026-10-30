@@ -88,7 +88,7 @@ def analyze(input_file: str):
         word = stress(verb, "ru")
 
         # Ищем символ ударения (он стоит сразу ПОСЛЕ ударной гласной)
-        verbs.pop(verb)
+        indexes = verbs.pop(verb)
         verbs[word] = indexes
 
     output_file = input_file.replace('.txt', '(edited).txt')

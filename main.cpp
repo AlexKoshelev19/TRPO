@@ -11,20 +11,29 @@
 #include <conio.h>
 
 using namespace std;
+namespace fs = std::filesystem;
 
 map<string, set<string>> rhymes;
 map<string, vector<int>> VERBS_and_indexes;
-string verbs_file;
-string rhymes_file;
-string file_name;
+bool is_running = true;
 
-// РџРѕРёСЃРє РЅР°С‡Р°Р»Р° РіР»Р°СЃРЅРѕР№ Р±СѓРєРІС‹, РЅР° РєРѕС‚РѕСЂРѕР№ СЃС‚РѕРёС‚ СѓРґР°СЂРµРЅРёРµ \u0301
+enum class ACTIONS : int
+{
+    NO_ACTION,
+    MOVE_UP,
+    MOVE_DOWN,
+    EXIT,
+    ENTER,
+    BACK,
+};
+
+// Поиск начала гласной буквы, на которой стоит ударение \u0301
 int accent_index(const string& str) {
     size_t pos = str.find("\u0301");
     if (pos == string::npos || pos == 0) return -1;
 
     size_t i = pos - 1;
-    // РџСЂРѕРїСѓСЃРєР°РµРј С…РІРѕСЃС‚РѕРІС‹Рµ Р±Р°Р№С‚С‹ UTF-8 (10xxxxxx), С‡С‚РѕР±С‹ РІСЃС‚Р°С‚СЊ РЅР° Р·Р°РіРѕР»РѕРІРѕС‡РЅС‹Р№ Р±Р°Р№С‚ Р±СѓРєРІС‹
+    // Пропускаем хвостовые байты UTF-8 (10xxxxxx), чтобы встать на заголовочный байт буквы
     while (i > 0 && (static_cast<unsigned char>(str[i]) & 0xC0) == 0x80) {
         --i;
     }
@@ -59,21 +68,19 @@ string generateFileName()
            to_string(tm_now.tm_min) + "_" + 
            to_string(tm_now.tm_sec) + ".txt";
 }
-namespace fs = std::filesystem;
-
 
 fs::path get_dir(string mode) {
     fs::path words = mode;
     error_code ec;
     fs::create_directories(words, ec);
 
-    // РџСЂРѕРІРµСЂСЏРµРј РёРјРµРЅРЅРѕ С„Р°РєС‚ РћРЁРР‘РљР, Р° РЅРµ С‚Рѕ, СЃСѓС‰РµСЃС‚РІРѕРІР°Р»Р° Р»Рё РїР°РїРєР° СЂР°РЅСЊС€Рµ
+    // Проверяем именно факт ОШИБКИ, а не то, существовала ли папка раньше
     if (ec) {
-        cout << "РљСЂРёС‚РёС‡РµСЃРєР°СЏ РѕС€РёР±РєР° СЃРѕР·РґР°РЅРёСЏ РґРёСЂРµРєС‚РѕСЂРёРё " << words
-             << ": " << ec.message() << " (РљРѕРґ: " << ec.value() << ")\n";
-        return fs::path(); // Р’РѕР·РІСЂР°С‰Р°РµРј РїСѓСЃС‚РѕР№ РїСѓС‚СЊ РІ СЃР»СѓС‡Р°Рµ СЃР±РѕСЏ
+        cout << "Критическая ошибка создания директории " << words
+             << ": " << ec.message() << " (Код: " << ec.value() << ")\n";
+        return fs::path(); // Возвращаем пустой путь в случае сбоя
     }
-    file_name = mode + "_" + generateFileName();
+    string file_name = mode + "_" + generateFileName();
     fs::path filePath = words / file_name;
     return filePath;
 }
@@ -82,13 +89,13 @@ void save_verbs()
 {
     fs::path filePath = get_dir("all_verbs");
     if (filePath.empty()) {
-        cout << "РЎРѕС…СЂР°РЅРµРЅРёРµ РѕС‚РјРµРЅРµРЅРѕ: РЅРµ СѓРґР°Р»РѕСЃСЊ РїРµСЂРµРЅР°РїСЂР°РІРёС‚СЊ РїСѓС‚СЊ.\n";
+        cout << "Сохранение отменено: не удалось перенаправить путь.\n";
         return;
     }
     ofstream fos(filePath, ios::out | ios::trunc);
 
-    fos << "РќР°Р№РґРµРЅРѕ СѓРЅРёРєР°Р»СЊРЅС‹С… РіР»Р°РіРѕР»РѕРІ: " << VERBS_and_indexes.size() << "\n\n";
-
+    fos << "unic verbs count: " << VERBS_and_indexes.size() << "\n\n";
+    
     int ind = 1;
     for (const auto& [verb, sentences] : VERBS_and_indexes)
     {
@@ -100,96 +107,15 @@ void save_verbs()
         fos << '\n';
         ind++;
     }
+    fos.close();
+    cout << "Статистика по каждому из глаголов сохранена в файл: " << filePath.string() << '\n';
 }
-enum class ACTIONS : int
-{
-    NO_ACTION,
-    MOVE_UP,
-    MOVE_DOWN,
-    CHANGE_CURSOR,
-    EXIT,
-    ENTER,
-    RESIZE,
-    BACK,
-};
-
-// РџРѕР»СѓС‡РµРЅРёРµ РЅР°Р¶Р°С‚РѕР№ РєР»Р°РІРёС€Рё
-ACTIONS getPressedKey()
-{
-    unsigned int key = _getch();
-
-    switch (key)
-    {
-        case 0x0D: // Enter
-            return ACTIONS::ENTER;
-
-        case 0x08: // Backspace
-            return ACTIONS::BACK;
-
-        case 0xE0: // РџРµСЂРІС‹Р№ Р±Р°Р№С‚ РєРѕРґР° СЃС‚СЂРµР»РѕРє РІ Windows
-        {
-            if (!_kbhit())
-                return ACTIONS::NO_ACTION;
-
-            key = _getch();
-
-            if (key == 0x48) // РЎС‚СЂРµР»РєР° РІРІРµСЂС…
-                return ACTIONS::MOVE_UP;
-            if (key == 0x50) // РЎС‚СЂРµР»РєР° РІРЅРёР·
-                return ACTIONS::MOVE_DOWN;
-
-            return ACTIONS::NO_ACTION;
-        }
-
-        default:
-            return ACTIONS::NO_ACTION;
-    }
-}
-
-void draw_menu(int index, string page_choice[], int size) {
-    // РћС‡РёС‰Р°РµРј СЌРєСЂР°РЅ РїРµСЂРµРґ РєР°Р¶РґС‹Рј РІС‹РІРѕРґРѕРј, С‡С‚РѕР±С‹ РјРµРЅСЋ РЅРµ РґСѓР±Р»РёСЂРѕРІР°Р»РѕСЃСЊ
-    for (int i = 0; i < size; i++) {
-        if (i == index)
-            cout << "> " << page_choice[i] << endl;
-        else
-            cout << "  " << page_choice[i] << endl; // Р”РѕР±Р°РІРёР»Рё РїСЂРѕР±РµР»С‹ РґР»СЏ РІС‹СЂР°РІРЅРёРІР°РЅРёСЏ
-    }
-}
-
-int choice_menu(string page_choice[], string message, int menu_size)
-{
-    if (menu_size <= 0)
-        return -1;
-
-    int index = 0;
-
-    while (true)
-    {
-        system("cls");
-        cout << message << "\n\n";
-        draw_menu(index, page_choice, menu_size);
-
-        ACTIONS action = getPressedKey();
-
-        if (action == ACTIONS::MOVE_UP)
-            index = (index - 1 + menu_size) % menu_size;
-        else if (action == ACTIONS::MOVE_DOWN)
-            index = (index + 1) % menu_size;
-        else if (action == ACTIONS::ENTER)
-            return index;
-        else if (action == ACTIONS::BACK)
-            return -1;
-    }
-}
-
-
-
 
 void save_rhymes()
 {
     fs::path filePath = get_dir("unic_rhymes");
     if (filePath.empty()) {
-        cout << "РЎРѕС…СЂР°РЅРµРЅРёРµ РѕС‚РјРµРЅРµРЅРѕ: РЅРµ СѓРґР°Р»РѕСЃСЊ РїРµСЂРµРЅР°РїСЂР°РІРёС‚СЊ РїСѓС‚СЊ.\n";
+        cout << "Сохранение отменено: не удалось перенаправить путь.\n";
         return;
     }
     ofstream fos(filePath, ios::out | ios::trunc);
@@ -209,9 +135,59 @@ void save_rhymes()
             }
         }
     }
+    fos.close();
+
+    cout << "Рифмующиеся глаголы сохранены в файл: " << filePath.string() << '\n';
+} 
+
+// Получение нажатой клавиши
+ACTIONS getPressedKey()
+{
+    unsigned int key = _getch();
+
+    switch (key)
+    {
+    case 0x0D: // Enter
+        return ACTIONS::ENTER;
+
+    case 0x08: // Backspace
+        return ACTIONS::BACK;
+        
+    case 0x1B: // ESC
+        return ACTIONS::EXIT;
+
+    case 0xE0: // Первый байт кода стрелок в Windows
+        {
+            if (!_kbhit())
+                return ACTIONS::NO_ACTION;
+
+            key = _getch();
+
+            if (key == 0x48) // Стрелка вверх
+            {
+                cout << "up" << endl;
+                return ACTIONS::MOVE_UP;
+            }
+            else if (key == 0x50) // Стрелка вниз
+            {
+                cout << "down" << endl;
+                return ACTIONS::MOVE_DOWN;
+            }
+        }
+
+    default:
+        return ACTIONS::NO_ACTION;
+    }
 }
 
-
+void draw_menu(int index, string page_choice[], int size) {
+    for (int i = 0; i < size; i++) {
+        if (i == index)
+            cout << "> " << page_choice[i] << endl;
+        else
+            cout << "  " << page_choice[i] << endl;
+    }
+}
 
 bool is_valid_data_file(const string& file_name)
 {
@@ -222,8 +198,7 @@ bool is_valid_data_file(const string& file_name)
     return true;
 }
 
-
-// РІРѕР·РІСЂР°С‰Р°РµС‚ С‡РёСЃР»Рѕ РЅР°Р№РґРµРЅРЅС‹С… С„Р°Р№Р»РѕРІ, РёРјРµРЅР° РїРёС€РµС‚ РІ files[]
+// возвращает число найденных файлов, имена пишет в files[]
 int collect_valid_files(string files[], int max_files)
 {
     int count = 0;
@@ -250,57 +225,72 @@ int collect_valid_files(string files[], int max_files)
     return count;
 }
 
-string choose_data_file()
+// функция управления меню выбора файла
+string choose_data_file_menu()
 {
-    const int MAX_FILES = 50;
+    const int MAX_FILES = 20;
     string files[MAX_FILES];
-    int n = collect_valid_files(files, MAX_FILES);
+    int count = collect_valid_files(files, MAX_FILES);
 
-    if (n == 0) {
-        cout << "РџРѕРґС…РѕРґСЏС‰РёС… С„Р°Р№Р»РѕРІ РЅРµ РЅР°Р№РґРµРЅРѕ.\n";
+    if (count == 0) {
+        cout << "Подходящих файлов не найдено.\n";
         getch();
         return "";
     }
 
-    // РїРѕСЃР»РµРґРЅРёР№ РїСѓРЅРєС‚ вЂ” РѕС‚РјРµРЅР°
-    files[n] = "РћС‚РјРµРЅР°";
-    int size = n + 1;
+    int index = 0;
+    ACTIONS action;
+    string message = "Выберите файл для анализа. Для перемещения курсора по пунктам меню используйте клавиши стрелок вверх и вниз.\nДля выбора файла нажмите клавишу Enter, для завершения работы с программой нажмите клавишу ESC.";
+    do
+    {
+        system("cls");
+        cout << message << "\n\n";
+        draw_menu(index, files, count);
 
-    string message = "Р’С‹Р±РµСЂРёС‚Рµ С„Р°Р№Р» РґР»СЏ Р·Р°РіСЂСѓР·РєРё:";
-    int index = choice_menu(files, message, size);
+        action = getPressedKey();
 
-    if (index < 0 || index >= n)  // Esc РёР»Рё В«РћС‚РјРµРЅР°В»
-        return "";
+        if (action == ACTIONS::MOVE_UP)
+        {
+            index = (index - 1 + count) % count;
+        }
+        else if (action == ACTIONS::MOVE_DOWN)
+        {
+            index = (index + 1) % count;
+        }
+        else if (action == ACTIONS::EXIT)
+        {
+            is_running = false;
+            return "";
+        }
+
+    } while (action != ACTIONS::ENTER);
 
     return files[index];
 }
 
-int main_algorytm() {
-    system("cls");
+void extract_verbs(string input_file)
+{
+    if (input_file.empty())
+    {
+        return;
+    }
 
     PyObject* pModule = PyImport_ImportModule("verb_analiser");
     if (!pModule) {
         PyErr_Print();
-        cerr << "РќРµ СѓРґР°Р»РѕСЃСЊ Р·Р°РіСЂСѓР·РёС‚СЊ РјРѕРґСѓР»СЊ" << endl;
         Py_Finalize();
-        return 1;
+        cerr << "Не удалось загрузить модуль" << endl;
+        return;
     }
 
     PyObject* pFunc = PyObject_GetAttrString(pModule, "analyze");
     if (!pFunc || !PyCallable_Check(pFunc)) {
-        cerr << "Р¤СѓРЅРєС†РёСЏ analyze РЅРµ РЅР°Р№РґРµРЅР°" << endl;
         Py_XDECREF(pFunc);
         Py_XDECREF(pModule);
         Py_Finalize();
-        return 1;
+        cerr << "Функция analyze не найдена" << endl;
+        return;
     }
-
-    string input_file = choose_data_file();
-    if (input_file.empty()) {
-        return 0;
-    }
-
-    auto start = chrono::high_resolution_clock::now();
 
     PyObject* pArgs = PyTuple_New(1);
     PyObject* pValue = PyUnicode_FromString(input_file.c_str());
@@ -328,119 +318,61 @@ int main_algorytm() {
                     }
                 }
 
-                // РџСЂСЏРјР°СЏ Р·Р°РїРёСЃСЊ Р±РµР· РІС‹Р·РѕРІР° MultiByteToWideChar
+                // Прямая запись без вызова MultiByteToWideChar
                 VERBS_and_indexes[string(verb_utf8)] = move(sentence_indices);
             }
         }
-
-        search_rhyme();
-        save_verbs();
-        verbs_file = file_name;
-        save_rhymes();
-        rhymes_file = file_name;
     } else {
         PyErr_Print();
     }
 
-    auto end = chrono::high_resolution_clock::now();
-    auto duration = chrono::duration_cast<chrono::milliseconds>(end - start);
-
-    cout << "РђРЅР°Р»РёР· РїСЂРѕРІРµРґРµРЅ. Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р»С‹ "
-            <<verbs_file << " Рё " << rhymes_file <<  " СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёС… РґРёСЂРµРєС‚РѕСЂРёР№\n";
-    cout << "Р’СЂРµРјСЏ РІС‹РїРѕР»РЅРµРЅРёСЏ: " << duration.count() << " РјСЃ\n";
-    cout << "РЅР°Р¶РјРёС‚Рµ Р»СЋР±СѓСЋ РєР»Р°РІРёС€Сѓ";
-    getch();
-    system("cls");
     Py_XDECREF(pResult);
     Py_XDECREF(pArgs);
     Py_XDECREF(pFunc);
     Py_XDECREF(pModule);
 
-    return 0;
+    return;
 }
-void instruction_menu() {
-    cout << "РџРѕРєР° РЅРёС‡РµРіРѕ РЅРµС‚Сѓ";
-    getch();
-    system("cls");
-}
-
-void exit_from_program() {
-
-    system("cls");
-    string page_choice[] = {
-        "РІС‹Р№С‚Рё РѕРєРѕРЅС‡Р°С‚РµР»СЊРЅРѕ",
-        "РІРµСЂРЅСѓС‚СЊСЃСЏ РІ РјРµРЅСЋ"
-    };
-    int index;
-    do{
-        int menu_size = size(page_choice);
-        string message = "Р’С‹ С‚РѕС‡РЅРѕ СѓРІРµСЂРµРЅС‹?";
-        index = choice_menu(page_choice, message, menu_size);
-        switch (index) {
-            case 0:  Py_Finalize(); exit(0);
-            case 1:  return;
-            default: continue;
-        }
-    } while(true);
-}
-
-void greeting_menu() {
-    string page_choice[] = {
-        "РќР°С‡Р°С‚СЊ СЂР°Р±РѕС‚Сѓ",
-        "Р’С‹Р№С‚Рё РёР· РїСЂРѕРіСЂР°РјРјС‹",
-        "РРЅСЃС‚СЂСѓРєС†РёСЏ"
-    };
-
-    int menu_size = size(page_choice);
-
-    string message =
-        "Р—РґСЂР°РІСЃС‚РІСѓР№С‚Рµ!\n"
-        "Р”Р°РЅРЅР°СЏ РїСЂРѕРіСЂР°РјРјР° РїРѕР·РІРѕР»СЏРµС‚ РЅР°С…РѕРґРёС‚СЊ СЂРёС„РјС‹ СЃСЂРµРґРё РіР»Р°РіРѕР»РѕРІ "
-        "РІ С‚РµРєСЃС‚РѕРІРѕРј С„Р°Р№Р»Рµ.\n"
-        "Р РµР·СѓР»СЊС‚Р°С‚С‹ СЂР°Р±РѕС‚С‹ СЃРѕС…СЂР°РЅСЏСЋС‚СЃСЏ РІ С„Р°Р№Р»С‹ "
-        "all_verbs_<id> Рё unic_rhymes_<id>."
-        "Enter - РІС‹Р±СЂР°С‚СЊ РґРµР№СЃС‚РІРёРµ\n"
-        "Backspace - РІС‹С…РѕРґ";
-
-    int index = 0;
-
-    do {
-        system("cls");
-        index = choice_menu(page_choice, message, menu_size);
-
-        if (index == -1) {
-            Py_Finalize();
-            return;
-        }
-
-        switch (index) {
-            case 0:
-                main_algorytm();
-                break;
-
-            case 1:
-                exit_from_program();
-                break;
-
-            case 2:
-                instruction_menu();
-                break;
-
-            default:
-                continue;
-        }
-
-    } while (true);
-}
-
-
 
 int main() {
-    SetConsoleOutputCP(65001);
-    SetConsoleCP(65001);
     Py_Initialize();
-    greeting_menu();
+    SetConsoleOutputCP(1251);
+    SetConsoleCP(1251);
 
+    cout << "Здравствуйте!\nДанная программа предназначена для поиска рифмующихся пар глаголов.\nДля завершения работы с программой нажмите клавишу ESC, а для продолжения - любую другую клавишу.";
+    
+    if (getPressedKey() == ACTIONS::EXIT)
+    {
+        is_running = false;
+        Py_Finalize();
+    }
+
+    while (is_running)
+    {
+        string input_file = choose_data_file_menu();
+        
+        if (is_running)
+        {
+            system("cls");
+            cout << "Загрузка глаголов.";
+  
+            extract_verbs(input_file);
+
+            cout << "Глаголы загружены.\n";
+            cout << "Глаголы загружены.\n";
+            search_rhyme();
+            cout << "Анализ проведён.\n";
+            save_rhymes();
+            save_verbs();
+
+            cout << "Для завершения работы с программой нажмите клавишу ESC, для продолжения - любую другую клавишу";
+            if (getPressedKey() == ACTIONS::EXIT)
+            {
+                Py_Finalize();
+                is_running = false;
+            }
+        }
+    }
 
     return 0;
 }
