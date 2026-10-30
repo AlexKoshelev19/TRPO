@@ -198,24 +198,29 @@ bool is_valid_data_file(const string& file_name)
     return true;
 }
 
-// возвращает число найденных файлов, имена пишет в files[]
+// возвращает число найденных файлов, имена (с путем) пишет в files[]
 int collect_valid_files(string files[], int max_files)
 {
     int count = 0;
+    string search_pattern = "input\\*.txt"; // Ищем только в папке input
 
     WIN32_FIND_DATAA fd;
-    HANDLE h = FindFirstFileA("*.txt", &fd);
+    HANDLE h = FindFirstFileA(search_pattern.c_str(), &fd);
     if (h == INVALID_HANDLE_VALUE)
         return 0;
 
     do {
+        // Пропускаем директории (на случай, если внутри input есть папки)
         if (fd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)
             continue;
 
-        string name = fd.cFileName;
-        if (is_valid_data_file(name)) {
+        string file_name = fd.cFileName;             // Только имя, например "data.txt"
+        string full_relative_path = "input\\" + file_name; // Полный относительный путь
+
+        // Проверяем доступность файла по полному пути
+        if (is_valid_data_file(full_relative_path)) {
             if (count < max_files) {
-                files[count] = name;
+                files[count] = fd.cFileName; // Сохраняем путь "input\\data.txt"
                 count++;
             }
         }
@@ -356,7 +361,7 @@ int main() {
             system("cls");
             cout << "Загрузка глаголов.";
   
-            extract_verbs(input_file);
+            extract_verbs("input\\"+input_file);
 
             cout << "Глаголы загружены.\n";
             cout << "Глаголы загружены.\n";
