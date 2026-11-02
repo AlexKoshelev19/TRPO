@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "D:/study/TRPO/bin/app.exe"
+			"path" : "D:/study/TRPO/bin/app/app.exe"
 		},
 		{
-			"path" : "D:/study/TRPO/bin/app.pdb"
+			"path" : "D:/study/TRPO/bin/app/app.pdb"
 		}
 	],
 	"backtrace" : 1,

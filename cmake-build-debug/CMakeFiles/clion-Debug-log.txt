@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2026.1.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2026.1.3/bin/ninja/win/x64/ninja.exe" -G Ninja -S D:\study\TRPO -B D:\study\TRPO\cmake-build-debug
+"C:\Program Files\JetBrains\CLion 2026.1.3\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "MinGW Makefiles" -S D:\study\TRPO -B D:\study\TRPO\cmake-build-debug
 -- The C compiler identification is GNU 13.1.0
 -- The CXX compiler identification is GNU 13.1.0
 -- Detecting C compiler ABI info
@@ -15,6 +15,6 @@
 -- pybind11 v3.1.0 
 -- pybind11::lto disabled (problems with undefined symbols for MinGW for now)
 -- pybind11::thin_lto disabled (problems with undefined symbols for MinGW for now)
--- Configuring done (3.6s)
+-- Configuring done (4.8s)
 -- Generating done (0.0s)
 -- Build files have been written to: D:/study/TRPO/cmake-build-debug
