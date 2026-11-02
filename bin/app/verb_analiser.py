@@ -21,6 +21,7 @@ os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
 has_cached_models = any(os.scandir(models_cache_dir))
 
 import re
+import pymorphy3
 # импортируем модель natasha для выявления глаголов
 from natasha import Segmenter, NewsEmbedding, NewsMorphTagger, NewsSyntaxParser, Doc
 # Импортируем функцию ударения из выбранной библиотеки
@@ -36,52 +37,86 @@ else:
 
 ACCENT_CHAR = '\u0301'  # Юникод-символ ударения, который ставит stressonnx
 
-def analyze(input_file: str):
+segmenter = Segmenter()
+emb = NewsEmbedding()
+morph_tagger = NewsMorphTagger(emb)
+syntax_tagger = NewsSyntaxParser(emb)
+morph_analyzer = pymorphy3.MorphAnalyzer()
+
+def is_true_verb(word: str) -> bool:
+    parses = morph_analyzer.parse(word)
+    return any(p.tag.POS in ('VERB', 'INFN') for p in parses)
+
+def analyze(input_file: str) -> dict:
     with open(input_file, 'r', encoding='utf-8') as f:
         text = f.read()
 
-    # Инициализация модулей Natasha
-    segmenter = Segmenter()
-    emb = NewsEmbedding()
-    morph_tagger = NewsMorphTagger(emb)
-    syntax_tagger = NewsSyntaxParser(emb)
+    # 1. Нормализация дефисных побудительных частиц (-ка, -то),
+    # чтобы токенизатор не сбоил на словах вроде "Скажи-ка" -> "Скажи ка"
+    normalized_text = re.sub(r'(\b\w+)-ка\b', r'\1 ка', text, flags=re.IGNORECASE)
+    normalized_text = re.sub(r'(\b\w+)-то\b', r'\1 то', text, flags=re.IGNORECASE)
 
-    doc = Doc(text)
+    doc = Doc(normalized_text)
 
-    # Разбор предложения на токены и части речи
+    # 2. Разбор структуры
     doc.segment(segmenter)
-
-    # моррфологический разбор (присваивает token.pos)
     doc.tag_morph(morph_tagger)
-
-    # синтаксический разбор (присваивает token.rel и token.head_id для выявления зависемостей между словами)
     doc.parse_syntax(syntax_tagger)
 
-    # ищем слова, у которых есть свои исполнители или зависимые предметы
-    heads_with_arguments = set()
+    # Собираем ID слов, которые управляют актантами или обстоятельствами
+    heads_with_arguments = {
+        token.head_id for token in doc.tokens
+        if token.rel in ("nsubj", "obj", "iobj", "obl", "advmod", "vocative")
+    }
+
+    # Предикативные синтаксические роли в дереве зависимостей
+    PREDICATE_ROLES = {
+        "root", "xcomp", "ccomp", "conj", "advcl", 
+        "parataxis", "cop", "aux", "discourse"
+    }
+
+    # Роли, гарантированно указывающие на то, что слово выступает как существительное/прилагательное
+    NOMINAL_ROLES = {"nsubj", "obj", "iobj", "nmod", "amod", "appos"}
+
+    verbs = {}
+
     for token in doc.tokens:
-        if token.rel in ("nsubj", "obj", "iobj", "obl"):
-            heads_with_arguments.add(token.head_id)
+        clean_text = token.text.lower()
 
-    verbs = dict()
-    # Выбираем глаголы
-    for token in doc.tokens:
-        if token.pos in ('VERB', 'AUX'):
-            # Критерий А: токен сам является предикативным узлом
-            is_predicate_node = token.rel in ("root", "xcomp", "ccomp", "conj", "advcl")
+        # Игнорируем знаки препинания и небуквенные токены
+        if not clean_text.isalpha():
+            continue
 
-            # Критерий Б: токен управляет хотя бы одним глагольным зависимым
-            controls_arguments = token.id in heads_with_arguments
+        feats = token.feats or {}
+        pos = token.pos
 
-            # Критерий В: отсекаем явно неглагольные роли (подлежащее, определение, приложение)
-            is_nominal_role = token.rel in ("nsubj", "obj", "iobj", "nmod", "amod", "appos")
+        # Рассматриваем только предикативные части речи Natasha
+        if pos in ('VERB', 'AUX'):
+            # Критерий 1: Повелительное наклонение (Скажи, постой, умремте)
+            is_imperative = feats.get("Mood") == "Imp"
 
-            if (is_predicate_node or controls_arguments) and not is_nominal_role:
-                verb = token.text.lower()
-                indexes =  verbs.get(verb) if verbs.get(verb) != None else []
-                indexes.append(int(token.id.split('_')[0]))
-                verbs[verb] = indexes
-                #print(verb)
+            # Критерий 2: Инфинитив (изорвать, разгуляться, видать, колоть)
+            is_infinitive = feats.get("VerbForm") == "Inf"
+
+            # Критерий 3: Предикативный узел в синтаксическом дереве
+            is_predicate = token.rel in PREDICATE_ROLES
+
+            # Критерий 4: Управляет зависимыми членами предложения
+            controls_args = token.id in heads_with_arguments
+
+            # Проверка на ложноположительную именную позицию
+            is_nominal = token.rel in NOMINAL_ROLES
+
+            # Слово проходит синтаксический порог, если:
+            # - это императив или инфинитив (они не требуют подлежащего)
+            # - или является предикатом / управляет актантами, не будучи номинативным членом
+            if (is_imperative or is_infinitive or is_predicate or controls_args) and not is_nominal:
+                if is_true_verb(token.text):
+                    verb = token.text.lower()
+                    indexes =  verbs.get(verb) if verbs.get(verb) != None else []
+                    indexes.append(int(token.id.split('_')[0]))
+                    verbs[verb] = indexes
+                    print(verb)
 
     for verb in list(verbs.keys()):
         # Передаем слово и маркер языка "ru"
