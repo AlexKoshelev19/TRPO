@@ -215,7 +215,8 @@ string choose_data_file_menu()
     vector<string> files = collect_valid_files();
 
     if (files.empty()) {
-        cout << "В папке input подходящих файлов не найдено.\n";
+        system("cls");
+        cout << "В папке input подходящих файлов не найдено.\nДобавьте файлы в директорию app\\input и перезапустите программу.";
         _getch();
         return "";
     }
@@ -359,7 +360,13 @@ int main() {
             if (getPressedKey() == ACTIONS::EXIT)
             {
                 is_running = false;
+                Py_Finalize();
             }
+        }
+        else
+        {
+            is_running = false;
+            Py_Finalize();
         }
     }
 
