@@ -1,5 +1,6 @@
 import sys
 import os
+from pathlib import Path
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -126,7 +127,14 @@ def analyze(input_file: str) -> dict:
         indexes = verbs.pop(verb)
         verbs[word] = indexes
 
-    output_file = input_file.replace('.txt', '(edited).txt')
+    in_path = Path(input_file)
+
+    # Каталог для отредактированных файлов
+    output_dir = Path("edited")
+    output_dir.mkdir(parents=True, exist_ok=True)  # Автоматически создаёт папку, если её нет
+
+    # in_path.stem берет только имя файла без расширения: "стих.txt" -> "стих"
+    output_file = output_dir / f"{in_path.stem}_edited.txt" 
     with open(output_file, "w", encoding="utf-8") as f:
         for index, sentence in enumerate(doc.sents, start=1):
             sent_text = sentence.text.strip()
