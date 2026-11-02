@@ -1,4 +1,4 @@
-set(CMAKE_CXX_COMPILER "C:/Exterenal tools/msys2/ucrt64/bin/c++.exe")
+set(CMAKE_CXX_COMPILER "C:/Progs/ucrt64/bin/c++.exe")
 set(CMAKE_CXX_COMPILER_ARG1 "")
 set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_COMPILER_VERSION "15.2.0")
@@ -25,16 +25,17 @@ set(CMAKE_CXX_COMPILER_ARCHITECTURE_ID "x86_64")
 
 
 
-set(CMAKE_AR "C:/Exterenal tools/msys2/ucrt64/bin/ar.exe")
-set(CMAKE_CXX_COMPILER_AR "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ar.exe")
-set(CMAKE_RANLIB "C:/Exterenal tools/msys2/ucrt64/bin/ranlib.exe")
-set(CMAKE_CXX_COMPILER_RANLIB "C:/Exterenal tools/msys2/ucrt64/bin/gcc-ranlib.exe")
-set(CMAKE_LINKER "C:/Exterenal tools/msys2/ucrt64/bin/ld.exe")
+
+set(CMAKE_AR "C:/Progs/ucrt64/bin/ar.exe")
+set(CMAKE_CXX_COMPILER_AR "C:/Progs/ucrt64/bin/gcc-ar.exe")
+set(CMAKE_RANLIB "C:/Progs/ucrt64/bin/ranlib.exe")
+set(CMAKE_CXX_COMPILER_RANLIB "C:/Progs/ucrt64/bin/gcc-ranlib.exe")
+set(CMAKE_LINKER "C:/Progs/ucrt64/bin/ld.exe")
 set(CMAKE_LINKER_LINK "")
 set(CMAKE_LINKER_LLD "")
-set(CMAKE_CXX_COMPILER_LINKER "C:/Exterenal tools/msys2/ucrt64/x86_64-w64-mingw32/bin/ld.exe")
+set(CMAKE_CXX_COMPILER_LINKER "C:/Progs/ucrt64/x86_64-w64-mingw32/bin/ld.exe")
 set(CMAKE_CXX_COMPILER_LINKER_ID "GNU")
-set(CMAKE_CXX_COMPILER_LINKER_VERSION 2.45.1)
+set(CMAKE_CXX_COMPILER_LINKER_VERSION 2.45)
 set(CMAKE_CXX_COMPILER_LINKER_FRONTEND_VARIANT GNU)
 set(CMAKE_MT "")
 set(CMAKE_TAPI "CMAKE_TAPI-NOTFOUND")
@@ -90,19 +91,12 @@ endif()
 
 
 
-set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "C:/Exterenal tools/msys2/ucrt64/include/c++/15.2.0;C:/Exterenal tools/msys2/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32;C:/Exterenal tools/msys2/ucrt64/include/c++/15.2.0/backward;C:/Exterenal tools/msys2/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include;C:/Exterenal tools/msys2/ucrt64/include;C:/Exterenal tools/msys2/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include-fixed")
-set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "")
-set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "")
+set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "C:/Progs/ucrt64/include/c++/15.2.0;C:/Progs/ucrt64/include/c++/15.2.0/x86_64-w64-mingw32;C:/Progs/ucrt64/include/c++/15.2.0/backward;C:/Progs/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include;C:/Progs/ucrt64/include;C:/Progs/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0/include-fixed")
+set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "stdc++;mingw32;gcc_s;gcc;mingwex;kernel32;pthread;advapi32;shell32;user32;kernel32;mingw32;gcc_s;gcc;mingwex;kernel32")
+set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "C:/Progs/ucrt64/lib/gcc/x86_64-w64-mingw32/15.2.0;C:/Progs/ucrt64/lib/gcc;C:/Progs/ucrt64/x86_64-w64-mingw32/lib;C:/Progs/ucrt64/lib")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")
 set(CMAKE_CXX_COMPILER_CLANG_RESOURCE_DIR "")
 
-set(CMAKE_CXX_COMPILER_IMPORT_STD "")
-### Imported target for C++23 standard library
-set(CMAKE_CXX23_COMPILER_IMPORT_STD_NOT_FOUND_MESSAGE "Experimental `import std` support not enabled when detecting toolchain; it must be set before `CXX` is enabled (usually a `project()` call)")
-
-
-### Imported target for C++26 standard library
-set(CMAKE_CXX26_COMPILER_IMPORT_STD_NOT_FOUND_MESSAGE "Experimental `import std` support not enabled when detecting toolchain; it must be set before `CXX` is enabled (usually a `project()` call)")
-
-
-
+set(CMAKE_CXX_COMPILER_IMPORT_STD "23;26")
+set(CMAKE_CXX_COMPILER_IMPORT_STD_ERROR_MESSAGE  "")
+set(CMAKE_CXX_STDLIB_MODULES_JSON "C:/Progs/ucrt64/bin/../lib/gcc/x86_64-w64-mingw32/15.2.0/../../../../lib/libstdc++.modules.json")

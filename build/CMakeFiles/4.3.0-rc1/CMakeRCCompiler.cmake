@@ -1,4 +1,4 @@
-set(CMAKE_RC_COMPILER "C:/Exterenal tools/msys2/ucrt64/bin/windres.exe")
+set(CMAKE_RC_COMPILER "C:/Progs/ucrt64/bin/windres.exe")
 set(CMAKE_RC_COMPILER_ARG1 "")
 set(CMAKE_RC_COMPILER_LOADED 1)
 set(CMAKE_RC_SOURCE_FILE_EXTENSIONS rc;RC)

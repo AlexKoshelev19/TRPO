@@ -15,25 +15,25 @@
 ########################
 
 //Path to a program.
-CMAKE_ADDR2LINE:FILEPATH=C:/Exterenal tools/msys2/ucrt64/bin/addr2line.exe
+CMAKE_ADDR2LINE:FILEPATH=C:/Progs/ucrt64/bin/addr2line.exe
 
 //Path to a program.
-CMAKE_AR:FILEPATH=C:/Exterenal tools/msys2/ucrt64/bin/ar.exe
+CMAKE_AR:FILEPATH=C:/Progs/ucrt64/bin/ar.exe
 
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
 // MinSizeRel ...
 CMAKE_BUILD_TYPE:STRING=
 
 //CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=C:/Exterenal tools/msys2/ucrt64/bin/c++.exe
+CMAKE_CXX_COMPILER:FILEPATH=C:/Progs/ucrt64/bin/c++.exe
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_CXX_COMPILER_AR:FILEPATH=C:/Exterenal tools/msys2/ucrt64/bin/gcc-ar.exe
+CMAKE_CXX_COMPILER_AR:FILEPATH=C:/Progs/ucrt64/bin/gcc-ar.exe
 
 //A wrapper around 'ranlib' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_CXX_COMPILER_RANLIB:FILEPATH=C:/Exterenal tools/msys2/ucrt64/bin/gcc-ranlib.exe
+CMAKE_CXX_COMPILER_RANLIB:FILEPATH=C:/Progs/ucrt64/bin/gcc-ranlib.exe
 
 //Flags used by the CXX compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
@@ -54,15 +54,15 @@ CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 CMAKE_CXX_STANDARD_LIBRARIES:STRING=-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
 
 //C compiler
-CMAKE_C_COMPILER:FILEPATH=C:/Exterenal tools/msys2/ucrt64/bin/cc.exe
+CMAKE_C_COMPILER:FILEPATH=C:/Progs/ucrt64/bin/cc.exe
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_C_COMPILER_AR:FILEPATH=C:/Exterenal tools/msys2/ucrt64/bin/gcc-ar.exe
+CMAKE_C_COMPILER_AR:FILEPATH=C:/Progs/ucrt64/bin/gcc-ar.exe
 
 //A wrapper around 'ranlib' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_C_COMPILER_RANLIB:FILEPATH=C:/Exterenal tools/msys2/ucrt64/bin/gcc-ranlib.exe
+CMAKE_C_COMPILER_RANLIB:FILEPATH=C:/Progs/ucrt64/bin/gcc-ranlib.exe
 
 //Flags used by the C compiler during all build types.
 CMAKE_C_FLAGS:STRING=
@@ -83,7 +83,7 @@ CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 CMAKE_C_STANDARD_LIBRARIES:STRING=-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
 
 //Path to a program.
-CMAKE_DLLTOOL:FILEPATH=C:/Exterenal tools/msys2/ucrt64/bin/dlltool.exe
+CMAKE_DLLTOOL:FILEPATH=C:/Progs/ucrt64/bin/dlltool.exe
 
 //Flags used by the linker during all build types.
 CMAKE_EXE_LINKER_FLAGS:STRING=
@@ -164,10 +164,10 @@ CMAKE_INSTALL_SHAREDSTATEDIR:PATH=com
 CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 
 //Path to a program.
-CMAKE_LINKER:FILEPATH=C:/Exterenal tools/msys2/ucrt64/bin/ld.exe
+CMAKE_LINKER:FILEPATH=C:/Progs/ucrt64/bin/ld.exe
 
-//make program
-CMAKE_MAKE_PROGRAM:FILEPATH=C:/EXTERE~1/msys2/ucrt64/bin/ninja.exe
+//Program used to build from build.ninja files.
+CMAKE_MAKE_PROGRAM:FILEPATH=C:/Progs/ucrt64/bin/ninja.exe
 
 //Flags used by the linker during the creation of modules during
 // all build types.
@@ -190,13 +190,13 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
-CMAKE_NM:FILEPATH=C:/Exterenal tools/msys2/ucrt64/bin/nm.exe
+CMAKE_NM:FILEPATH=C:/Progs/ucrt64/bin/nm.exe
 
 //Path to a program.
-CMAKE_OBJCOPY:FILEPATH=C:/Exterenal tools/msys2/ucrt64/bin/objcopy.exe
+CMAKE_OBJCOPY:FILEPATH=C:/Progs/ucrt64/bin/objcopy.exe
 
 //Path to a program.
-CMAKE_OBJDUMP:FILEPATH=C:/Exterenal tools/msys2/ucrt64/bin/objdump.exe
+CMAKE_OBJDUMP:FILEPATH=C:/Progs/ucrt64/bin/objdump.exe
 
 //Value Computed by CMake
 CMAKE_PROJECT_COMPAT_VERSION:STATIC=
@@ -229,10 +229,10 @@ CMAKE_PROJECT_VERSION_PATCH:STATIC=0
 CMAKE_PROJECT_VERSION_TWEAK:STATIC=
 
 //Path to a program.
-CMAKE_RANLIB:FILEPATH=C:/Exterenal tools/msys2/ucrt64/bin/ranlib.exe
+CMAKE_RANLIB:FILEPATH=C:/Progs/ucrt64/bin/ranlib.exe
 
 //RC compiler
-CMAKE_RC_COMPILER:FILEPATH=C:/Exterenal tools/msys2/ucrt64/bin/windres.exe
+CMAKE_RC_COMPILER:FILEPATH=C:/Progs/ucrt64/bin/windres.exe
 
 //Flags for Windows Resource Compiler during all build types.
 CMAKE_RC_FLAGS:STRING=
@@ -250,7 +250,7 @@ CMAKE_RC_FLAGS_RELEASE:STRING=
 CMAKE_RC_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
-CMAKE_READELF:FILEPATH=C:/Exterenal tools/msys2/ucrt64/bin/readelf.exe
+CMAKE_READELF:FILEPATH=C:/Progs/ucrt64/bin/readelf.exe
 
 //Flags used by the linker during the creation of shared libraries
 // during all build types.
@@ -300,7 +300,7 @@ CMAKE_STATIC_LINKER_FLAGS_RELEASE:STRING=
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
-CMAKE_STRIP:FILEPATH=C:/Exterenal tools/msys2/ucrt64/bin/strip.exe
+CMAKE_STRIP:FILEPATH=C:/Progs/ucrt64/bin/strip.exe
 
 //Path to a program.
 CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
@@ -368,9 +368,9 @@ CMAKE_CACHEFILE_DIR:INTERNAL=c:/Users/ivanr/MAI/TRPO/build
 //Major version of cmake used to create the current loaded cache
 CMAKE_CACHE_MAJOR_VERSION:INTERNAL=4
 //Minor version of cmake used to create the current loaded cache
-CMAKE_CACHE_MINOR_VERSION:INTERNAL=2
+CMAKE_CACHE_MINOR_VERSION:INTERNAL=3
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=3
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=0
 //Path to CMake executable.
 CMAKE_COMMAND:INTERNAL=C:/Program Files/CMake/bin/cmake.exe
 //Path to cpack program executable.
@@ -522,7 +522,7 @@ CMAKE_RC_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_READELF
 CMAKE_READELF-ADVANCED:INTERNAL=1
 //Path to CMake installation.
-CMAKE_ROOT:INTERNAL=C:/Program Files/CMake/share/cmake-4.2
+CMAKE_ROOT:INTERNAL=C:/Program Files/CMake/share/cmake-4.3
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS
 CMAKE_SHARED_LINKER_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_SHARED_LINKER_FLAGS_DEBUG
@@ -554,10 +554,10 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Details about finding Python
-FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[C:/Users/ivanr/AppData/Local/Programs/Python/Python314/python.exe][C:/Users/ivanr/AppData/Local/Programs/Python/Python314/libs/python314.lib][C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Include][found components: Interpreter Development.Embed ][v3.14.7()]
+FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[C:/Users/ivanr/MAI/TRPO/bin/app/python.exe][C:/Users/ivanr/AppData/Local/Programs/Python/Python314/libs/python314.lib][C:/Users/ivanr/AppData/Local/Programs/Python/Python314/include][found components: Interpreter Development.Embed ][v3.14.7()]
 PYBIND11_INCLUDE_DIR:INTERNAL=C:/Users/ivanr/MAI/TRPO/third_party/pybind11/include
 //Python executable during the last CMake run
-PYBIND11_PYTHON_EXECUTABLE_LAST:INTERNAL=C:/Users/ivanr/AppData/Local/Programs/Python/Python314/python.exe
+PYBIND11_PYTHON_EXECUTABLE_LAST:INTERNAL=C:/Users/ivanr/MAI/TRPO/bin/app/python.exe
 //Python debug status
 PYTHON_IS_DEBUG:INTERNAL=0
 PYTHON_MODULE_DEBUG_POSTFIX:INTERNAL=
@@ -568,18 +568,18 @@ _PYBIND11_CROSSCOMPILING:INTERNAL=OFF
 _Python:INTERNAL=Python
 //Compiler reason failure
 _Python_Compiler_REASON_FAILURE:INTERNAL=
-_Python_DEVELOPMENT_EMBED_SIGNATURE:INTERNAL=e4843ca272f4b121305e6c3e35280593
+_Python_DEVELOPMENT_EMBED_SIGNATURE:INTERNAL=9ff63f3cbe13a58bddf370c146bfb87f
 //Development reason failure
 _Python_Development_REASON_FAILURE:INTERNAL=
 //Path to a program.
-_Python_EXECUTABLE:INTERNAL=C:/Users/ivanr/AppData/Local/Programs/Python/Python314/python.exe
+_Python_EXECUTABLE:INTERNAL=C:/Users/ivanr/MAI/TRPO/bin/app/python.exe
 //Path to a program.
 _Python_EXECUTABLE_DEBUG:INTERNAL=_Python_EXECUTABLE_DEBUG-NOTFOUND
 //Path to a file.
-_Python_INCLUDE_DIR:INTERNAL=C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Include
+_Python_INCLUDE_DIR:INTERNAL=C:/Users/ivanr/AppData/Local/Programs/Python/Python314/include
 //Python Properties
-_Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;14;7;64;<none>;cp314-win_amd64;;C:\Users\ivanr\AppData\Local\Programs\Python\Python314\Lib;C:\Users\ivanr\AppData\Local\Programs\Python\Python314\Lib;C:\Users\ivanr\AppData\Local\Programs\Python\Python314\Lib\site-packages;C:\Users\ivanr\AppData\Local\Programs\Python\Python314\Lib\site-packages
-_Python_INTERPRETER_SIGNATURE:INTERNAL=6dfce85e1d3a5b518581808bf227191e
+_Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;14;7;64;<none>;cp314-win_amd64;;C:\Users\ivanr\MAI\TRPO\bin\app\Lib;C:\Users\ivanr\MAI\TRPO\bin\app\Lib;C:\Users\ivanr\MAI\TRPO\bin\app\Lib\site-packages;C:\Users\ivanr\MAI\TRPO\bin\app\Lib\site-packages
+_Python_INTERPRETER_SIGNATURE:INTERNAL=686747011b62462b86aab14736e3b3ad
 //Path to a library.
 _Python_LIBRARY_DEBUG:INTERNAL=_Python_LIBRARY_DEBUG-NOTFOUND
 //Path to a library.
@@ -593,5 +593,5 @@ pybind11_FOUND:INTERNAL=TRUE
 //Directory where pybind11 headers are located
 pybind11_INCLUDE_DIR:INTERNAL=C:/Users/ivanr/MAI/TRPO/third_party/pybind11/include
 //Directories where pybind11 and possibly Python headers are located
-pybind11_INCLUDE_DIRS:INTERNAL=C:/Users/ivanr/MAI/TRPO/third_party/pybind11/include;C:/Users/ivanr/AppData/Local/Programs/Python/Python314/Include
+pybind11_INCLUDE_DIRS:INTERNAL=C:/Users/ivanr/MAI/TRPO/third_party/pybind11/include;C:/Users/ivanr/AppData/Local/Programs/Python/Python314/include
 
