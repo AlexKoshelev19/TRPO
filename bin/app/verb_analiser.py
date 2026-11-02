@@ -116,7 +116,7 @@ def analyze(input_file: str) -> dict:
                     indexes =  verbs.get(verb) if verbs.get(verb) != None else []
                     indexes.append(int(token.id.split('_')[0]))
                     verbs[verb] = indexes
-                    print(verb)
+                    #print(verb)
 
     for verb in list(verbs.keys()):
         # Передаем слово и маркер языка "ru"
