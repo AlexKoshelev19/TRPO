@@ -27,6 +27,51 @@ enum class ACTIONS : int
     BACK,
 };
 
+#include <iomanip>
+#include <sstream>
+
+
+string strip_accent(string s) // Убираем символ ударения U+0301 (байты CC 81), чтобы в отчёте было "читать", а не "чита́ть"
+{
+    const string accent = "\u0301";
+    size_t pos;
+    while ((pos = s.find(accent)) != string::npos)
+        s.erase(pos, accent.size());
+    return s;
+}
+
+string current_datetime() //получение строки даты и времени
+{
+    auto now = chrono::system_clock::now();
+    auto t = chrono::system_clock::to_time_t(now);
+    tm tm_now{};
+    localtime_s(&tm_now, &t);
+    ostringstream oss;
+    oss << put_time(&tm_now, "%Y-%m-%d %H:%M:%S");
+    return oss.str();
+}
+
+// Общее число рифмующихся пар: для группы из n глаголов
+size_t count_rhyme_pairs()
+{
+    size_t total = 0;
+    for (const auto& [ending, group] : rhymes)
+        if (group.size() > 1)
+            total += group.size() * (group.size() - 1) / 2;
+    return total;
+}
+
+void write_report_header(ofstream& fos, const string& title, const string& input_name)
+{
+    fos << "=== " << title << " ===\n"
+        << "Дата/время обработки: " << current_datetime() << "\n"
+        << "Входной файл: " << input_name << "\n"
+        << "Общее количество найденных рифмующихся пар: " << count_rhyme_pairs() << "\n"
+        << "===============================================\n\n";
+}
+
+
+
 // Поиск начала гласной буквы, на которой стоит ударение \u0301
 int accent_index(const string& str) {
     size_t pos = str.find("\u0301");
@@ -84,7 +129,7 @@ fs::path get_dir(const string& mode, const string&  base_name) {
     return words / file_name; // вместо fs::u8path
 }
 
-void save_verbs(const string& base_name)
+void save_verbs(const string& base_name, const string& input_name)
 {
     fs::path filePath = get_dir("all_verbs", base_name);
     if (filePath.empty()) {
@@ -93,24 +138,35 @@ void save_verbs(const string& base_name)
     }
     ofstream fos(filePath, ios::out | ios::trunc);
 
-    fos << "unic verbs count: " << VERBS_and_indexes.size() << "\n\n";
-    
+    write_report_header(fos, "Отчёт о глаголах образующих рифмованную пару", input_name);
+
     int ind = 1;
-    for (const auto& [verb, sentences] : VERBS_and_indexes)
+    for (const auto& [end, group] : rhymes)
     {
-        fos << ind << ") " << verb << " : ";
-        for (const auto& sentence : sentences)
+        if (group.size() < 2) continue;          // глагол без рифмы в отчёт не попадает
+
+        for (const auto& verb : group)
         {
-            fos << sentence << ' ';
+            const vector<int>& sentences = VERBS_and_indexes[verb];
+
+            fos << ind++ << ") " << strip_accent(verb) << '\n';
+            fos << "  Число появлений в тексте: " << sentences.size() << '\n';
+            fos << "  Число уникальных пар с этим словом: " << group.size() - 1 << '\n';
+            fos << "  Номера предложений с этим словом: ";
+            for (size_t i = 0; i < sentences.size(); ++i)
+            {
+                if (i) fos << ", ";
+                fos << sentences[i];
+            }
+            fos << "\n\n";
         }
-        fos << '\n';
-        ind++;
     }
     fos.close();
-    cout << "Статистика по каждому из глаголов сохранена в файл: " << fs::absolute(filePath).string() << '\n';
+    cout << "Статистика по глаголам, образующим рифмы, сохранена в файл: "
+         << fs::absolute(filePath).string() << '\n';
 }
 
-void save_rhymes(const string& base_name)
+void save_rhymes(const string& base_name, const string& input_name)
 {
     fs::path filePath = get_dir("unic_rhymes", base_name);
     if (filePath.empty()) {
@@ -119,18 +175,22 @@ void save_rhymes(const string& base_name)
     }
     ofstream fos(filePath, ios::out | ios::trunc);
 
+    write_report_header(fos, "Отчёт о поиске однородных рифм", input_name);
+
     int ind = 1;
     for (const auto& [end, v] : rhymes)
     {
-        if (v.size() > 1)
+        if (v.size() < 2) continue;
+
+        for (auto it1 = v.begin(); it1 != v.end(); ++it1)
         {
-            for (auto it1 = v.begin(); it1 != v.end(); ++it1)
+            for (auto it2 = next(it1); it2 != v.end(); ++it2)
             {
-                auto it2 = next(it1);
-                for (; it2 != v.end(); ++it2)
-                {
-                    fos << ind++ << ") " << *it1 << " - " << *it2 << '\n';
-                }
+                fos << ind++ << ") " << strip_accent(*it1) << " - " << strip_accent(*it2) << '\n';
+                fos << "Число появлений\tслова \"" << strip_accent(*it1) << "\" - "
+                    << VERBS_and_indexes[*it1].size() << '\n';
+                fos << "Число появлений\tслова \"" << strip_accent(*it2) << "\" - "
+                    << VERBS_and_indexes[*it2].size() << "\n\n";
             }
         }
     }
@@ -315,17 +375,17 @@ void extract_verbs(const string& input_file)
 }
 
 int main() {
-    
+
     Py_Initialize();
-    
+
     // Включаем UTF-8 для консоли Windows
     setlocale(LC_ALL, ".UTF-8");
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
-    
+
     cout << "Здравствуйте!\nДанная программа предназначена для поиска рифмующихся пар глаголов.\n"
          << "Для завершения работы с программой нажмите клавишу ESC, а для продолжения - любую другую клавишу.\n";
-    
+
     if (getPressedKey() == ACTIONS::EXIT)
     {
         is_running = false;
@@ -336,13 +396,13 @@ int main() {
     while (is_running)
     {
         string chosen_file = choose_data_file_menu();
-        
+
         if (is_running && !chosen_file.empty())
         {
             system("cls");
-            cout << "Загрузка глаголов...\n";
-  
-            // Прямая конкатенация путей через fs::path
+            cout << "Выполняется анализ...\n";
+
+
             fs::path relative_file_path = fs::path("input") / chosen_file;
             extract_verbs(relative_file_path.string()); // передаем обычный std::string
             system("cls");
@@ -353,8 +413,8 @@ int main() {
 
             cout << "Анализ проведён.\n";
             cout << "Разбитый по предложениям текст сохранён в директорию \\app\\edited.\n";
-            save_rhymes(base_input_name);
-            save_verbs(base_input_name);
+            save_rhymes(base_input_name, chosen_file);
+            save_verbs(base_input_name, chosen_file);
 
             cout << "\nДля завершения работы с программой нажмите клавишу ESC, для продолжения - любую другую клавишу: ";
             if (getPressedKey() == ACTIONS::EXIT)
