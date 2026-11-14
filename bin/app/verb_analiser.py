@@ -49,8 +49,14 @@ def is_true_verb(word: str) -> bool:
     return any(p.tag.POS in ('VERB', 'INFN') for p in parses)
 
 def analyze(input_file: str) -> dict:
-    with open(input_file, 'r', encoding='utf-8') as f:
-        text = f.read()
+    with open(input_file, 'rb') as f:
+        raw_text = f.read()
+
+    # Декодирование байтов (UTF-8 или ANSI)
+    try:
+        text = raw_text.decode('utf-8-sig')
+    except UnicodeDecodeError:
+        text = raw_text.decode('cp1251')
 
     # 1. Нормализация дефисных побудительных частиц (-ка, -то),
     # чтобы токенизатор не сбоил на словах вроде "Скажи-ка" -> "Скажи ка"

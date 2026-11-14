@@ -9,6 +9,8 @@
 #include <fstream>
 #include <windows.h>
 #include <conio.h>
+#include <iomanip>
+#include <sstream>
 
 using namespace std;
 namespace fs = std::filesystem;
@@ -26,9 +28,6 @@ enum class ACTIONS : int
     ENTER,
     BACK,
 };
-
-#include <iomanip>
-#include <sstream>
 
 
 string strip_accent(string s) // Убираем символ ударения U+0301 (байты CC 81), чтобы в отчёте было "читать", а не "чита́ть"
@@ -61,15 +60,23 @@ size_t count_rhyme_pairs()
     return total;
 }
 
-void write_report_header(ofstream& fos, const string& title, const string& input_name)
+size_t count_verbs()
 {
-    fos << "=== " << title << " ===\n"
-        << "Дата/время обработки: " << current_datetime() << "\n"
-        << "Входной файл: " << input_name << "\n"
-        << "Общее количество найденных рифмующихся пар: " << count_rhyme_pairs() << "\n"
-        << "===============================================\n\n";
+    size_t total = 0;
+    for (const auto& [ending, group] : rhymes)
+        if (group.size() > 1)
+            total += group.size();
+    return total;
 }
 
+void write_report_header(ofstream& fos, const string& title, const string& input_name, string info)
+{
+    fos << "===== " << title << " =====\n"
+        << "Дата/время обработки: " << current_datetime() << '\n'
+        << "Входной файл: " << input_name << '\n'
+        << info << '\n'
+        << "===============================================\n\n";
+}
 
 
 // Поиск начала гласной буквы, на которой стоит ударение \u0301
@@ -138,7 +145,8 @@ void save_verbs(const string& base_name, const string& input_name)
     }
     ofstream fos(filePath, ios::out | ios::trunc);
 
-    write_report_header(fos, "Отчёт о глаголах образующих рифмованную пару", input_name);
+    string info = "Количество найденных глаголов: " + to_string(count_verbs());
+    write_report_header(fos, "Отчёт о глаголах образующих рифмованную пару", input_name, info);
 
     int ind = 1;
     for (const auto& [end, group] : rhymes)
@@ -175,7 +183,8 @@ void save_rhymes(const string& base_name, const string& input_name)
     }
     ofstream fos(filePath, ios::out | ios::trunc);
 
-    write_report_header(fos, "Отчёт о поиске однородных рифм", input_name);
+    string info = "Общее количество найденных рифмующихся пар: " + to_string(count_rhyme_pairs());
+    write_report_header(fos, "Отчёт о поиске однородных рифм", input_name, info);
 
     int ind = 1;
     for (const auto& [end, v] : rhymes)
@@ -251,13 +260,9 @@ bool is_valid_data_file(const fs::path& file_path)
 
 vector<string> collect_valid_files()
 {
+    error_code ec;
     vector<string> files;
     fs::path input_dir = "input";
-
-    error_code ec;
-    if (!fs::exists(input_dir, ec) || !fs::is_directory(input_dir, ec)) {
-        return files;
-    }
 
     for (const auto& entry : fs::directory_iterator(input_dir, ec)) {
         if (entry.is_regular_file(ec) && entry.path().extension() == ".txt") {
@@ -272,12 +277,24 @@ vector<string> collect_valid_files()
 
 string choose_data_file_menu()
 {
+    fs::path input_dir = "input";
+    error_code ec;
+
+    // Проверка директории app/input на существование
+    if (!fs::exists(input_dir, ec) || !fs::is_directory(input_dir, ec))
+    {
+        system("cls");
+        cout << "Не найдено директории app\\input. Добавть директорию.";
+        getPressedKey();
+        return "";
+    }
     vector<string> files = collect_valid_files();
 
+    // Проверка, что в директории app/input есть текстовые файлы для анализа
     if (files.empty()) {
         system("cls");
         cout << "В папке input подходящих файлов не найдено.\nДобавьте файлы в директорию app\\input и перезапустите программу.";
-        _getch();
+        getPressedKey();
         return "";
     }
 
@@ -286,6 +303,8 @@ string choose_data_file_menu()
     ACTIONS action;
     string message = "Выберите файл для анализа. Для перемещения курсора по пунктам меню используйте клавиши стрелок вверх и вниз.\n"
                      "Для выбора файла нажмите клавишу Enter, для завершения работы с программой нажмите клавишу ESC.";
+
+    // Меню выбора входного файла
     do
     {
         system("cls");
@@ -406,7 +425,7 @@ int main() {
             fs::path relative_file_path = fs::path("input") / chosen_file;
             extract_verbs(relative_file_path.string()); // передаем обычный std::string
             system("cls");
-            cout << "Глаголы загружены.\n";
+            cout << "Глаголы из файла загружены.\n";
             search_rhyme();
             // Получаем имя файла без расширения (например, "стих" из "стих.txt")
             string base_input_name = fs::path(chosen_file).stem().string();
