@@ -284,7 +284,7 @@ string choose_data_file_menu()
     if (!fs::exists(input_dir, ec) || !fs::is_directory(input_dir, ec))
     {
         system("cls");
-        cout << "Не найдено директории app\\input. Добавть директорию.";
+        cout << "Не найдено директории app\\input. Cоздайте директорию и добавьте в нее входные файлы файлы.";
         getPressedKey();
         return "";
     }
