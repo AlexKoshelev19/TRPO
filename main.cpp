@@ -408,12 +408,12 @@ int main() {
     if (getPressedKey() == ACTIONS::EXIT)
     {
         is_running = false;
-        Py_Finalize();
-        return 0;
     }
 
     while (is_running)
     {
+        VERBS_and_indexes.clear();
+        rhymes.clear();
         string chosen_file = choose_data_file_menu();
 
         if (is_running && !chosen_file.empty())
@@ -423,29 +423,37 @@ int main() {
 
 
             fs::path relative_file_path = fs::path("input") / chosen_file;
-            extract_verbs(relative_file_path.string()); // передаем обычный std::string
+            extract_verbs(relative_file_path.string());
             system("cls");
-            cout << "Глаголы из файла загружены.\n";
-            search_rhyme();
-            // Получаем имя файла без расширения (например, "стих" из "стих.txt")
-            string base_input_name = fs::path(chosen_file).stem().string();
 
-            cout << "Анализ проведён.\n";
-            cout << "Разбитый по предложениям текст сохранён в директорию \\app\\edited.\n";
-            save_rhymes(base_input_name, chosen_file);
-            save_verbs(base_input_name, chosen_file);
+            if(VERBS_and_indexes.empty())
+            {
+                cout << "Глаголов в файле не обнаружено.\n";
+            }
+            else
+            {
+                cout << "Глаголы из файла загружены.\n";
+                search_rhyme();
+                // Получаем имя файла без расширения (например, "стих" из "стих.txt")
+                string base_input_name = fs::path(chosen_file).stem().string();
+                
+                fs::path relative_file_path = fs::path("input") / fs::path("edited")/ fs::path(base_input_name + "_edited.txt");
+
+                cout << "Анализ проведён.\n";
+                cout << "Разбитый по предложениям текст сохранён в файл: " << fs::absolute(relative_file_path).string() << '\n';
+                save_rhymes(base_input_name, chosen_file);
+                save_verbs(base_input_name, chosen_file);
+            }
 
             cout << "\nДля завершения работы с программой нажмите клавишу ESC, для продолжения - любую другую клавишу: ";
             if (getPressedKey() == ACTIONS::EXIT)
             {
                 is_running = false;
-                Py_Finalize();
             }
         }
         else
         {
             is_running = false;
-            Py_Finalize();
         }
     }
 
